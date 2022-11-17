@@ -108,5 +108,7 @@ public class Auditlocator {
     public String shudleEndDate= "//div/label[contains(text(),'Scheduled End Date')]//following::input";
     public String targetFinalDate= "//div/label[contains(text(),'Target Finalization Date')]//following::input";
     public String actualFuncationDate ="//div/label[contains(text(),'Actual Finalization Date')]//following::input";
-
+ public String MRCCReviewsTitle ="//span[text()=' MRCC Reviews']//following::table/tbody/tr/td/div/input";
+ public String MRCCReviesRecipt="//span[text()=' MRCC Reviews']//following::table/tbody/tr/td/div/div/input";
+public String MRCCTable="//p/span/strong/a[contains(text(),'MRCC')]";
 }

@@ -3,20 +3,20 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2022-10-28T04:52:41.545Z",
-        "line": 34,
-        "name": "NAMS-25: Review DET/OET/Outcome Test performance",
+        "start_timestamp": "2022-11-17T04:14:51.174Z",
+        "line": 19,
+        "name": "NAMS-74: Manage Fieldwork Tollgate",
         "description": "",
-        "id": "nams-25:-review-det/oet/outcome-test-performance;nams-25:-review-det/oet/outcome-test-performance;;2",
+        "id": "nams-74:-manage-fieldwork-tollgate;nams-74:-manage-fieldwork-tollgate;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 21265000000,
+              "duration": 18825000000,
               "status": "passed"
             },
-            "line": 5,
+            "line": 6,
             "name": "I Enter the \"AA_test1\" and \"password@1\"",
             "match": {
               "arguments": [
@@ -35,10 +35,10 @@
           },
           {
             "result": {
-              "duration": 1535000000,
+              "duration": 1516000000,
               "status": "passed"
             },
-            "line": 6,
+            "line": 7,
             "name": "wait for \"2\" seconds",
             "match": {
               "arguments": [
@@ -53,10 +53,10 @@
           },
           {
             "result": {
-              "duration": 6380000000,
+              "duration": 7914000000,
               "status": "passed"
             },
-            "line": 7,
+            "line": 8,
             "name": "I  click the menu \"Audits\"",
             "match": {
               "arguments": [
@@ -71,10 +71,10 @@
           },
           {
             "result": {
-              "duration": 7602000000,
+              "duration": 6571000000,
               "status": "passed"
             },
-            "line": 8,
+            "line": 9,
             "name": "Click the button \"Create Audit\"",
             "match": {
               "arguments": [
@@ -89,22 +89,22 @@
           },
           {
             "result": {
-              "duration": 91848000000,
+              "duration": 32474000000,
               "status": "passed"
             },
-            "line": 9,
-            "name": "I fill the Audit form",
+            "line": 10,
+            "name": "I fill the Audit form Without Key Date",
             "match": {
-              "location": "com.Steps.Definitions.LoginStepDef.iFillTheAuditForm()"
+              "location": "com.Steps.Definitions.LoginStepDef.iFillTheAuditFormWithoutKeyDate()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 11836000000,
+              "duration": 17200000000,
               "status": "passed"
             },
-            "line": 10,
+            "line": 11,
             "name": "Click the button \"Submit\" and Wait",
             "match": {
               "arguments": [
@@ -119,10 +119,10 @@
           },
           {
             "result": {
-              "duration": 6276000000,
+              "duration": 6231000000,
               "status": "passed"
             },
-            "line": 11,
+            "line": 12,
             "name": "I  click the menu \"Home\"",
             "match": {
               "arguments": [
@@ -137,10 +137,10 @@
           },
           {
             "result": {
-              "duration": 6789000000,
+              "duration": 6213000000,
               "status": "passed"
             },
-            "line": 12,
+            "line": 13,
             "name": "I click submenu \"My Audits\"",
             "match": {
               "arguments": [
@@ -155,291 +155,67 @@
           },
           {
             "result": {
-              "duration": 6905000000,
-              "status": "passed"
-            },
-            "line": 13,
-            "name": "I Search the Name",
-            "match": {
-              "location": "com.Steps.Definitions.HomeStepDef.iSearchTheName()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 19887000000,
+              "duration": 12692000000,
               "status": "passed"
             },
             "line": 14,
-            "name": "I Move to \"Risks and Controls\"",
+            "name": "I Move to \"Summary\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Risks and Controls\"",
+                  "val": "\"Summary\"",
                   "offset": 10
                 }
               ],
               "location": "com.Steps.Definitions.SummaryStepDef.iMoveTo(java.lang.String)"
             },
             "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 2301000000,
-              "status": "passed"
-            },
-            "line": 15,
-            "name": "file the Risk level \"2.5\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"2.5\"",
-                  "offset": 20
-                }
-              ],
-              "location": "com.Steps.Definitions.SummaryStepDef.fileTheRiskLevel(java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 11285000000,
-              "status": "passed"
-            },
-            "line": 16,
-            "name": "Click the button \"Save\" and Wait",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Save\"",
-                  "offset": 17
-                }
-              ],
-              "location": "com.Steps.Definitions.HomeStepDef.clickTheButtonAndWait(java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//span[contains(text(),\u0027MY AUDITS\u0027)]//following::button[contains(text(),\u0027Search\u0027)]\"}\n  (Session info: chrome\u003d106.0.5249.119)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027BEST\u0027, ip: \u0027192.168.0.102\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_281\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\\Users\\Best\\AppData\\Local...}, goog:chromeOptions: {debuggerAddress: localhost:53518}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: a6d5e28475e976d9ff0d6d2dc5eef855\n*** Element info: {Using\u003dxpath, value\u003d//span[contains(text(),\u0027MY AUDITS\u0027)]//following::button[contains(text(),\u0027Search\u0027)]}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat com.step.steps.WaitStep.click(WaitStep.java:96)\r\n\tat com.step.steps.LandPageStep.leve2RiskClick(LandPageStep.java:180)\r\n\tat com.Steps.Definitions.SummaryStepDef.iFileTheLevelOfRisk(SummaryStepDef.java:48)\r\n\tat ✽.I file the Level two of risk(file:///C:/Users/Best/Desktop/CSApp/CAapplication/src/test/resources/feature/NAMS-25%20Review%20DET_OET_Outcome%20Test%20performance.feature:17)\r\n",
-              "duration": 144031000000,
-              "status": "failed"
-            },
-            "line": 17,
-            "name": "I file the Level two of risk",
-            "match": {
-              "location": "com.Steps.Definitions.SummaryStepDef.iFileTheLevelOfRisk()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 18,
-            "name": "I file the Level three of risk",
-            "match": {
-              "location": "com.Steps.Definitions.SummaryStepDef.iFileTheRiskthreeLevel()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 19,
-            "name": "I  fill  the OT Form",
-            "match": {
-              "location": "com.Steps.Definitions.SummaryStepDef.iFillTheOTForm()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 5000000,
-              "status": "skipped"
-            },
-            "line": 20,
-            "name": "I Create and Edit the DET or OET Form",
-            "match": {
-              "location": "com.Steps.Definitions.SummaryStepDef.iCreateAndEditTheDETOrOETForm()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 3000000,
-              "status": "skipped"
-            },
-            "line": 21,
-            "name": "I click menu Button \"Design Effectiveness Testing\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Design Effectiveness Testing\"",
-                  "offset": 20
-                }
-              ],
-              "location": "com.Steps.Definitions.SummaryStepDef.iClickMenuButton(java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 22,
-            "name": "Click the button \"Manage DET\" and Wait",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Manage DET\"",
-                  "offset": 17
-                }
-              ],
-              "location": "com.Steps.Definitions.HomeStepDef.clickTheButtonAndWait(java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1000000,
-              "status": "skipped"
-            },
-            "line": 23,
-            "name": "I  fill the DET Form",
-            "match": {
-              "location": "com.Steps.Definitions.HomeStepDef.iFillTheDETForm()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 24,
-            "name": "Click the button \"Manage DET\" and Wait",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Manage DET\"",
-                  "offset": 17
-                }
-              ],
-              "location": "com.Steps.Definitions.HomeStepDef.clickTheButtonAndWait(java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 25,
-            "name": "I fill the conclusion of DET or OET",
-            "match": {
-              "location": "com.Steps.Definitions.SummaryStepDef.iFillTheConclusionOfDET()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 26,
-            "name": "I click menu Button \"Operating Effectiveness Testing\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Operating Effectiveness Testing\"",
-                  "offset": 20
-                }
-              ],
-              "location": "com.Steps.Definitions.SummaryStepDef.iClickMenuButton(java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 27,
-            "name": "Click the button \"Manage OET\" and Wait",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Manage OET\"",
-                  "offset": 17
-                }
-              ],
-              "location": "com.Steps.Definitions.HomeStepDef.clickTheButtonAndWait(java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 28,
-            "name": "I fill the OET form",
-            "match": {
-              "location": "com.Steps.Definitions.SummaryStepDef.iFillTheOETForm()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 29,
-            "name": "Click the button \"Manage OET\" and Wait",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Manage OET\"",
-                  "offset": 17
-                }
-              ],
-              "location": "com.Steps.Definitions.HomeStepDef.clickTheButtonAndWait(java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 30,
-            "name": "I fill the conclusion of DET or OET",
-            "match": {
-              "location": "com.Steps.Definitions.SummaryStepDef.iFillTheConclusionOfDET()"
-            },
-            "keyword": "And "
           }
         ],
         "tags": [
           {
-            "name": "@nams25"
+            "name": "@nams74"
           },
           {
-            "name": "@test2610221"
+            "name": "@sp4"
           },
           {
             "name": "@reg"
+          },
+          {
+            "name": "@test1711221"
           }
         ]
       }
     ],
-    "name": "NAMS-25: Review DET/OET/Outcome Test performance",
+    "name": "NAMS-74: Manage Fieldwork Tollgate",
     "description": "",
-    "id": "nams-25:-review-det/oet/outcome-test-performance",
+    "id": "nams-74:-manage-fieldwork-tollgate",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/feature/NAMS-25%20Review%20DET_OET_Outcome%20Test%20performance.feature",
+    "uri": "file:src/test/resources/feature/Sprint4/NAMS-74%20Manage%20Fieldwork%20Tollgate.feature",
     "tags": [
       {
-        "name": "@nams25",
+        "name": "@nams74",
         "type": "Tag",
         "location": {
           "line": 1,
           "column": 1
+        }
+      },
+      {
+        "name": "@sp4",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 9
+        }
+      },
+      {
+        "name": "@reg",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 14
         }
       }
     ]

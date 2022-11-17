@@ -27,6 +27,7 @@ public class AllDriverManager {
     public AllDriverManager() {
         driverType = FileReaderManager.getInstance().getConfigFileReader().getBrowser();
         environmentType = FileReaderManager.getInstance().getConfigFileReader().getEnvironment();
+       // filread=FileReaderManager.getInstance().getConfigFileReader();
     }
 
     public WebDriver createLocalDriver(){
@@ -34,7 +35,7 @@ public class AllDriverManager {
             case CHROME:
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions chromeOptions = new ChromeOptions();
-               //chromeOptions.addArguments("--headless", "--window-size=1644,868");
+                chromeOptions.addArguments("--headless", "--window-size=1644,868");
                 webDriver = new ChromeDriver(chromeOptions);
                 break;
             case FIREFOX:

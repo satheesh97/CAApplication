@@ -5,9 +5,6 @@ import com.Steps.Definitions.AbstractStepDef;
 import com.locator.Auditlocator;
 import com.locator.CommonLogic;
 import com.locator.LandingPageLocator;
-import io.cucumber.java.bs.A;
-import org.apache.commons.logging.Log;
-import org.checkerframework.checker.units.qual.K;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -17,11 +14,12 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-import java.util.logging.Logger;
+
 
 public class AuditStep extends AbstractStepDef {
 
     WebDriver driver = getDrivr();
+    LoggerFile logger =new LoggerFile() ;
     Auditlocator auditlocator = new Auditlocator();
     ExpectedDataClass expectedDataClass =new ExpectedDataClass();
     CommonLogic commonLogic = new CommonLogic();
@@ -45,10 +43,7 @@ public class AuditStep extends AbstractStepDef {
 
 
     public void auditFill(String confiedntial) throws InterruptedException {
-
-       //commonLogic.setTitle(commonLogic.getTitle());
-
-        enterText(auditlocator.title);
+       enterText(auditlocator.title);
         commonLogic.setTitle(getTitlename);
         commonLogic.setName(driver.findElement(By.xpath(auditlocator.title)).getAttribute("value"));
         uiText=commonLogic.getName();
@@ -70,23 +65,79 @@ public class AuditStep extends AbstractStepDef {
         insertDate();
 
     }
+    public void auditFillWithoutDate() throws InterruptedException {
+        enterText(auditlocator.title);
+        commonLogic.setTitle(getTitlename);
+        commonLogic.setName(driver.findElement(By.xpath(auditlocator.title)).getAttribute("value"));
+        uiText=commonLogic.getName();
+        commonLogic.writeFile(uiText);
+        clickRadioButton(auditlocator.confidential);
+        callTypeFunctionPriority();
+        callPriority();
+        mulClickDropdown(auditlocator.relRegion);
+        mulClickDropdown(auditlocator.relRegion);
+        clickRadioButton(auditlocator.group_Risk);
+        clickObject(auditlocator.addRiskThem);
+        fillMRCCReiview();
+        singleClickdown(auditlocator.selectThem);
+        enterNo(auditlocator.budget);
+        enterTextarea(auditlocator.objective);
+        keyPeople();
+        impactedDivisions();
+    }
 
     public void verifyconfirdential(){
 
         loginStep.isVisible(landingPageLocator.confidentilaIcon);
     }
 
-
+public void fillMRCCReiview(){
+        enterText(auditlocator.MRCCReviewsTitle);
+        searchAndEnter(auditlocator.MRCCReviesRecipt);
+}
     public void searchAudit(){
         driver.findElement(By.xpath(landingPageLocator.searchAudit)).sendKeys(commonLogic.readFile());
         waitStep.click();
+        logger.info("Search field prescent and Value is  "+ commonLogic.readFile());
+        waitStep.driverwait5();
+
+    }
+    public void  clickTableBody(){
+        clickObject(auditlocator.MRCCTable);
+    }
+    public void searchAuditforDasboard(){
+        driver.findElement(By.xpath(landingPageLocator.searchAudit)).sendKeys(commonLogic.readOET());
+        waitStep.click();
+        logger.info("Search field prescent and Value is  "+ commonLogic.readOET());
         waitStep.driverwait5();
     }
+
+    public void searchTasksDashBoard(){
+        driver.findElement(By.xpath(landingPageLocator.searchTask)).sendKeys(commonLogic.readOET());
+       // commonLogic.writeOET(driver.findElement(By.xpath(landingPageLocator.searchTask)).getAttribute("value"));
+        waitStep.clickTask();
+        logger.info("Search field prescent and Value is  "+ commonLogic.readOET());
+        waitStep.driverwait5();
+    }
+    /**
+     * Authour Satheesh
+     * Search Task in My audit
+     */
+
+    public void searchTasks(){
+        driver.findElement(By.xpath(landingPageLocator.searchTask)).sendKeys(commonLogic.readFile());
+        commonLogic.writeOET(driver.findElement(By.xpath(landingPageLocator.searchTask)).getAttribute("value"));
+        waitStep.clickTask();
+        logger.info("Search field prescent and Value is  "+ commonLogic.readFile());
+        waitStep.driverwait5();
+    }
+
 
     public void searchAuditName(String name){
 
         driver.findElement(By.xpath(landingPageLocator.searchAudit)).sendKeys(name);
         waitStep.click();
+        logger.info("Searched audit name is   "+ name);
         waitStep.driverwait5();
     }
 
@@ -98,6 +149,11 @@ public class AuditStep extends AbstractStepDef {
         searchAndSelect(auditlocator.chiefAuditorLead);
         searchAndSelect(auditlocator.headOfAudit);
     }
+
+    public void changeRecipient(){
+        searchAndEnterWithData(auditlocator.MRCCReviesRecipt, "Samantha");
+    }
+
     public void auditScope(){
         clickObject(auditlocator.auditScope);
         enterText(auditlocator.auditScopeTitle);
@@ -135,13 +191,35 @@ public class AuditStep extends AbstractStepDef {
             enterNo(auditlocator.noOfReport);
         }
     }
-    public void callTypeFunction() throws InterruptedException {
-        singleClickdown(auditlocator.dropType);
-        callsubmethod(index9);
+    public void callTypeFunctionPriority()   {
+        singleClickdownforPriority(auditlocator.dropType, "Regular Audit");
+        callsubmethod();
 
     }
-    public void callsubmethod(int count) throws InterruptedException {
-        String text = driver.findElement(By.xpath("(//div[contains(@id,\"_value\") and @role='listbox']//child::span)[13]")).getText();
+    public void callTypeFunction()   {
+        singleClickdown(auditlocator.dropType);
+        callsubmethod();
+
+    }
+
+    public void singleClickdownforPriority(String singleSelect,String Type) {
+        WebElement drop = driver.findElement(By.xpath(singleSelect));
+            drop.click();
+            List<WebElement> droplist = driver.findElements(By.xpath(auditlocator.dropTableIndex));
+        for (int i =0;i<droplist.size();i++){
+            String value =droplist.get(i).getText();
+            if(value.equalsIgnoreCase(Type)) {
+                droplist.get(i).click();
+                i=droplist.size();
+            }
+        }
+          //  drop.sendKeys(Keys.ENTER);
+            logger.info("DropDwon Value Selected");
+
+
+    }
+    public void callsubmethod() {
+        String text = driver.findElement(By.xpath("//div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/span")).getText();
         System.out.println(text);
         if(text.contains("Standalone Action Verification")){
             searchAndEnter(auditlocator.nonAssuranceWorkPckg);
@@ -163,21 +241,14 @@ public class AuditStep extends AbstractStepDef {
     }
 
     public void passData(WebElement element ,String Data )  {
-        char[] dataArray = new char[Data.length()];
-        for (int i = 0; i < Data.length(); i++) {
-            dataArray[i] = Data.charAt(i);
-        }
-        for (char c : dataArray) {
-            element.sendKeys(Character.toString(c));
-            waitStep.driverwait2();
-        }
+        element.sendKeys(Data); element.sendKeys(" ");
         waitStep.driverwait2();
         WebElement element1 =  driver.findElement(By.xpath(".//div/ul[contains(@id,'_suggestions')]/li[1]"));
         waitStep.driverwait2();
         element1.click();
     }
 
-    public void searchAndEnter(String path) throws InterruptedException {
+    public void searchAndEnter(String path)  {
         if(driver.findElement(By.xpath(path)).isDisplayed()){
             WebElement searchAndEnter = driver.findElement(By.xpath(path));
             passData(searchAndEnter, "a");
@@ -200,6 +271,7 @@ public class AuditStep extends AbstractStepDef {
         if(driver.findElement(By.xpath(path)).isDisplayed()) {
             WebElement textArea = driver.findElement(By.xpath(path));
             textArea.sendKeys(commonLogic.readFile());
+            logger.info("textarea Information "+ commonLogic.readFile());
         }
     }
 
@@ -208,10 +280,12 @@ public class AuditStep extends AbstractStepDef {
             WebElement enterText = driver.findElement(By.xpath(title));
                 enterText.sendKeys(titleName);
            getTitlename=enterText.getAttribute("value");
-
+            logger.info("Enter informtion in n " + titleName);
         }
 
     }
+
+
 
     public void enterTextDate(String date ,int count){
 driver.findElement(By.xpath(date)).sendKeys(commonLogic.getCurrentDate(count));
@@ -221,6 +295,7 @@ driver.findElement(By.xpath(date)).sendKeys(commonLogic.getCurrentDate(count));
             WebElement enterText= driver.findElement(By.xpath(title));
             String data = Integer.toString(index9);
            enterText.sendKeys(data);
+            logger.info("Enter informtion in  " + data);
         }
 
     }
@@ -229,6 +304,24 @@ driver.findElement(By.xpath(date)).sendKeys(commonLogic.getCurrentDate(count));
         if(driver.findElement(By.xpath(singleSelect)).isDisplayed()){
             WebElement drop= driver.findElement(By.xpath(singleSelect));
             drop.click();
+            logger.info("Radio button Clicked");
+        }
+    }
+
+
+    public void singleClickdownType(String singleSelect) {
+        WebElement drop = null;
+        String text =null;
+        if (driver.findElement(By.xpath(singleSelect)).isDisplayed()) {
+            drop = driver.findElement(By.xpath(singleSelect));
+            drop.click();
+         List<WebElement> list=driver.findElements(By.xpath(auditlocator.dropTableIndex));
+            for (int i = 1; i <= index9; i++) {
+                drop.sendKeys(Keys.ARROW_DOWN);
+               // text=list.get(index9).getText();
+            }
+            drop.sendKeys(Keys.ENTER);
+            logger.info("Enter informtion in n " + text+ "and  Information Selected");
         }
     }
     public void singleClickdown(String singleSelect) {
@@ -240,8 +333,8 @@ driver.findElement(By.xpath(date)).sendKeys(commonLogic.getCurrentDate(count));
                 drop.sendKeys(Keys.ARROW_DOWN);
             }
             drop.sendKeys(Keys.ENTER);
+            logger.info("DropDwon Value Selected");
         }
-
     }
 
     public void singleClickdownLessdata(String singleSelect){
@@ -254,6 +347,7 @@ driver.findElement(By.xpath(date)).sendKeys(commonLogic.getCurrentDate(count));
             }
             drop.sendKeys(Keys.ENTER);
             uiText = drop.getText();
+            logger.info("Information Selected");
         }
 
     }
@@ -267,15 +361,17 @@ driver.findElement(By.xpath(date)).sendKeys(commonLogic.getCurrentDate(count));
             drop.click();
             for (int i = 1; i <= index4; i++) {
                 drop.sendKeys(Keys.ARROW_DOWN);
-                driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                 drop.sendKeys(Keys.ENTER);
             }
+            logger.info("Multi dropDown Value Selected");
         }
     }
 
     public void clickObject(String path){
         WebElement clickObject = driver.findElement(By.xpath(path));
         clickObject.click();
+        waitStep.waitPageload();
+        logger.info("Element is Clickable");
 
     }
 

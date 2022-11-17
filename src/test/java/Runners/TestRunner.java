@@ -14,8 +14,9 @@ import org.testng.annotations.DataProvider;
                 "pretty",
                 "html:target/cucumber-reports/cucumber-pretty.html",
                 "json:target/cucumber-reports/CucumberTestReport.json",
-                "timeline:target/test-output-thread/"
-        },tags = "@test2610221"
+                "timeline:target/test-output-thread/",
+                       "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
+        },tags = "@test1711221"
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
     @Override

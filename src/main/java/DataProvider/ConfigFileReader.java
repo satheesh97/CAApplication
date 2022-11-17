@@ -39,7 +39,13 @@ public class ConfigFileReader {
         else
             throw new RuntimeException("url not specified in the config file.");
     }
+public String getHeadleassmode(){
+         String headless = properties.getProperty("headless");
+    if(headless !=null)return headless;
+    else
+        throw new RuntimeException("url not specified in the config file.");
 
+}
     public long getTime(){
         String timeout = properties.getProperty("timeout");
         if (timeout != null){
@@ -61,6 +67,8 @@ public class ConfigFileReader {
                 return DriverType.EDGE;
             case "safari":
                 return DriverType.SAFARI;
+            case "html":
+                return DriverType.HTML;
             default:
                 throw new RuntimeException("Browser name key value in configuration file is not matched: " + browserName);
         }

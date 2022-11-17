@@ -1,15 +1,15 @@
 $(document).ready(function() {
 CucumberHTML.timelineItems.pushArray([
   {
-    "id": "afcb78df-3676-4a6e-9442-5d372236a23a",
-    "feature": "NAMS-25: Review DET/OET/Outcome Test performance",
-    "scenario": "NAMS-25: Review DET/OET/Outcome Test performance",
-    "start": 1666932761545,
+    "id": "88b4e2e5-7e22-4967-866a-cf0e971de087",
+    "feature": "NAMS-74: Manage Fieldwork Tollgate",
+    "scenario": "NAMS-74: Manage Fieldwork Tollgate",
+    "start": 1668658491174,
     "group": 1,
     "content": "",
-    "tags": "@nams25,@test2610221,@reg,",
-    "end": 1666933099599,
-    "className": "failed"
+    "tags": "@nams74,@sp4,@reg,@test1711221,",
+    "end": 1668658600996,
+    "className": "passed"
   }
 ]);
 CucumberHTML.timelineGroups.pushArray([

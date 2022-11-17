@@ -12,6 +12,7 @@ import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 import ru.yandex.qatools.ashot.AShot;
@@ -28,6 +29,7 @@ import com.step.steps.Log4jPrint;
 public class LandPageStep extends AbstractStepDef {
     // Logger log = LogManager.getLogger(LandPageStep.class.getName());
     LandingPageLocator landingPageLocator= new LandingPageLocator();
+    LoggerFile logger =new LoggerFile() ;
     CommonLogic commonLogic =new CommonLogic();
     WaitStep waitStep= new WaitStep();
     WebDriver driver = getDrivr();
@@ -40,7 +42,7 @@ public class LandPageStep extends AbstractStepDef {
 
     Auditlocator auditlocator=new Auditlocator();
 
-
+       String OT ="Create Outcome Test";
     public void verifyAndValidate()   {
 
         isPresent(landingPageLocator.name,"Name");
@@ -54,16 +56,23 @@ public class LandPageStep extends AbstractStepDef {
 
     }
 
+
+
     public void selectSearchAudit(){
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.MINUTES);
         driver.findElement(By.xpath(landingPageLocator.testdata)).click();
-        log.info("Table valuse Clicked from  selectsearchAudit");
+
 
     }
 
     public void fillDET(){
         auditStep.enterText(auditlocator.title);
         fillOET_DET();
+        reminderSave();
+    }
+    public void fillDETException(){
+        auditStep.enterText(auditlocator.title);
+        //fillOET_DET();
         reminderSave();
     }
 
@@ -95,6 +104,28 @@ public class LandPageStep extends AbstractStepDef {
         auditStep.enterTextarea(auditlocator.DETAssessment);
         waitStep.clickButton("Submit for Review");
         click(auditlocator.DETRemSubmit);
+        waitStep.driverwait5();
+    }
+    public void saveDET_OET(){
+        auditStep.clickRadioButton(auditlocator.DETEffective);
+        auditStep.enterTextarea(auditlocator.DETAssessment);
+        waitStep.clickButton("Save");
+        click(auditlocator.DETReminderSave);
+        waitStep.driverwait5();
+    }
+
+    public void saveDETforException(){
+        auditStep.clickRadioButton(auditlocator.DETNotEffective);
+        auditStep.clickRadioButton(creatControlLocator.creatOTTESTYes);
+        waitStep.waitPageload();
+        auditStep.clickRadioButton(creatControlLocator.exceptionSaveNow);
+        auditStep.enterTextarea(auditlocator.DETAssessment);
+        waitStep.clickButton("Save");
+        click(auditlocator.DETReminderSave);
+        waitStep.driverwait5();
+        auditStep.enterText(creatControlLocator.title);
+        waitStep.clickButton("Save");
+        click(auditlocator.DETReminderSave);
 
     }
 
@@ -113,6 +144,7 @@ public class LandPageStep extends AbstractStepDef {
         fillOET_DET();
         auditStep.enterTextarea(auditlocator.OETTextArea);
         reminderSave();
+        waitStep.pageLoadWait();
     }
 
 
@@ -133,6 +165,51 @@ public class LandPageStep extends AbstractStepDef {
         isPresent(landingPageLocator.relatedAction,expectedDataClass.relatedAction);
         getScreenresult("Menu bar");
     }
+
+    public  void validateIssues(){
+        verifyIssues();
+        click(landingPageLocator.disposedIssues);
+        verifyDissposalIssue();
+    }
+    public void verifyIssues(){
+        isPresent(landingPageLocator.issTitle);
+        isPresent(landingPageLocator.issStatus);
+        isPresent(landingPageLocator.issRelException);
+        isPresent(landingPageLocator.issOwner);
+        isPresent(landingPageLocator.issRating);
+        isPresent(landingPageLocator.issDueDate);
+        isPresent(landingPageLocator.issViewAction);
+    }
+    public void verifyDissposalIssue(){
+        isPresent(landingPageLocator.issDisTitle);
+        isPresent(landingPageLocator.issDisStatus);
+        isPresent(landingPageLocator.issDisRelException);
+        isPresent(landingPageLocator.issDisOwners);
+        isPresent(landingPageLocator.issDisRating);
+        isPresent(landingPageLocator.issDissDueDate);
+        isPresent(landingPageLocator.issDisViewActions);
+    }
+    public void validateExceptions(){
+        verifyExceptions();
+        click(landingPageLocator.DisposedException);
+        verifyDisposalException();
+    }
+public void verifyExceptions(){
+    isPresent(landingPageLocator.ExpTitle);
+    isPresent(landingPageLocator.ExpSataus);
+    isPresent(landingPageLocator.ExpRewStatus);
+    isPresent(landingPageLocator.ExpRaisedFrom);
+    isPresent(landingPageLocator.ExpRealtedIssue);
+    isPresent(landingPageLocator.ExpDesctiption);
+}
+public void verifyDisposalException(){
+    isPresent(landingPageLocator.DisTitle);
+    isPresent(landingPageLocator.DisStatus);
+    isPresent(landingPageLocator.DisRevStataus);
+    isPresent(landingPageLocator.DisRaisedFrom);
+    isPresent(landingPageLocator.DisRelatedIssues);
+    isPresent(landingPageLocator.DisDiscription);
+}
 
     /**
      * @authour Satheesh
@@ -177,12 +254,16 @@ public class LandPageStep extends AbstractStepDef {
 
     public void  leve2RiskClick(){
         driver.findElement(By.xpath(creatControlLocator.selectL2data)).click();
-        waitStep.click();
+        waitStep.waitPage("2");
     }
     public void ifileNewControlAtL2(){
         auditStep.enterText(creatControlLocator.title);
         auditStep.clickRadioButton(creatControlLocator.preventiveate);
         auditStep.enterTextarea(creatControlLocator.controlDescription);
+        fillControl();
+    }
+
+    public void fillControl(){
         auditStep.enterTextarea(creatControlLocator.objective);
         singleSelect(3,creatControlLocator.controlType);
         singleSelect(4,creatControlLocator.frequency);
@@ -191,7 +272,6 @@ public class LandPageStep extends AbstractStepDef {
         multiselect(7,creatControlLocator.controlSupport,"ControlProgram Support");
         waitStep.clickButton("Save");
     }
-
     public void clickTheTable(){
         click(creatControlLocator.risk1Table);
         waitStep.waitSec(2);
@@ -199,6 +279,7 @@ public class LandPageStep extends AbstractStepDef {
         waitStep.waitSec(2);
         click(creatControlLocator.selectL3data);
         waitStep.waitSec(2);
+        creatcontrol1();
     }
 
     public void fillDETForm(){
@@ -215,20 +296,71 @@ public class LandPageStep extends AbstractStepDef {
         auditStep.enterTextarea(creatControlLocator.Description);
         waitStep.clickButton("Save");
         waitStep.driverwait5();
-        click(creatControlLocator.selectL3data);
-        clickButton("Create Control");
-        auditStep.enterText(creatControlLocator.title);
-        waitStep.clickButton("Save");
+        creatcontrol();
 
     }
 
+
+    public void creatcontrol1() {
+        //click(creatControlLocator.selectL3data);
+        clickButton("Create Control");
+        auditStep.enterText(creatControlLocator.title);
+        waitStep.clickButton("Save");
+    }
+
+    public void creatcontrol() {
+       click(creatControlLocator.selectL3data);
+        clickButton("Create Control");
+        auditStep.enterText(creatControlLocator.title);
+        waitStep.clickButton("Save");
+    }
+
     public void fillOTform(){
-        String button="(//button[contains(text(),'Submit for Review')])[2]";
-        waitStep.clickButton("Create Outcome Test");
+        String button="//h4[text()='Reminder']//following::button[text()='Submit for Review']";
+        waitStep.waitPageload();
+        waitStep.clickButton(OT);
         auditStep.enterText(creatControlLocator.title);
         fillOT();
         waitStep.clickButton("Submit for Review");
         click(button);
+        waitStep.pageLoadWait();
+    }
+    public void fillOTformSave(){
+        String button="//h4[text()='Reminder']//following::button[text()='Save']";
+        waitStep.waitPageload();
+        waitStep.clickButton(OT);
+        auditStep.enterText(creatControlLocator.title);
+        fillOT();
+        getScreenresult(OT);
+        waitStep.clickButton("Save");
+        click(button);
+        waitStep.pageLoadWait();
+
+    }
+    public void fillOTformwithException(){
+        String button="//h4[text()='Reminder']//following::button[text()='Save']";
+        waitStep.waitPageload();
+        waitStep.clickButton(OT);
+        auditStep.enterText(creatControlLocator.title);
+        fillOT();
+        waitStep.clickButton("Save");
+        click(button);
+        waitStep.waitPageload();
+        click(creatControlLocator.menuOTIcon);
+        click(creatControlLocator.menuOT);
+        waitStep.waitPageload();
+        OTsave();
+
+    }
+
+    public void OTsave(){
+        String button="//h4[text()='Reminder']//following::button[text()='Save']";
+        auditStep.clickRadioButton(creatControlLocator.creatExceFrmeOTYes);
+        waitStep.waitPageload();
+        auditStep.clickRadioButton(creatControlLocator.exceptionSaveNow);
+        waitStep.clickButton("Save");
+        click(button);
+        waitStep.clickWait();
     }
 
     public void clickButton(String Button){
@@ -262,22 +394,19 @@ public class LandPageStep extends AbstractStepDef {
     }
     public void dropdownList(){
         List<WebElement> data = driver.findElements(By.xpath(auditlocator.dropTableIndex));
-        WebElement element = driver.findElement(By.xpath("//input[@placeholder='Search']"));
+       // WebElement element = driver.findElement(By.xpath("//input[@placeholder='Search']"));
         WebElement elemetClick =driver.findElement(By.xpath("//div/div/table/tbody/tr/td[2]/div/p"));
         int size = data.size()/2;
         if(size>1){
             for(int i =0;i<=size;i++){
-                element.sendKeys(Keys.ARROW_DOWN);
+
             }
-            data.get(size).click();
+           data.get(commonLogic.randomNumber(size)).click();
             elemetClick.click();
 
         }else{
-
             data.get(1).click();
-
         }
-
 
     }
 
@@ -312,18 +441,28 @@ public class LandPageStep extends AbstractStepDef {
 
 
     public void validateAuditProgram(String name){
-
         takeSnapShot(name);
-
     }
 
+    public void isPresent(String Locator){
+        WebElement element = driver.findElement(By.xpath(Locator));
+        try {
+            Assert.assertTrue(element.isDisplayed());
+            logger.error("Element is  Available in UI");
+            waitStep.clickWait();
+        }catch (Exception e){
+            e.printStackTrace();
+            logger.error("Element is Not  Available in UI");
+            //System.out.println("not assert ture");
+        }
+    }
     public void isPresent(String Locator, String expected){
         String actual =driver.findElement(By.xpath(Locator)).getText();
         if(actual.equalsIgnoreCase(expected)) {
             Assert.assertEquals(actual,expected);
-            log.info("print the ----"+actual+"and"+expected+"vales are same");
+logger.info(expected+"UI is Availabel in Page");
         }else{
-            log.info("Value of both "+actual+"and "+expected+ "  is different");
+logger.error(expected+ "UI is not availabel ");
         }
 
     }
@@ -345,10 +484,10 @@ public class LandPageStep extends AbstractStepDef {
             String path =System.getProperty("user.dir") + "\\src\\test\\resources\\OutPutImage\\" + name + ".jpg";
             Screenshot screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver);
             ImageIO.write(screenshot.getImage(), "jpg", new File(System.getProperty("user.dir") + "\\src\\test\\resources\\OutPutImage\\" + name + ".jpg"));
-            log.info("image Stored in the name of "+ path);
+logger.info("Image  Stored in Path");
         }catch(IOException e){
             e.printStackTrace();
-            log.info("image location is wrong");
+
         }
     }
 }

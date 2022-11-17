@@ -7,12 +7,14 @@ import com.step.steps.WaitStep;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 
 public class LoginStepDef  {
 
     LoginStep loginStep = new LoginStep();
+
 
     WaitStep waitStep = new WaitStep();
 
@@ -54,6 +56,10 @@ public class LoginStepDef  {
     public void iFillTheAuditForm() throws InterruptedException {
 
         auditStep.auditFill("");
+    }
+    @And("I fill the Audit form Without Key Date")
+    public void iFillTheAuditFormWithoutKeyDate() throws InterruptedException {
+        auditStep.auditFillWithoutDate();
     }
 
     @And("Click the button {string}")

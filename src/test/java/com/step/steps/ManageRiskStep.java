@@ -15,7 +15,7 @@ public class ManageRiskStep extends AbstractStepDef {
 
     WebDriver driver = getDrivr();
     SoftAssert softAssert = new SoftAssert();
-    Log4Config log =new Log4Config();
+
 
     public void validateTabel(){
 
@@ -34,7 +34,7 @@ public class ManageRiskStep extends AbstractStepDef {
                         for (int k = 0; k < listColor.size(); k++) {
                             colour = listColor.get(k).getCssValue("color");
                            // log.info("print color" + colour);
-                            log.info("Print color "+ colour +"code" +text);
+
                         }
 
                     colorComparision(colour,  text);

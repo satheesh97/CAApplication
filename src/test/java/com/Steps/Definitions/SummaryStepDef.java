@@ -1,8 +1,6 @@
 package com.Steps.Definitions;
 
-import com.step.steps.LandPageStep;
-import com.step.steps.ManageRiskStep;
-import com.step.steps.WaitStep;
+import com.step.steps.*;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.it.Ma;
@@ -11,6 +9,8 @@ public class SummaryStepDef {
     LandPageStep landPageStep = new LandPageStep();
     WaitStep waitStep=new WaitStep();;
     ManageRiskStep manageRiskStep = new ManageRiskStep();
+    AuditStep auditStep =new AuditStep();
+    MyTaskStep myTaskStep = new MyTaskStep();
 
     @And("I take Evidence of the {string} tap")
     public void iTakeEvidenceOfTheTap(String name) {
@@ -29,8 +29,9 @@ public class SummaryStepDef {
     public void iMoveTo(String menu) {
         landPageStep.selectSearchAudit();
         waitStep.clickButtonMenu(menu);
-       waitStep.clickButton("Manage Risk Assessment Intersections");
-
+        if(menu.contains("Risks and Controls")) {
+            waitStep.clickButton("Manage Risk Assessment Intersections");
+        }
     }
 
     @And("file the Risk level {string}")
@@ -112,5 +113,29 @@ public class SummaryStepDef {
     @And("I  fill  the OT Form")
     public void iFillTheOTForm() {
         landPageStep.fillOTform();
+    }
+
+    @Then("I fill the Control in {string}")
+    public void iFillTheControlIn(String name) {
+        landPageStep.fillControl();
+    }
+
+    @And("I Search the Name under the {string}")
+    public void iSearchTheNameUnderThe(String Task) {
+        auditStep.searchTasks();    }
+
+    @And("I Select the Type {string} And {string}")
+    public void iSelectTheTypeAnd(String Type, String action) {
+        myTaskStep.selectTaskType(Type,action);
+    }
+
+    @Then("I capture the {string}")
+    public void iCaptureThe(String name) {
+        landPageStep.getScreenresult(name);
+    }
+
+    @And("I Search the Name under Audits")
+    public void iSearchTheNameUnderAudits() {
+        auditStep.searchAuditforDasboard();
     }
 }

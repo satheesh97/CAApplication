@@ -1,73 +1,28 @@
 package com.step.steps;
 
-import org.apache.log4j.xml.DOMConfigurator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 public class Log4jPrint {
      static Logger Log = LogManager.getLogger(Log4jPrint.class.getName());
+    // Logger l = new Logger();
+enum level{
+    INFO, WARNING,ERROR
+}
 
+    public String log(level l,String Message) {
+        LocalDateTime present = LocalDateTime.now();
+        DateTimeFormatter f =DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+        String logDateTime = present.format(f);
 
-    public static void startTestCase(String sTestCaseName){
-
-        Log.info("****************************************************************************************");
-
-        Log.info("****************************************************************************************");
-
-        Log.info("$$$$$$$$$$$$$$$$$$$$$                 "+sTestCaseName+ "       $$$$$$$$$$$$$$$$$$$$$$$$$");
-
-        Log.info("****************************************************************************************");
-
-        Log.info("****************************************************************************************");
-
+        return  l +": " +logDateTime +":"+ Message;
     }
 
-    //This is to print log for the ending of the test case
 
-    public static void endTestCase(String sTestCaseName){
 
-        Log.info("XXXXXXXXXXXXXXXXXXXXXXX             "+"-E---N---D-"+"             XXXXXXXXXXXXXXXXXXXXXX");
-
-        Log.info("X");
-
-        Log.info("X");
-
-        Log.info("X");
-
-        Log.info("X");
-
-    }
-
-    // Need to create these methods, so that they can be called
-
-    public static void info(String message) {
-
-        Log.info(message);
-
-    }
-
-    public static void warn(String message) {
-
-        Log.warn(message);
-
-    }
-
-    public static void error(String message) {
-
-        Log.error(message);
-
-    }
-
-    public static void fatal(String message) {
-
-        Log.fatal(message);
-
-    }
-
-    public static void debug(String message) {
-
-        Log.debug(message);
-
-    }
 
 }
