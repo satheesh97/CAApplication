@@ -37,7 +37,8 @@ public class LoginStepDef  {
 
     @Given("wait for {string} seconds")
     public void waitForSeconds(String time) {
-        waitStep.waitSec(2);
+        int wait= Integer.parseInt(time);
+        waitStep.waitSec(wait);
 
     }
 
@@ -60,6 +61,11 @@ public class LoginStepDef  {
     @And("I fill the Audit form Without Key Date")
     public void iFillTheAuditFormWithoutKeyDate() throws InterruptedException {
         auditStep.auditFillWithoutDate();
+    }
+
+    @And("I fill the Audit form Type {string}")
+    public void iFillTheAuditFormType(String type) throws InterruptedException {
+        auditStep.auditFillWithoutDate(type);
     }
 
     @And("Click the button {string}")
@@ -93,5 +99,21 @@ public class LoginStepDef  {
     @And("I Validate the Confidential Audit")
     public void iValidateTheConfidentialAudit() {
        auditStep.verifyconfirdential();
+    }
+
+
+    @And("click sheet {string}")
+    public void clickSheet(String name) {
+        waitStep.clickablediv(name);
+    }
+
+    @And("I Click the {string} to {string}")
+    public void iClickTheTo(String reminder, String option) {
+        waitStep.clickReminderButton(reminder,option);
+    }
+
+    @And("I click {string} button icon")
+    public void iClickButton(String icon) {
+        waitStep.clickIcon(icon);
     }
 }

@@ -1,7 +1,7 @@
 @nams159 @sp3
 Feature: NAMS-159: Move Audit Phase to Clearance and Reporting
    @reg
-  Scenario Outline:NAMS-160: Move Audit Phase to Archived
+  Scenario Outline:NAMS-159: Move Audit Phase to Clearance and Reporting
     Given I Enter the "<Username>" and "<Password>"
     Given  wait for "2" seconds
     And I  click the menu "Audits"

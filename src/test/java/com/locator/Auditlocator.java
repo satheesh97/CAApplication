@@ -34,7 +34,6 @@ public class Auditlocator {
     multidropDwon
      */
     public String relRegion = "//div/span[contains(text(),'Relevant Regions')]//following::div[@class='MultipleDropdownWidget---dropdown_value']";
-    public String relCategory = "//div/span[contains(text(),'Relevance Category')]//following::div[@class='MultipleDropdownWidget---dropdown_value']";
 
 
     public String dropPriority = "//div[contains(text(),'--- Select a Priority ---')]";
@@ -58,7 +57,7 @@ public class Auditlocator {
 
     public String auditScopeTitle ="//div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/input[1]";
     public String DETTitle="//div/span[contains(text(),'Owner')]//following::div/input";
-    public String DETfilePath=System.getProperty("user.dir")+"\\src\\test\\resources\\document\\document.txt";
+    public String DETfilePath=System.getProperty("user.dir")+"\\src\\test\\resources\\document\\year.text";
     public String DETUpload=".//input[@type='file']";
     public String DETAssessment="//label[contains(text(),'Assessment Conclusion')]//following::textarea";
 
@@ -111,4 +110,10 @@ public class Auditlocator {
  public String MRCCReviewsTitle ="//span[text()=' MRCC Reviews']//following::table/tbody/tr/td/div/input";
  public String MRCCReviesRecipt="//span[text()=' MRCC Reviews']//following::table/tbody/tr/td/div/div/input";
 public String MRCCTable="//p/span/strong/a[contains(text(),'MRCC')]";
+
+public String auditScop="//div/p/a[contains(text(),'Add Audit Scope')]";
+public String auditScopeDescription="//label[contains(text(),'Description')]//following::textarea";
+
+
+
 }

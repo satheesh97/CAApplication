@@ -45,6 +45,14 @@ public class WaitStep extends AbstractStepDef {
         driver.manage().timeouts().pageLoadTimeout(100,TimeUnit.SECONDS);
         waitSometime();
         logger.info(name+" element  Clicked Sucessfully");
+    }
+
+    public void clickablediv(String name)  {
+        String path = "//strong[contains(text(),'"+name+"')]";
+        driver.findElement(By.xpath(path)).click();
+        driver.manage().timeouts().pageLoadTimeout(100,TimeUnit.SECONDS);
+        waitSometime();
+        logger.info(name+" element  Clicked Sucessfully");
 
 
     }
@@ -75,14 +83,17 @@ public void clickText(String textName){
     public void clickButton(String Button){
         String path = "//button[contains(text(),'"+ Button +"')]";
         driver.findElement(By.xpath(path)).click();
-        driver.manage().timeouts().setScriptTimeout(100,TimeUnit.SECONDS);
         logger.info(Button +" element  Clicked Sucessfully");
         buttonClickWait();
     }
+    public void close(){
+        driver.close();
+    }
+
 
     public void fileUpload(String path, String dir){
        WebElement file=  driver.findElement(By.xpath(path));
-file.sendKeys(dir);
+        file.sendKeys(dir);
     }
     public void clickMenu(String menuTab){
 
@@ -104,6 +115,24 @@ file.sendKeys(dir);
         String subMenu="//p/span[contains(text(),'"+subMenubutton+"')]";
         driver.findElement(By.xpath(subMenu)).click();
         logger.info(subMenubutton+" element  Clicked Sucessfully");
+        buttonClickWait();
+    }
+    public void clickReminderButton(String reminder, String option){
+        String Confrim ="//h4[text()='"+reminder+"']//following::button[text()='"+option+"']";
+        driver.findElement(By.xpath(Confrim)).click();
+        logger.info(option+" element  Clicked Sucessfully");
+        buttonClickWait();
+    }
+    public void clickIcon(String icon){
+
+        String Confrim = null;
+        if(icon.equalsIgnoreCase("cancel")){
+            Confrim ="//div[@data-thumbnail='false']";
+        }else if(icon.equalsIgnoreCase("dot")){
+            Confrim="//button[contains(@class,'record_action_menu_icon')]";
+        }
+        driver.findElement(By.xpath(Confrim)).click();
+        logger.info(icon+" element  Clicked Sucessfully");
         buttonClickWait();
     }
 
@@ -128,6 +157,13 @@ file.sendKeys(dir);
             logger.info("element  Clicked Sucessfully");
         }
     }
+
+    public void clickYear(){
+        if( driver.findElement(By.xpath(landingPageLocator.yearSearchButton)).isDisplayed()) {
+            driver.findElement(By.xpath(landingPageLocator.yearSearchButton)).click();
+            logger.info("element  Clicked Sucessfully");
+        }
+    }
     public void clickTask(){
 
             driver.findElement(By.xpath(landingPageLocator.TaskSearchButtion)).click();
@@ -144,7 +180,7 @@ file.sendKeys(dir);
     public void buttonClickWait(){
         for(int i=0;i<=5;i++) {
             try {
-                Thread.sleep(1000);
+                Thread.sleep(1500);
             } catch (Exception e) {
                 e.printStackTrace();
             }

@@ -3,6 +3,7 @@ package com.locator;
 public class LandingPageLocator {
 
     public String searchButton ="//span[contains(text(),'MY AUDITS')]//following::button[contains(text(),'Search')]";
+    public String yearSearchButton="//span[contains(text(),'ANNUAL PLANS')]//following::button[contains(text(),'Search')]";
     public String TaskSearchButtion="//span[contains(text(),'MY TASKS')]//following::button[contains(text(),'Search')]";
     public String searchButton_1 ="//button[contains(text(),'Search')]";
     public  String homeTab ="//a/div[contains(text(),'Home')]";
@@ -19,7 +20,7 @@ public class LandingPageLocator {
 
     public String searchAudits ="//input[@placeholder='Search Audits']";
 
-    public String testdata ="//span[contains(text(),'MY AUDITS')]//following::table//following::tr/td/div/p/strong/a";
+    public String testdata ="//span[contains(text(),'AUDITS')]//following::table//following::tr/td/div/p/strong/a";
     public String summary ="//div[contains(text(),'Summary')]";
     public String rAndControls="//div[contains(text(),'Risks and Controls')]";
     public String bandStaff ="//div[contains(text(),'Budget and Staffing')]";
@@ -56,21 +57,21 @@ public class LandingPageLocator {
     public String  DisRaisedFrom="//span[text()='Disposed Exceptions']//following::th[@abbr='Raised From']";
     public String DisRelatedIssues="//span[text()='Disposed Exceptions']//following::th[@abbr='Related Issues']";
     public String DisDiscription="//span[text()='Disposed Exceptions']//following::th[@abbr='Description']";
-    public String issTitle="//span[text()='Issues']//following::th[@abbr='Title']";
-    public String issStatus="//span[text()='Issues']//following::th[@abbr='Status']";
-    public String issRelException="//span[text()='Issues']//following::th[@abbr='Related Exception']";
-    public String issOwner="//span[text()='Issues']//following::th[@abbr='Owners']";
-    public String issRating="//span[text()='Issues']//following::th[@abbr='Rating']";
-    public String issDueDate="//span[text()='Issues']//following::th[@abbr='Due Date']";
-    public String issViewAction="//span[text()='Issues']//following::th[@abbr='View Actions']";
+    public String issTitle="//span[text()='Issues']//following::th[@abbr='Title']/div/span";
+    public String issStatus="//span[text()='Issues']//following::th[@abbr='Status']/div/span";
+    public String issRelException="//span[text()='Issues']//following::th[@abbr='Related Exception']/div/span";
+    public String issOwner="//span[text()='Issues']//following::th[@abbr='Owners']/div/span";
+    public String issRating="//span[text()='Issues']//following::th[@abbr='Rating']/div/span";
+    public String issDueDate="//span[text()='Issues']//following::th[@abbr='Due Date']/div/span";
+    public String issViewAction="//span[text()='Issues']//following::th[@abbr='View Actions']/div/span";
     public String disposedIssues ="//span[text()='Disposed Issues']";
-    public String issDisTitle="//span[text()='Disposed Issues']//following::th[@abbr='Title']";
-    public String issDisStatus="//span[text()='Disposed Issues']//following::th[@abbr='Status']";
-    public String issDisRelException="//span[text()='Disposed Issues']//following::th[@abbr='Related Exception']";
-    public String issDisOwners="//span[text()='Disposed Issues']//following::th[@abbr='Owners']";
-    public String issDisRating="//span[text()='Disposed Issues']//following::th[@abbr='Rating']";
-    public String issDissDueDate="//span[text()='Disposed Issues']//following::th[@abbr='Due Date']";
-    public String issDisViewActions="//span[text()='Disposed Issues']//following::th[@abbr='View Actions']";
+    public String issDisTitle="//span[text()='Disposed Issues']//following::th[@abbr='Title']/div/span";
+    public String issDisStatus="//span[text()='Disposed Issues']//following::th[@abbr='Status']/div/span";
+    public String issDisRelException="//span[text()='Disposed Issues']//following::th[@abbr='Related Exception']/div/span";
+    public String issDisOwners="//span[text()='Disposed Issues']//following::th[@abbr='Owners']/div/span";
+    public String issDisRating="//span[text()='Disposed Issues']//following::th[@abbr='Rating']/div/span";
+    public String issDissDueDate="//span[text()='Disposed Issues']//following::th[@abbr='Due Date']/div/span";
+    public String issDisViewActions="//span[text()='Disposed Issues']//following::th[@abbr='View Actions']/div/span";
 
 
 

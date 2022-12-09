@@ -129,6 +129,18 @@ public class LandPageStep extends AbstractStepDef {
 
     }
 
+    public void saveDETforExceptionL2(){
+        auditStep.clickRadioButton(auditlocator.DETNotEffective);
+        waitStep.waitPageload();
+        auditStep.clickRadioButton(creatControlLocator.exceptionSaveNow);
+        auditStep.enterTextarea(auditlocator.DETAssessment);
+        waitStep.clickButton("Save");
+        click(auditlocator.DETReminderSave);
+        waitStep.driverwait5();
+
+
+    }
+
     /*
      *method for OET Application
      */
@@ -282,9 +294,21 @@ public void verifyDisposalException(){
         creatcontrol1();
     }
 
+    public void clickTableSelction(){
+        click(creatControlLocator.risk1Table);
+        waitStep.waitSec(2);
+        click(creatControlLocator.selectL2data);
+        waitStep.waitSec(2);
+        click(creatControlLocator.selectL3data);
+        waitStep.waitSec(2);
+    }
     public void fillDETForm(){
         waitStep.pageWait();
         click(creatControlLocator.level3Task);
+    }
+    public void fillDETFormL2(){
+        waitStep.pageWait();
+        click(creatControlLocator.level2Task);
     }
 
     public void Leve3Application(){
@@ -306,6 +330,7 @@ public void verifyDisposalException(){
         clickButton("Create Control");
         auditStep.enterText(creatControlLocator.title);
         waitStep.clickButton("Save");
+        waitStep.waitPageload();
     }
 
     public void creatcontrol() {
@@ -313,6 +338,7 @@ public void verifyDisposalException(){
         clickButton("Create Control");
         auditStep.enterText(creatControlLocator.title);
         waitStep.clickButton("Save");
+        waitStep.waitPageload();
     }
 
     public void fillOTform(){
@@ -360,7 +386,7 @@ public void verifyDisposalException(){
         auditStep.clickRadioButton(creatControlLocator.exceptionSaveNow);
         waitStep.clickButton("Save");
         click(button);
-        waitStep.clickWait();
+        waitStep.buttonClickWait();
     }
 
     public void clickButton(String Button){
@@ -467,9 +493,9 @@ logger.error(expected+ "UI is not availabel ");
 
     }
 
-    public static void takeSnapShot(String name) {
+    public  void takeSnapShot(String name) {
         try {
-            String fileWithPath = System.getProperty("user.dir") + "\\src\\test\\resources\\OutPutImage\\" + name + ".jpg";
+            String fileWithPath = System.getProperty("user.dir") + "\\src\\test\\resources\\Section\\" + name + ".jpg";
             TakesScreenshot scrShot = ((TakesScreenshot) webDriver);
             File SrcFile = scrShot.getScreenshotAs(OutputType.FILE);
             File DestFile = new File(fileWithPath);
@@ -490,4 +516,6 @@ logger.info("Image  Stored in Path");
 
         }
     }
+
+
 }

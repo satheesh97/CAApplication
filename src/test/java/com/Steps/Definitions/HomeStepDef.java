@@ -1,9 +1,7 @@
 package com.Steps.Definitions;
 
-import com.step.steps.AuditStep;
-import com.step.steps.LandPageStep;
-import com.step.steps.LoginStep;
-import com.step.steps.WaitStep;
+import com.step.steps.*;
+import com.step.steps.MRCCTab.MRCCManageStep;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -18,11 +16,17 @@ public class HomeStepDef {
     LandPageStep landPageStep= new LandPageStep();
     WaitStep waitStep = new WaitStep();
     AuditStep auditStep =new AuditStep();
+
+    MyTaskStep myTaskStep = new MyTaskStep();
+    MRCCManageStep mrccManageStep =new MRCCManageStep();
     @And("I Search the Name")
     public void iSearchTheName() {
         auditStep.searchAudit();
     }
-
+    @And("I Search the Name Under Audit")
+    public void iSearchTheNameunderAudit() {
+        auditStep.searchAuditAudit();
+    }
     @Given("Launch the browser")
     public void launchTheBrowser() {
         loginStep.launcbrowserurl();
@@ -82,5 +86,19 @@ public class HomeStepDef {
     }
 
 
+    @And("I filter the intersection field {string}")
+    public void iFilterTheIntersectionField(String section) {
+        mrccManageStep.intersction(section);
+    }
 
+    @And("I select the Table Row")
+    public void iSelectTheTableRow() {
+        landPageStep.clickTableSelction();
+    }
+
+    @And("I click the Menu icon in {string}")
+    public void iClickTheMenuIconIn(String data) {
+        myTaskStep.manageOT(data);
+        myTaskStep.completeOTException();
+    }
 }

@@ -12,6 +12,7 @@ import org.openqa.selenium.WebElement;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -65,6 +66,16 @@ public class AuditStep extends AbstractStepDef {
         insertDate();
 
     }
+
+    public void belowPriority(){
+
+    }
+
+    public void fillDate(){
+        insertDate();
+       // HasMap<String, Integer> demo = new HashMap<String, Integer>();
+    }
+
     public void auditFillWithoutDate() throws InterruptedException {
         enterText(auditlocator.title);
         commonLogic.setTitle(getTitlename);
@@ -86,6 +97,29 @@ public class AuditStep extends AbstractStepDef {
         impactedDivisions();
     }
 
+    public void auditFillWithoutDate(String type) throws InterruptedException {
+        enterText(auditlocator.title);
+        commonLogic.setTitle(getTitlename);
+        commonLogic.setName(driver.findElement(By.xpath(auditlocator.title)).getAttribute("value"));
+        uiText=commonLogic.getName();
+        commonLogic.writeFile(uiText);
+        clickRadioButton(auditlocator.confidential);
+        callTypeFunctionPriority(type);
+        callPriority();
+        mulClickDropdown(auditlocator.relRegion);
+        mulClickDropdown(auditlocator.relRegion);
+        clickRadioButton(auditlocator.group_Risk);
+        clickObject(auditlocator.addRiskThem);
+        if(type.equalsIgnoreCase("Regular Audit")){
+        fillMRCCReiview();}
+        singleClickdown(auditlocator.selectThem);
+        enterNo(auditlocator.budget);
+        enterTextarea(auditlocator.objective);
+        keyPeople();
+        impactedDivisions();
+    }
+
+
     public void verifyconfirdential(){
 
         loginStep.isVisible(landingPageLocator.confidentilaIcon);
@@ -98,6 +132,12 @@ public void fillMRCCReiview(){
     public void searchAudit(){
         driver.findElement(By.xpath(landingPageLocator.searchAudit)).sendKeys(commonLogic.readFile());
         waitStep.click();
+        logger.info("Search field prescent and Value is  "+ commonLogic.readFile());
+        waitStep.driverwait5();
+    }
+    public void searchAuditAudit(){
+        driver.findElement(By.xpath(landingPageLocator.searchAudit)).sendKeys(commonLogic.readFile());
+        waitStep.clickSearch();
         logger.info("Search field prescent and Value is  "+ commonLogic.readFile());
         waitStep.driverwait5();
 
@@ -150,6 +190,7 @@ public void fillMRCCReiview(){
         searchAndSelect(auditlocator.headOfAudit);
     }
 
+
     public void changeRecipient(){
         searchAndEnterWithData(auditlocator.MRCCReviesRecipt, "Samantha");
     }
@@ -193,6 +234,11 @@ public void fillMRCCReiview(){
     }
     public void callTypeFunctionPriority()   {
         singleClickdownforPriority(auditlocator.dropType, "Regular Audit");
+        callsubmethod();
+
+    }
+    public void callTypeFunctionPriority(String type)   {
+        singleClickdownforPriority(auditlocator.dropType, type);
         callsubmethod();
 
     }

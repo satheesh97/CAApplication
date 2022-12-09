@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Automation Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Nov 17, 2022 09:44:48 AM</span></a>
+<a href="#"><span class="badge badge-primary">Dec 9, 2022 12:51:18 PM</span></a>
 </li>
 </ul>
 </div>
@@ -79,7 +79,7 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@sp4</a><a class="dropdown-item" href="#">@nams74</a><a class="dropdown-item" href="#">@test1711221</a><a class="dropdown-item" href="#">@reg</a>
+<a class="dropdown-item" href="#">@test8003</a><a class="dropdown-item" href="#">@test8001</a><a class="dropdown-item" href="#">@sp6</a><a class="dropdown-item" href="#">@test8002</a><a class="dropdown-item" href="#">@test8005</a><a class="dropdown-item" href="#">@reg</a><a class="dropdown-item" href="#">@test8004</a><a class="dropdown-item" href="#">@nams80</a>
 </ul>
 </li>
 </ul>
@@ -90,9 +90,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">NAMS-74: Manage Fieldwork Tollgate</p>
+            <p class="name">NAMS-80: Publish Audit Report</p>
             <p class="text-sm">
-              <span>9:44:51 AM</span> / <span>00:01:49:709</span>
+              <span>12:51:20 PM</span> / <span>00:12:54:505</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -100,10 +100,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">NAMS-74: Manage Fieldwork Tollgate</h5>
-<span class='badge badge-success'>11.17.2022 9:44:51 AM</span>
-<span class='badge badge-danger'>11.17.2022 9:46:40 AM</span>
-<span class='badge badge-default'>00:01:49:709</span>
+<h5 class="test-status text-pass">NAMS-80: Publish Audit Report</h5>
+<span class='badge badge-success'>12.09.2022 12:51:20 PM</span>
+<span class='badge badge-danger'>12.09.2022 1:04:15 PM</span>
+<span class='badge badge-default'>00:12:54:505</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -115,14 +115,14 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>NAMS-74: Manage Fieldwork Tollgate</div>
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>NAMS-80: Publish Audit Report</div>
       </div>
     </div>
         <div class="scenario_outline collapse">
             <div class="card-body l1">
               <div class="card-header">
                 <div class="card-title outline-child">
-                  <div class="node" id="3"><span class="badge log pass-bg mr-2">Pass</span>NAMS-74: Manage Fieldwork Tollgate</div>
+                  <div class="node" id="3"><span class="badge log pass-bg mr-2">Pass</span>NAMS-80: Publish Audit Report</div>
                 </div>
               </div>
               <div class="card-body mt-3 collapse">
@@ -132,7 +132,7 @@
       </div>
                   </div>
                   <div class="step pass-bg">
-                    <span>Given wait for "2" seconds</span>
+                    <span>And wait for "2" seconds</span>
       <div>
       </div>
                   </div>
@@ -167,7 +167,282 @@
       </div>
                   </div>
                   <div class="step pass-bg">
-                    <span>And I Move to "Summary"</span>
+                    <span>And I Search the Name</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Move to "Risks and Controls"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And file the Risk level "2.5"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Save" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I click menu Button "Document & Stakeholder Comms"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I click the "Audit Planning Memorandum" and "Manage APM" menu</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I fill the APM Managemnt Form</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I click the "Audit Announcement Memorandum" and "Manage AAM Distribution List" menu</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Confirm" and Wait</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="56"><span class="badge log pass-bg mr-2">Pass</span>NAMS-80: Publish Audit Report</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given I Enter the "AA_test1" and "password@1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given wait for "2" seconds</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  click the menu "Home"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then I click submenu "My Audits"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Search the Name</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Move to "Document & Stakeholder Comms"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I capture the "AAM published info"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="21"><span class="badge log pass-bg mr-2">Pass</span>NAMS-80: Publish Audit Report Manager User</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="22"><span class="badge log pass-bg mr-2">Pass</span>NAMS-80: Publish Audit Report Manager User</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given I Enter the "satheesh.kaliappan" and "Satheesh1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given wait for "2" seconds</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  click the menu "Home"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then I click submenu "My Audits"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Search the Name</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Move to "Document & Stakeholder Comms"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I click the "Audit Planning Memorandum" and "Publish APM" menu</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I upload the File</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Confirm" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Click the "Reminder" to "Confirm"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="33"><span class="badge log pass-bg mr-2">Pass</span>NAMS-80: Publish Audit Report Manager User</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given I Enter the "satheesh.kaliappan" and "Satheesh1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given wait for "2" seconds</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  click the menu "Home"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then I click submenu "My Audits"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Search the Name</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Move to "Document & Stakeholder Comms"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I click the "Audit Announcement Memorandum" and "Publish AAM" menu</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Confirm" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Submit" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I upload the File</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Proceed to publish" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Email distribution list" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "OK" and Wait</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="47"><span class="badge log pass-bg mr-2">Pass</span>NAMS-80: Publish Audit Report Manager User</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given I Enter the "satheesh.kaliappan" and "Satheesh1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given wait for "2" seconds</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  click the menu "Home"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then I click submenu "My Audits"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Search the Name</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Move to "Document & Stakeholder Comms"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I click the "Audit Report" and "Publish Audit Report" menu</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I fill the publish Audit Form</span>
       <div>
       </div>
                   </div>
@@ -191,7 +466,7 @@
 <div class="test-list">
 <div class="test-list-tools">
 <ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">4</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">8</span></a></li></ul>
 </div>
 <div class="test-list-wrapper scrollable">
 <ul class="test-list-item">
@@ -200,12 +475,12 @@
 <span class="meta">
 <span class='badge log pass-bg'>1</span>
 </span>
-<p class="name">@sp4</p>
+<p class="name">@test8003</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@sp4</h4>
+<h4>@test8003</h4>
 <span status="pass" class='badge log pass-bg'>1 passed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -219,11 +494,11 @@
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>09:44:51 AM</td>
+<td>12:56:36 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='3'>NAMS-74: Manage Fieldwork Tollgate</a>
+<a href="#" class="linked" test-id='1' id='33'>NAMS-80: Publish Audit Report Manager User</a>
 <div class="">
-<span class="badge badge-default">NAMS-74: Manage Fieldwork Tollgate.NAMS-74: Manage Fieldwork Tollgate</span>
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report Manager User</span>
 </div>
 </td>
 </tr>
@@ -236,12 +511,12 @@
 <span class="meta">
 <span class='badge log pass-bg'>1</span>
 </span>
-<p class="name">@nams74</p>
+<p class="name">@test8001</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@nams74</h4>
+<h4>@test8001</h4>
 <span status="pass" class='badge log pass-bg'>1 passed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -255,11 +530,153 @@
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>09:44:51 AM</td>
+<td>12:51:20 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='3'>NAMS-74: Manage Fieldwork Tollgate</a>
+<a href="#" class="linked" test-id='1' id='3'>NAMS-80: Publish Audit Report</a>
 <div class="">
-<span class="badge badge-default">NAMS-74: Manage Fieldwork Tollgate.NAMS-74: Manage Fieldwork Tollgate</span>
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>5</span>
+</span>
+<p class="name">@sp6</p>
+<p class="duration text-sm">5 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@sp6</h4>
+<span status="pass" class='badge log pass-bg'>5 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:51:20 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='3'>NAMS-80: Publish Audit Report</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:15 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='22'>NAMS-80: Publish Audit Report Manager User</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report Manager User</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:36 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='33'>NAMS-80: Publish Audit Report Manager User</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report Manager User</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:58:57 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='47'>NAMS-80: Publish Audit Report Manager User</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report Manager User</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:03:27 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='56'>NAMS-80: Publish Audit Report</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>4</span>
+</span>
+<p class="name">@test8002</p>
+<p class="duration text-sm">4 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@test8002</h4>
+<span status="pass" class='badge log pass-bg'>4 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:15 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='22'>NAMS-80: Publish Audit Report Manager User</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report Manager User</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:36 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='33'>NAMS-80: Publish Audit Report Manager User</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report Manager User</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:58:57 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='47'>NAMS-80: Publish Audit Report Manager User</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report Manager User</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:03:27 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='56'>NAMS-80: Publish Audit Report</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report</span>
 </div>
 </td>
 </tr>
@@ -272,12 +689,12 @@
 <span class="meta">
 <span class='badge log pass-bg'>1</span>
 </span>
-<p class="name">@test1711221</p>
+<p class="name">@test8005</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@test1711221</h4>
+<h4>@test8005</h4>
 <span status="pass" class='badge log pass-bg'>1 passed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -291,11 +708,11 @@
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>09:44:51 AM</td>
+<td>13:03:27 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='3'>NAMS-74: Manage Fieldwork Tollgate</a>
+<a href="#" class="linked" test-id='1' id='56'>NAMS-80: Publish Audit Report</a>
 <div class="">
-<span class="badge badge-default">NAMS-74: Manage Fieldwork Tollgate.NAMS-74: Manage Fieldwork Tollgate</span>
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report</span>
 </div>
 </td>
 </tr>
@@ -306,14 +723,90 @@
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log pass-bg'>1</span>
+<span class='badge log pass-bg'>5</span>
 </span>
 <p class="name">@reg</p>
-<p class="duration text-sm">1 tests</p>
+<p class="duration text-sm">5 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
 <h4>@reg</h4>
+<span status="pass" class='badge log pass-bg'>5 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:51:20 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='3'>NAMS-80: Publish Audit Report</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:15 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='22'>NAMS-80: Publish Audit Report Manager User</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report Manager User</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:36 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='33'>NAMS-80: Publish Audit Report Manager User</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report Manager User</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:58:57 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='47'>NAMS-80: Publish Audit Report Manager User</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report Manager User</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:03:27 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='56'>NAMS-80: Publish Audit Report</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@test8004</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@test8004</h4>
 <span status="pass" class='badge log pass-bg'>1 passed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -327,11 +820,87 @@
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>09:44:51 AM</td>
+<td>12:58:57 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='3'>NAMS-74: Manage Fieldwork Tollgate</a>
+<a href="#" class="linked" test-id='1' id='47'>NAMS-80: Publish Audit Report Manager User</a>
 <div class="">
-<span class="badge badge-default">NAMS-74: Manage Fieldwork Tollgate.NAMS-74: Manage Fieldwork Tollgate</span>
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report Manager User</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>5</span>
+</span>
+<p class="name">@nams80</p>
+<p class="duration text-sm">5 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@nams80</h4>
+<span status="pass" class='badge log pass-bg'>5 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:51:20 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='3'>NAMS-80: Publish Audit Report</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:15 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='22'>NAMS-80: Publish Audit Report Manager User</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report Manager User</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:36 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='33'>NAMS-80: Publish Audit Report Manager User</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report Manager User</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:58:57 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='47'>NAMS-80: Publish Audit Report Manager User</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report Manager User</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:03:27 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='56'>NAMS-80: Publish Audit Report</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report</span>
 </div>
 </td>
 </tr>
@@ -352,13 +921,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Nov 17, 2022 09:44:48 AM</h3>
+<h3>Dec 9, 2022 12:51:18 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Nov 17, 2022 09:46:41 AM</h3>
+<h3>Dec 9, 2022 01:04:15 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -409,7 +978,7 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>1</b> scenarios passed</small></div>
+<div><small data-tooltip='100%'><b>5</b> scenarios passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
@@ -429,7 +998,7 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>9</b> steps passed</small></div>
+<div><small data-tooltip='100%'><b>55</b> steps passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> steps failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
@@ -448,7 +1017,7 @@
 </div></div>
 <script>
 var timeline = {
-"NAMS-74: Manage Fieldwork Tollgate":109.709
+"NAMS-80: Publish Audit Report":774.505
 };
 </script>
 <div class="row">
@@ -458,7 +1027,7 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>@sp4</td>
+<td>@test8003</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
@@ -466,7 +1035,7 @@ var timeline = {
 <td>100%</td>
 </tr>
 <tr>
-<td>@nams74</td>
+<td>@test8001</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
@@ -474,7 +1043,23 @@ var timeline = {
 <td>100%</td>
 </tr>
 <tr>
-<td>@test1711221</td>
+<td>@sp6</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@test8002</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@test8005</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
@@ -483,7 +1068,23 @@ var timeline = {
 </tr>
 <tr>
 <td>@reg</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@test8004</td>
 <td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@nams80</td>
+<td>5</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -503,13 +1104,13 @@ failParent: 0,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 1,
+passChild: 5,
 failChild: 0,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 9,
+passGrandChild: 55,
 failGrandChild: 0,
 warningGrandChild: 0,
 skipGrandChild: 0,

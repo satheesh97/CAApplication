@@ -26,6 +26,8 @@ public class LoginStep extends AbstractStepDef {
     }
 
     public void launchUsername(String name, String pass){
+        boolean present =driver.findElement(elementLocator.name).isDisplayed();
+        boolean present1 =driver.findElement(elementLocator.name).isEnabled();
 
         driver.findElement(elementLocator.name).sendKeys(name);
         logger.info("Launch the User name" + name);

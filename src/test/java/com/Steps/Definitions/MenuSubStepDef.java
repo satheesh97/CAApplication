@@ -41,6 +41,11 @@ public class MenuSubStepDef {
         myTaskStep.fllissueForm();
     }
 
+    @And("I fill the Create Issue Form verify")
+    public void iFillTheCreateIssueFormVerify() {
+        myTaskStep.fllissueFormVerify();
+    }
+
     @And("I Search the Name under the My Task")
     public void iSearchTheNameUnderTheMyTask() {
         auditStep.searchTasksDashBoard();
@@ -91,6 +96,11 @@ public class MenuSubStepDef {
     public void iFillTheConclusionOfDETOrOETWithOTSave() {
         landPageStep.saveDETforException();
     }
+    @And("I fill the conclusion of DET or OET with OT save in L2")
+    public void iFillTheConclusionOfDETOrOETWithOTSaveinL2() {
+        landPageStep.saveDETforExceptionL2();
+        myTaskStep.completeOTException();
+    }
 
     @And("I fill the conclusion of DET or OET save")
     public void iFillTheConclusionOfDETOrOETSave() {
@@ -131,7 +141,10 @@ public class MenuSubStepDef {
     public void iClickTheMenu(String Icon) {
         myTaskStep.exceptionMenuClick(Icon);
     }
-
+    @And("I click drop button {string}")
+    public void iClickDropButton(String path) {
+        myTaskStep.manageOptionMenuClick(path);
+    }
     @And("I move to {string} Page")
     public void iMoveToPage(String deactivate) {
         if(deactivate.contains(("Deactivate OT"))){
@@ -169,4 +182,50 @@ public class MenuSubStepDef {
     public void iValidate(String form) {
         mrccManageStep.validateForm(form);
     }
+
+    @And("I manage the GroupStratgy")
+    public void iManageTheGroupStratgy() {
+        mrccManageStep.manageGroup();
+    }
+
+    @And("I remove the Pillar")
+    public void iRemoveThePillar() {
+        mrccManageStep.removePiller();
+    }
+
+    @And("I Verify Activity History")
+    public void iVerifyActivityHistory() {
+        mrccManageStep.verifyHistroy();
+    }
+
+
+
+    @And("I fill the {string}")
+    public void iFillThe(String name) {
+        auditStep.auditScope();
+        landPageStep.takeSnapShot(name);
+    }
+
+    @And("I fill the {string} Phase")
+    public void iFillThePhase(String Phase) {
+       mrccManageStep.manageBudget(Phase);
+    }
+
+    @And("I fill the Date Field in Audidt Page")
+    public void iFillTheDateFieldInAudidtPage() {
+        auditStep.fillDate();
+    }
+
+    @And("I file the audit lead")
+    public void iFileTheAuditLead() {
+    mrccManageStep.fillLeadAuidt();
+    }
+
+    @And("I validate the Risk is Disable")
+    public void iValidateTheRiskIsDiable() {
+        mrccManageStep.verifyElemetn();
+    }
+
+
+
 }

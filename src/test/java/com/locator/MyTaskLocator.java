@@ -31,6 +31,9 @@ public class MyTaskLocator {
     public String dueDate=".//div/label[text()='Due Date']//following::input";
     public String riskCategory=".//div/span[text()='Risk Category']//following::div/div/div";
     public String issueCause="//div/span[contains(text(),'Issue Cause')]//following::div[@class='MultipleDropdownWidget---dropdown_value']";
+
+   public String systemOrigin="//span[contains(text(),'External System Origin')]//following::div/div/div";
+   public String systemID="//label[contains(text(),'External System ID')]//following::input";
     public String groupRiskThem="//div/span[contains(text(),'Group Risk Themes')]//following::div[@class='MultipleDropdownWidget---dropdown_value']";
     public String materialEntities="//div/span[contains(text(),'Material Legal Entities')]//following::div[@class='MultipleDropdownWidget---dropdown_value']";
     public String relavantRegion="//div/span[contains(text(),'Relevant Regions')]//following::div[@class='MultipleDropdownWidget---dropdown_value']";
@@ -51,6 +54,7 @@ public class MyTaskLocator {
    public String menuOTIcon="//span[contains(text(),'Outcome Test')]//following::tbody/tr/td/div/div/button";
 
    public String menuIcon="//span[contains(text(),'')]//following::tbody/tr/td/div/div/button";
+   public String manageDocmenu="//button[contains(@class,'has_pulldown')]";
    public String menuUC="//div[contains(@id,'_tetherWrapper')]//li/span[text()='Update Control']";
     public String menuDET="//div[contains(@id,'_tetherWrapper')]//li/span[text()='Manage DET']";
     public String menuOET="//div[contains(@id,'_tetherWrapper')]//li/span[text()='Manage OET']";
@@ -64,4 +68,10 @@ public String deactivateOTReason="//label[contains(text(),'Rationale for Deactiv
 public String planning="//a[contains(text(),'Planning')]";
 public String fieldWork="//a[contains(text(),'Fieldwork')]";
 public String report="//a[contains(text(),'Reporting')]";
+
+public String exceptionOTTest ="//div/span[text()='Create Exception from Outcome Test?']//following::label[text()='Yes']";
+public String exceptionOTsave ="//div/span[text()='Create Exception On Save?']//following::label[text()='Now']";
+
+public String executiveSummery="//label[contains(text(),'Executive Summary Feedback')]//following::textarea";
+public String approve ="//span[contains(text(),'Decision')]//following::label[contains(text(),'Approve')]";
 }

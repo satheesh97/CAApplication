@@ -19,6 +19,7 @@
       And I click menu Button "MRCC Reviews"
       Then I click Table "MRCC"
       Then Click the button "Manage MRCC Indicators" and Wait
+      And I Select Indicator in MRCC
       Then Click the button "Save" and Wait
       Then I navigat to "MRCC Reviews"
       And I click menu Button "Summary"

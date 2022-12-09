@@ -11,7 +11,16 @@
       Then Click the button "Submit" and Wait
       And I  click the menu "Home"
       Then I click submenu "My Audits"
+      And I Search the Name
       And I Move to "Summary"
+      And Click the button "Move to Pre-Planning"
+      Then Click the button "Transition Audit" and Wait
+      And Click the button "Move to Planning"
+      Then Click the button "Transition Audit" and Wait
+      And I click menu Button "Tollgates"
+      Then I click the "Fieldwork" for "Add New Entry"
+      And  I fill the tollgate entry
+      And Click the button "Save" and Wait
 
   Examples:
       Examples:

@@ -28,7 +28,9 @@ public class AbstractStepDef {
     private static DriverType driverType;
     private static EnvironmentType environmentType;
 
-
+public void demon(){
+    WebDriver webDriver1 = new ChromeDriver();
+}
     public AbstractStepDef() {
         driverType = FileReaderManager.getInstance().getConfigFileReader().getBrowser();
         environmentType = FileReaderManager.getInstance().getConfigFileReader().getEnvironment();

@@ -17,6 +17,7 @@ public class CommonLogic
     LoggerFile logger =new LoggerFile() ;
     public String path =System.getProperty("user.dir") + "\\src\\test\\resources\\document\\uesrname.text";
     public String OETpath =System.getProperty("user.dir") + "\\src\\test\\resources\\document\\document.text";
+   public String year =System.getProperty("user.dir") + "\\src\\test\\resources\\document\\year.text";
     public String title;
 
     public String name;
@@ -48,6 +49,26 @@ public void writeFile(String text){
     }catch(Exception e){System.out.println(e);}
 }
 
+    public void writeYear(String text){
+        try{
+            FileWriter writefile=new FileWriter(year);
+            writefile.write(text);
+            writefile.close();
+            logger.info("File information written Sucessfully");
+        }catch(Exception e){System.out.println(e);}
+    }
+
+    public String readYear(){
+        String text = "";
+        try {
+            text = new String(Files.readAllBytes(Paths.get(year)));
+            //logger.info("File information read Sucessfully");
+        }
+        catch ( IOException e) { e.printStackTrace();
+            logger.info("File information Not read ");}
+        return text;
+    }
+
     public void writeOET(String text){
         try{
             FileWriter writefile=new FileWriter(OETpath);
@@ -70,7 +91,8 @@ public String readFile(){
     String text = "";
     try {
         text = new String(Files.readAllBytes(Paths.get(path)));
-        logger.info("File information read Sucessfully");}
+        //logger.info("File information read Sucessfully");
+    }
      catch ( IOException e) { e.printStackTrace();
          logger.info("File information Not read ");}
     return text;
@@ -82,7 +104,7 @@ public String readFile(){
         logger.info("Title is  created time is "+ now);
         title = "Testtoday"+dtf.format(now).toString();
        // System.out.println(title);
-        logger.info("Title is  created Name is "+ title);
+      //  logger.info("Title is  created Name is "+ title);
         return title;
     }
 

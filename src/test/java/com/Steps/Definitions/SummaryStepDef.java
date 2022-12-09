@@ -1,6 +1,7 @@
 package com.Steps.Definitions;
 
 import com.step.steps.*;
+import com.step.steps.MRCCTab.MRCCManageStep;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.it.Ma;
@@ -11,6 +12,8 @@ public class SummaryStepDef {
     ManageRiskStep manageRiskStep = new ManageRiskStep();
     AuditStep auditStep =new AuditStep();
     MyTaskStep myTaskStep = new MyTaskStep();
+
+    MRCCManageStep mrccManageStep = new MRCCManageStep();
 
     @And("I take Evidence of the {string} tap")
     public void iTakeEvidenceOfTheTap(String name) {
@@ -110,6 +113,11 @@ public class SummaryStepDef {
         landPageStep.fillDETForm();
     }
 
+    @And("I Create and Edit the DET or OET Form in L2")
+    public void iCreateAndEditTheDETOrOETForminL2() {
+        landPageStep.fillDETFormL2();
+    }
+
     @And("I  fill  the OT Form")
     public void iFillTheOTForm() {
         landPageStep.fillOTform();
@@ -126,7 +134,14 @@ public class SummaryStepDef {
 
     @And("I Select the Type {string} And {string}")
     public void iSelectTheTypeAnd(String Type, String action) {
-        myTaskStep.selectTaskType(Type,action);
+
+            myTaskStep.selectTaskType(Type, action);
+
+    }
+
+    @And("I Select the Type {string} for {string} And {string}")
+    public void iSelectTheTypeForAnd(String Type, String staus, String action) {
+        myTaskStep.selectTaskType(Type,staus,action);
     }
 
     @Then("I capture the {string}")
@@ -137,5 +152,21 @@ public class SummaryStepDef {
     @And("I Search the Name under Audits")
     public void iSearchTheNameUnderAudits() {
         auditStep.searchAuditforDasboard();
+    }
+
+    @And("I Select Indicator in MRCC")
+    public void iSelectIndicatorInMRCC() {
+            mrccManageStep.mrccRatingFill();
+    }
+
+
+    @And("I verify the Staff page")
+    public void iVerifyTheStaffPage() {
+        mrccManageStep.verifyStaffPage();
+    }
+
+    @And("I fill the Executive Summary Feedback form")
+    public void iFillTheExecutiveSummaryFeedbackForm() {
+        myTaskStep.fillSummaryExecutive();
     }
 }

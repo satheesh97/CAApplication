@@ -36,13 +36,28 @@ public class MyTaskStep extends AbstractStepDef {
 
     }
 
+    public void  SendkeysSingleValue(String data,String Approve, String action){
+        String path ="//p/strong/a[contains(text(),'"+data+"')]";
+        String Radiopath="//span[contains(text(),'Decision')]//following::label[contains(text(),'"+Approve+"')]";
+        String Rational="//label[contains(text(),'Rationale')]/following::textarea";
+        click(path);
+        click(Radiopath);
+        auditStep.enterTextarea(Rational);
+        waitStep.clickSubmit(action);
 
+    }
+    public void selectTaskType(String data, String Approve,String action){
+        //click(myTaskLocator.taskType);
+        SendkeysSingleValue(data,Approve,action);
+        waitStep.driverwait5();
+    }
 
     public void selectTaskType(String data, String action){
         //click(myTaskLocator.taskType);
         SendkeysSingleValue(data,action);
         waitStep.driverwait5();
     }
+
 
     public void filltheException(){
         auditStep.enterText(myTaskLocator.title);
@@ -78,13 +93,35 @@ public class MyTaskStep extends AbstractStepDef {
         auditStep.searchAndEnter(myTaskLocator.issueOwner);
         auditStep.enterTextDate(myTaskLocator.dueDate,0);
         singleClickdown(myTaskLocator.riskCategory);
-        singleClickdown(myTaskLocator.IATaxonomy);
+      //  singleClickdown(myTaskLocator.IATaxonomy);
         auditStep.mulClickDropdown(myTaskLocator.issueCause);
         auditStep.mulClickDropdown(myTaskLocator.groupRiskThem);
         auditStep.mulClickDropdown(myTaskLocator.materialEntities);
         auditStep.mulClickDropdown(myTaskLocator.relavantRegion);
         waitStep.clickButton("Submit for Review");
         viewAction();
+    }
+
+    public void fllissueFormVerify(){
+        click(myTaskLocator.selectAvialbelExp);
+        waitStep.waitPageload();
+        auditStep.enterText(myTaskLocator.title);
+        auditStep.enterTextarea(myTaskLocator.Description);
+        singleClickdown(myTaskLocator.selectRiskrate);
+        singleClickdown(myTaskLocator.Selectissue);
+        auditStep.searchAndEnter(myTaskLocator.issueOwner);
+        singleClickdownWithvalue(myTaskLocator.systemOrigin,"MICOS");
+        waitStep.waitSec(4);
+        auditStep.enterNo(myTaskLocator.systemID);
+        auditStep.enterTextDate(myTaskLocator.dueDate,0);
+        singleClickdown(myTaskLocator.riskCategory);
+        //  singleClickdown(myTaskLocator.IATaxonomy);
+        auditStep.mulClickDropdown(myTaskLocator.issueCause);
+        auditStep.mulClickDropdown(myTaskLocator.groupRiskThem);
+        auditStep.mulClickDropdown(myTaskLocator.materialEntities);
+        auditStep.mulClickDropdown(myTaskLocator.relavantRegion);
+       waitStep.close();
+
     }
 
     public void iFillActionForm(){
@@ -131,18 +168,18 @@ public class MyTaskStep extends AbstractStepDef {
         click(myTaskLocator.menuIcon);
         clickmenuData(IconData);
     }
+    public void manageOptionMenuClick(String IconData){
+        click(myTaskLocator.manageDocmenu);
+        clickmenuData(IconData);
+    }
     public void clickmenuData(String IconData ){
-
-
         List<WebElement> menu = driver.findElements(By.xpath(myTaskLocator.dropTableIcon));
         for(int i=0;i<menu.size();i++){
             if(menu.get(i).getText().equalsIgnoreCase(IconData)){
                 //   logger.info(menu.get(i).getText()+" *****************");
                 logger.info(menu.get(i).getText()+" Menu Clicked *****************");
                 menu.get(i).click();
-
                 i= menu.size();
-
             }
         }
     }
@@ -153,20 +190,59 @@ public class MyTaskStep extends AbstractStepDef {
         if (drop.isDisplayed()) {
             drop.click();
             List <WebElement>body=driver.findElements(By.xpath(myTaskLocator.dropTableIndex));
-            body.get(commonLogic.randomNumber(body.size())).click();
-
+            int count =commonLogic.randomNumber(body.size()-1);
+            if(count==0){
+                logger.info("*********"+count);
+            body.get(count+1).click();
+            }else{
+                body.get(count).click();
+                logger.info("*********"+count);
+            }
         }
 
     }
+
+    public void singleClickdownWithvalue(String singleSelect, String Value) {
+        WebElement drop = driver.findElement(By.xpath(singleSelect));
+            drop.click();
+            List <WebElement>body=driver.findElements(By.xpath(myTaskLocator.dropTableIndex));
+           for(int i=0;i<body.size();i++){
+               String datainput = body.get(i).getText();
+               if(datainput.equalsIgnoreCase(Value)){
+                   body.get(i).click();
+                   i=body.size();
+               }
+           }
+
+    }
+
+    public void multiClickdown(String singleSelect) {
+        WebElement drop = driver.findElement(By.xpath(singleSelect));
+            drop.click();
+            List <WebElement>body=driver.findElements(By.xpath(myTaskLocator.dropTableIndex));
+          for(int i=0;i<body.size();i++){
+              body.get(i).click();
+          }
+
+
+
+    }
+
+
 
     public void ctMenuClick() {
         click(myTaskLocator.menuCTIcon);
     }
 
 
-
+public void manageOT(String ot){
+    OtMenuClick();
+    clickmenuData(ot);
+    landPageStep.OTsave();
+}
     public void OtMenuClick() {
         click(myTaskLocator.menuOTIcon);
+
     }
 
     public void deactivateOET_DET(){
@@ -208,6 +284,13 @@ public class MyTaskStep extends AbstractStepDef {
     }
 
 
+public void fillSummaryExecutive(){
+List<WebElement>textarea=driver.findElements(By.xpath(myTaskLocator.executiveSummery));
+for(int i=0;i<textarea.size();i++){
+    textarea.get(i).sendKeys("Summery Review done");
+}
+auditStep.clickRadioButton(myTaskLocator.approve);
+    }
 
 
 }
