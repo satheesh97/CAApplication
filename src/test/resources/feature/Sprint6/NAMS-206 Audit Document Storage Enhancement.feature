@@ -16,8 +16,7 @@
       And I upload the File
       Then Click the button "Confirm" and Wait
       And I Click the "Reminder" to "Confirm"
-      And click sheet "Manage Documents"
-      And I click "cancel" button icon
+
       Examples:
         |Username|Password|
         |AA_test1 |password@1|

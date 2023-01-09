@@ -45,6 +45,7 @@ public class HomeStepDef {
     @Then("Click the button {string} and Wait")
     public void clickTheButtonAndWait(String name)   {
         waitStep.clickSubmit(name);
+        waitStep.waitPageload();
     }
 
     @And("I validate the Audit")
@@ -100,5 +101,6 @@ public class HomeStepDef {
     public void iClickTheMenuIconIn(String data) {
         myTaskStep.manageOT(data);
         myTaskStep.completeOTException();
+        waitStep.waitPageload();
     }
 }

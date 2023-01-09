@@ -2,7 +2,7 @@ package com.locator;
 
 public class LandingPageLocator {
 
-    public String searchButton ="//span[contains(text(),'MY AUDITS')]//following::button[contains(text(),'Search')]";
+    public String searchButton ="//span[contains(text(),'AUDITS')]//following::button[contains(text(),'Search')]";
     public String yearSearchButton="//span[contains(text(),'ANNUAL PLANS')]//following::button[contains(text(),'Search')]";
     public String TaskSearchButtion="//span[contains(text(),'MY TASKS')]//following::button[contains(text(),'Search')]";
     public String searchButton_1 ="//button[contains(text(),'Search')]";

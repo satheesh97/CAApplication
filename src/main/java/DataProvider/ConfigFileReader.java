@@ -91,4 +91,16 @@ public String getHeadleassmode(){
         }
     }
 
+    public String getPassWord(){
+        String uname = properties.getProperty("test.username");
+        if(uname.equalsIgnoreCase("satheesh.kaliappan") ){
+            return "Satheesh1";
+        }else if(uname.equalsIgnoreCase("satheesh.kaliappan")){
+            return "Satheesh1";
+        }else if(uname.equalsIgnoreCase("satheesh.kaliappan")){
+            return "Satheesh1";
+        } else
+            throw new RuntimeException("url not specified in the config file.");
+    }
+
 }

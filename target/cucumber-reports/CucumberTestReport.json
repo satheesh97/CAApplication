@@ -3,30 +3,30 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2022-12-09T07:21:20.779Z",
-        "line": 25,
-        "name": "NAMS-80: Publish Audit Report",
+        "start_timestamp": "2023-01-06T06:53:31.614Z",
+        "line": 32,
+        "name": "Internal Audit and Non-Internal Audit Employees Selection Enhancement",
         "description": "",
-        "id": "nams-80:-publish-audit-report;nams-80:-publish-audit-report;;2",
+        "id": "nams-487:-internal-audit-and-non-internal-audit-employees-selection-enhancement;internal-audit-and-non-internal-audit-employees-selection-enhancement;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 14691000000,
+              "duration": 44456000000,
               "status": "passed"
             },
             "line": 5,
-            "name": "I Enter the \"AA_test1\" and \"password@1\"",
+            "name": "I Enter the \"satheesh.kaliappan\" and \"Satheesh2\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"AA_test1\"",
+                  "val": "\"satheesh.kaliappan\"",
                   "offset": 12
                 },
                 {
-                  "val": "\"password@1\"",
-                  "offset": 27
+                  "val": "\"Satheesh2\"",
+                  "offset": 37
                 }
               ],
               "location": "com.Steps.Definitions.LoginStepDef.i_enter_the_and(java.lang.String,java.lang.String)"
@@ -35,7 +35,7 @@
           },
           {
             "result": {
-              "duration": 1517000000,
+              "duration": 1613000000,
               "status": "passed"
             },
             "line": 6,
@@ -53,7 +53,7 @@
           },
           {
             "result": {
-              "duration": 9191000000,
+              "duration": 17912000000,
               "status": "passed"
             },
             "line": 7,
@@ -71,7 +71,7 @@
           },
           {
             "result": {
-              "duration": 9406000000,
+              "duration": 17822000000,
               "status": "passed"
             },
             "line": 8,
@@ -89,22 +89,40 @@
           },
           {
             "result": {
-              "duration": 35094000000,
+              "duration": 37906000000,
               "status": "passed"
             },
             "line": 9,
-            "name": "I fill the Audit form Without Key Date",
+            "name": "I fill the Audit form Type \"Regular Audit\"",
             "match": {
-              "location": "com.Steps.Definitions.LoginStepDef.iFillTheAuditFormWithoutKeyDate()"
+              "arguments": [
+                {
+                  "val": "\"Regular Audit\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.Steps.Definitions.LoginStepDef.iFillTheAuditFormType(java.lang.String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 19732000000,
+              "duration": 6521000000,
               "status": "passed"
             },
             "line": 10,
+            "name": "I fill the Date Field in Audidt Page",
+            "match": {
+              "location": "com.Steps.Definitions.MenuSubStepDef.iFillTheDateFieldInAudidtPage()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 20828000000,
+              "status": "passed"
+            },
+            "line": 11,
             "name": "Click the button \"Submit\" and Wait",
             "match": {
               "arguments": [
@@ -119,10 +137,10 @@
           },
           {
             "result": {
-              "duration": 9234000000,
+              "duration": 17770000000,
               "status": "passed"
             },
-            "line": 11,
+            "line": 12,
             "name": "I  click the menu \"Home\"",
             "match": {
               "arguments": [
@@ -137,10 +155,10 @@
           },
           {
             "result": {
-              "duration": 9251000000,
+              "duration": 17696000000,
               "status": "passed"
             },
-            "line": 12,
+            "line": 13,
             "name": "I click submenu \"My Audits\"",
             "match": {
               "arguments": [
@@ -155,10 +173,10 @@
           },
           {
             "result": {
-              "duration": 6638000000,
+              "duration": 12622000000,
               "status": "passed"
             },
-            "line": 13,
+            "line": 14,
             "name": "I Search the Name",
             "match": {
               "location": "com.Steps.Definitions.HomeStepDef.iSearchTheName()"
@@ -167,15 +185,15 @@
           },
           {
             "result": {
-              "duration": 21820000000,
+              "duration": 14254000000,
               "status": "passed"
             },
-            "line": 14,
-            "name": "I Move to \"Risks and Controls\"",
+            "line": 15,
+            "name": "I Move to \"Budget and Staffing\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Risks and Controls\"",
+                  "val": "\"Budget and Staffing\"",
                   "offset": 10
                 }
               ],
@@ -185,28 +203,40 @@
           },
           {
             "result": {
-              "duration": 909000000,
+              "duration": 18825000000,
               "status": "passed"
             },
-            "line": 15,
-            "name": "file the Risk level \"2.5\"",
+            "line": 16,
+            "name": "Click the button \"Manage Audit Staff\" and Wait",
             "match": {
               "arguments": [
                 {
-                  "val": "\"2.5\"",
-                  "offset": 20
+                  "val": "\"Manage Audit Staff\"",
+                  "offset": 17
                 }
               ],
-              "location": "com.Steps.Definitions.SummaryStepDef.fileTheRiskLevel(java.lang.String)"
+              "location": "com.Steps.Definitions.HomeStepDef.clickTheButtonAndWait(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6684000000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I file the audit lead",
+            "match": {
+              "location": "com.Steps.Definitions.MenuSubStepDef.iFileTheAuditLead()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 16773000000,
+              "duration": 18701000000,
               "status": "passed"
             },
-            "line": 16,
+            "line": 18,
             "name": "Click the button \"Save\" and Wait",
             "match": {
               "arguments": [
@@ -221,15 +251,15 @@
           },
           {
             "result": {
-              "duration": 6299000000,
+              "duration": 17749000000,
               "status": "passed"
             },
-            "line": 17,
-            "name": "I click menu Button \"Document \u0026 Stakeholder Comms\"",
+            "line": 19,
+            "name": "I click menu Button \"Tollgates\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Document \u0026 Stakeholder Comms\"",
+                  "val": "\"Tollgates\"",
                   "offset": 20
                 }
               ],
@@ -239,877 +269,185 @@
           },
           {
             "result": {
-              "duration": 5188000000,
-              "status": "passed"
-            },
-            "line": 18,
-            "name": "I click the \"Audit Planning Memorandum\" and \"Manage APM\" menu",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Audit Planning Memorandum\"",
-                  "offset": 12
-                },
-                {
-                  "val": "\"Manage APM\"",
-                  "offset": 44
-                }
-              ],
-              "location": "com.Steps.Definitions.DocumentAndStock.iClickTheAndMenu(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 47261000000,
-              "status": "passed"
-            },
-            "line": 19,
-            "name": "I fill the APM Managemnt Form",
-            "match": {
-              "location": "com.Steps.Definitions.DocumentAndStock.iFillTheAPMManagemntForm()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 313000000,
+              "duration": 2227000000,
               "status": "passed"
             },
             "line": 20,
-            "name": "I click the \"Audit Announcement Memorandum\" and \"Manage AAM Distribution List\" menu",
+            "name": "I click the \"Planning\" for \"Add New Entry\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Audit Announcement Memorandum\"",
+                  "val": "\"Planning\"",
                   "offset": 12
                 },
                 {
-                  "val": "\"Manage AAM Distribution List\"",
-                  "offset": 48
-                }
-              ],
-              "location": "com.Steps.Definitions.DocumentAndStock.iClickTheAndMenu(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 21285000000,
-              "status": "passed"
-            },
-            "line": 21,
-            "name": "Click the button \"Confirm\" and Wait",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Confirm\"",
-                  "offset": 17
-                }
-              ],
-              "location": "com.Steps.Definitions.HomeStepDef.clickTheButtonAndWait(java.lang.String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@nams80"
-          },
-          {
-            "name": "@sp6"
-          },
-          {
-            "name": "@reg"
-          },
-          {
-            "name": "@test8001"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2022-12-09T07:25:15.569Z",
-        "line": 41,
-        "name": "NAMS-80: Publish Audit Report Manager User",
-        "description": "",
-        "id": "nams-80:-publish-audit-report;nams-80:-publish-audit-report-manager-user;;2",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 4804000000,
-              "status": "passed"
-            },
-            "line": 29,
-            "name": "I Enter the \"satheesh.kaliappan\" and \"Satheesh1\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"satheesh.kaliappan\"",
-                  "offset": 12
-                },
-                {
-                  "val": "\"Satheesh1\"",
-                  "offset": 37
-                }
-              ],
-              "location": "com.Steps.Definitions.LoginStepDef.i_enter_the_and(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 1528000000,
-              "status": "passed"
-            },
-            "line": 30,
-            "name": "wait for \"2\" seconds",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"2\"",
-                  "offset": 9
-                }
-              ],
-              "location": "com.Steps.Definitions.LoginStepDef.waitForSeconds(java.lang.String)"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 9641000000,
-              "status": "passed"
-            },
-            "line": 31,
-            "name": "I  click the menu \"Home\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Home\"",
-                  "offset": 18
-                }
-              ],
-              "location": "com.Steps.Definitions.LoginStepDef.iClickTheMenu(java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 9234000000,
-              "status": "passed"
-            },
-            "line": 32,
-            "name": "I click submenu \"My Audits\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"My Audits\"",
-                  "offset": 16
-                }
-              ],
-              "location": "com.Steps.Definitions.LoginStepDef.iClickSubmenu(java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 8539000000,
-              "status": "passed"
-            },
-            "line": 33,
-            "name": "I Search the Name",
-            "match": {
-              "location": "com.Steps.Definitions.HomeStepDef.iSearchTheName()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 13102000000,
-              "status": "passed"
-            },
-            "line": 34,
-            "name": "I Move to \"Document \u0026 Stakeholder Comms\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Document \u0026 Stakeholder Comms\"",
-                  "offset": 10
-                }
-              ],
-              "location": "com.Steps.Definitions.SummaryStepDef.iMoveTo(java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 5187000000,
-              "status": "passed"
-            },
-            "line": 35,
-            "name": "I click the \"Audit Planning Memorandum\" and \"Publish APM\" menu",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Audit Planning Memorandum\"",
-                  "offset": 12
-                },
-                {
-                  "val": "\"Publish APM\"",
-                  "offset": 44
-                }
-              ],
-              "location": "com.Steps.Definitions.DocumentAndStock.iClickTheAndMenu(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 3292000000,
-              "status": "passed"
-            },
-            "line": 36,
-            "name": "I upload the File",
-            "match": {
-              "location": "com.Steps.Definitions.DocumentAndStock.iUploadTheFile()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 16733000000,
-              "status": "passed"
-            },
-            "line": 37,
-            "name": "Click the button \"Confirm\" and Wait",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Confirm\"",
-                  "offset": 17
-                }
-              ],
-              "location": "com.Steps.Definitions.HomeStepDef.clickTheButtonAndWait(java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 9266000000,
-              "status": "passed"
-            },
-            "line": 38,
-            "name": "I Click the \"Reminder\" to \"Confirm\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Reminder\"",
-                  "offset": 12
-                },
-                {
-                  "val": "\"Confirm\"",
-                  "offset": 26
-                }
-              ],
-              "location": "com.Steps.Definitions.LoginStepDef.iClickTheTo(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@nams80"
-          },
-          {
-            "name": "@sp6"
-          },
-          {
-            "name": "@reg"
-          },
-          {
-            "name": "@test8002"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2022-12-09T07:26:36.905Z",
-        "line": 61,
-        "name": "NAMS-80: Publish Audit Report Manager User",
-        "description": "",
-        "id": "nams-80:-publish-audit-report;nams-80:-publish-audit-report-manager-user;;2",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 4391000000,
-              "status": "passed"
-            },
-            "line": 45,
-            "name": "I Enter the \"satheesh.kaliappan\" and \"Satheesh1\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"satheesh.kaliappan\"",
-                  "offset": 12
-                },
-                {
-                  "val": "\"Satheesh1\"",
-                  "offset": 37
-                }
-              ],
-              "location": "com.Steps.Definitions.LoginStepDef.i_enter_the_and(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 1526000000,
-              "status": "passed"
-            },
-            "line": 46,
-            "name": "wait for \"2\" seconds",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"2\"",
-                  "offset": 9
-                }
-              ],
-              "location": "com.Steps.Definitions.LoginStepDef.waitForSeconds(java.lang.String)"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 9163000000,
-              "status": "passed"
-            },
-            "line": 47,
-            "name": "I  click the menu \"Home\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Home\"",
-                  "offset": 18
-                }
-              ],
-              "location": "com.Steps.Definitions.LoginStepDef.iClickTheMenu(java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 9161000000,
-              "status": "passed"
-            },
-            "line": 48,
-            "name": "I click submenu \"My Audits\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"My Audits\"",
-                  "offset": 16
-                }
-              ],
-              "location": "com.Steps.Definitions.LoginStepDef.iClickSubmenu(java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 8408000000,
-              "status": "passed"
-            },
-            "line": 49,
-            "name": "I Search the Name",
-            "match": {
-              "location": "com.Steps.Definitions.HomeStepDef.iSearchTheName()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 13443000000,
-              "status": "passed"
-            },
-            "line": 50,
-            "name": "I Move to \"Document \u0026 Stakeholder Comms\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Document \u0026 Stakeholder Comms\"",
-                  "offset": 10
-                }
-              ],
-              "location": "com.Steps.Definitions.SummaryStepDef.iMoveTo(java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 6076000000,
-              "status": "passed"
-            },
-            "line": 51,
-            "name": "I click the \"Audit Announcement Memorandum\" and \"Publish AAM\" menu",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Audit Announcement Memorandum\"",
-                  "offset": 12
-                },
-                {
-                  "val": "\"Publish AAM\"",
-                  "offset": 48
-                }
-              ],
-              "location": "com.Steps.Definitions.DocumentAndStock.iClickTheAndMenu(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 21234000000,
-              "status": "passed"
-            },
-            "line": 52,
-            "name": "Click the button \"Confirm\" and Wait",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Confirm\"",
-                  "offset": 17
-                }
-              ],
-              "location": "com.Steps.Definitions.HomeStepDef.clickTheButtonAndWait(java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 16740000000,
-              "status": "passed"
-            },
-            "line": 53,
-            "name": "Click the button \"Submit\" and Wait",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Submit\"",
-                  "offset": 17
-                }
-              ],
-              "location": "com.Steps.Definitions.HomeStepDef.clickTheButtonAndWait(java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 136000000,
-              "status": "passed"
-            },
-            "line": 54,
-            "name": "I upload the File",
-            "match": {
-              "location": "com.Steps.Definitions.DocumentAndStock.iUploadTheFile()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 16802000000,
-              "status": "passed"
-            },
-            "line": 55,
-            "name": "Click the button \"Proceed to publish\" and Wait",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Proceed to publish\"",
-                  "offset": 17
-                }
-              ],
-              "location": "com.Steps.Definitions.HomeStepDef.clickTheButtonAndWait(java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 16900000000,
-              "status": "passed"
-            },
-            "line": 56,
-            "name": "Click the button \"Email distribution list\" and Wait",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Email distribution list\"",
-                  "offset": 17
-                }
-              ],
-              "location": "com.Steps.Definitions.HomeStepDef.clickTheButtonAndWait(java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 16733000000,
-              "status": "passed"
-            },
-            "line": 57,
-            "name": "Click the button \"OK\" and Wait",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"OK\"",
-                  "offset": 17
-                }
-              ],
-              "location": "com.Steps.Definitions.HomeStepDef.clickTheButtonAndWait(java.lang.String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@nams80"
-          },
-          {
-            "name": "@sp6"
-          },
-          {
-            "name": "@reg"
-          },
-          {
-            "name": "@test8003"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2022-12-09T07:28:57.655Z",
-        "line": 82,
-        "name": "NAMS-80: Publish Audit Report Manager User",
-        "description": "",
-        "id": "nams-80:-publish-audit-report;nams-80:-publish-audit-report-manager-user;;2",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 6081000000,
-              "status": "passed"
-            },
-            "line": 65,
-            "name": "I Enter the \"satheesh.kaliappan\" and \"Satheesh1\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"satheesh.kaliappan\"",
-                  "offset": 12
-                },
-                {
-                  "val": "\"Satheesh1\"",
-                  "offset": 37
-                }
-              ],
-              "location": "com.Steps.Definitions.LoginStepDef.i_enter_the_and(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 1534000000,
-              "status": "passed"
-            },
-            "line": 66,
-            "name": "wait for \"2\" seconds",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"2\"",
-                  "offset": 9
-                }
-              ],
-              "location": "com.Steps.Definitions.LoginStepDef.waitForSeconds(java.lang.String)"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 9169000000,
-              "status": "passed"
-            },
-            "line": 67,
-            "name": "I  click the menu \"Home\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Home\"",
-                  "offset": 18
-                }
-              ],
-              "location": "com.Steps.Definitions.LoginStepDef.iClickTheMenu(java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 9173000000,
-              "status": "passed"
-            },
-            "line": 68,
-            "name": "I click submenu \"My Audits\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"My Audits\"",
-                  "offset": 16
-                }
-              ],
-              "location": "com.Steps.Definitions.LoginStepDef.iClickSubmenu(java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 8640000000,
-              "status": "passed"
-            },
-            "line": 69,
-            "name": "I Search the Name",
-            "match": {
-              "location": "com.Steps.Definitions.HomeStepDef.iSearchTheName()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 13820000000,
-              "status": "passed"
-            },
-            "line": 70,
-            "name": "I Move to \"Document \u0026 Stakeholder Comms\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Document \u0026 Stakeholder Comms\"",
-                  "offset": 10
-                }
-              ],
-              "location": "com.Steps.Definitions.SummaryStepDef.iMoveTo(java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 5138000000,
-              "status": "passed"
-            },
-            "line": 71,
-            "name": "I click the \"Audit Report\" and \"Publish Audit Report\" menu",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Audit Report\"",
-                  "offset": 12
-                },
-                {
-                  "val": "\"Publish Audit Report\"",
-                  "offset": 31
-                }
-              ],
-              "location": "com.Steps.Definitions.DocumentAndStock.iClickTheAndMenu(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 215976000000,
-              "status": "passed"
-            },
-            "line": 72,
-            "name": "I fill the publish Audit Form",
-            "match": {
-              "location": "com.Steps.Definitions.DocumentAndStock.iFillThePublishAuditForm()"
-            },
-            "keyword": "And "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@nams80"
-          },
-          {
-            "name": "@sp6"
-          },
-          {
-            "name": "@reg"
-          },
-          {
-            "name": "@test8004"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2022-12-09T07:33:27.193Z",
-        "line": 94,
-        "name": "NAMS-80: Publish Audit Report",
-        "description": "",
-        "id": "nams-80:-publish-audit-report;nams-80:-publish-audit-report;;2",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 4021000000,
-              "status": "passed"
-            },
-            "line": 85,
-            "name": "I Enter the \"AA_test1\" and \"password@1\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"AA_test1\"",
-                  "offset": 12
-                },
-                {
-                  "val": "\"password@1\"",
+                  "val": "\"Add New Entry\"",
                   "offset": 27
                 }
               ],
-              "location": "com.Steps.Definitions.LoginStepDef.i_enter_the_and(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 1532000000,
-              "status": "passed"
-            },
-            "line": 86,
-            "name": "wait for \"2\" seconds",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"2\"",
-                  "offset": 9
-                }
-              ],
-              "location": "com.Steps.Definitions.LoginStepDef.waitForSeconds(java.lang.String)"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 9176000000,
-              "status": "passed"
-            },
-            "line": 87,
-            "name": "I  click the menu \"Home\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Home\"",
-                  "offset": 18
-                }
-              ],
-              "location": "com.Steps.Definitions.LoginStepDef.iClickTheMenu(java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 9207000000,
-              "status": "passed"
-            },
-            "line": 88,
-            "name": "I click submenu \"My Audits\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"My Audits\"",
-                  "offset": 16
-                }
-              ],
-              "location": "com.Steps.Definitions.LoginStepDef.iClickSubmenu(java.lang.String)"
+              "location": "com.Steps.Definitions.MenuSubStepDef.iClickTheFor(java.lang.String,java.lang.String)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 8517000000,
+              "duration": 22080000000,
               "status": "passed"
             },
-            "line": 89,
-            "name": "I Search the Name",
+            "line": 21,
+            "name": "I fill the tollgate entry",
             "match": {
-              "location": "com.Steps.Definitions.HomeStepDef.iSearchTheName()"
+              "location": "com.Steps.Definitions.MenuSubStepDef.iFillTheTollgateEntry()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 13036000000,
+              "duration": 18739000000,
               "status": "passed"
             },
-            "line": 90,
-            "name": "I Move to \"Document \u0026 Stakeholder Comms\"",
+            "line": 22,
+            "name": "Click the button \"Save\" and Wait",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Document \u0026 Stakeholder Comms\"",
-                  "offset": 10
+                  "val": "\"Save\"",
+                  "offset": 17
                 }
               ],
-              "location": "com.Steps.Definitions.SummaryStepDef.iMoveTo(java.lang.String)"
+              "location": "com.Steps.Definitions.HomeStepDef.clickTheButtonAndWait(java.lang.String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 2677000000,
+              "duration": 2197000000,
               "status": "passed"
             },
-            "line": 91,
-            "name": "I capture the \"AAM published info\"",
+            "line": 23,
+            "name": "I click the \"Reporting\" for \"Add New Entry\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"AAM published info\"",
-                  "offset": 14
+                  "val": "\"Reporting\"",
+                  "offset": 12
+                },
+                {
+                  "val": "\"Add New Entry\"",
+                  "offset": 28
                 }
               ],
-              "location": "com.Steps.Definitions.SummaryStepDef.iCaptureThe(java.lang.String)"
+              "location": "com.Steps.Definitions.MenuSubStepDef.iClickTheFor(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 19951000000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "I fill the tollgate entry",
+            "match": {
+              "location": "com.Steps.Definitions.MenuSubStepDef.iFillTheTollgateEntry()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 18721000000,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "Click the button \"Save\" and Wait",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Save\"",
+                  "offset": 17
+                }
+              ],
+              "location": "com.Steps.Definitions.HomeStepDef.clickTheButtonAndWait(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2156000000,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "I click the \"Fieldwork\" for \"Add New Entry\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Fieldwork\"",
+                  "offset": 12
+                },
+                {
+                  "val": "\"Add New Entry\"",
+                  "offset": 28
+                }
+              ],
+              "location": "com.Steps.Definitions.MenuSubStepDef.iClickTheFor(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 19198000000,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "I fill the tollgate entry",
+            "match": {
+              "location": "com.Steps.Definitions.MenuSubStepDef.iFillTheTollgateEntry()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 18734000000,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "Click the button \"Save\" and Wait",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Save\"",
+                  "offset": 17
+                }
+              ],
+              "location": "com.Steps.Definitions.HomeStepDef.clickTheButtonAndWait(java.lang.String)"
             },
             "keyword": "And "
           }
         ],
         "tags": [
           {
-            "name": "@nams80"
+            "name": "@nams487"
           },
           {
-            "name": "@sp6"
+            "name": "@sp11"
           },
           {
             "name": "@reg"
           },
           {
-            "name": "@test8005"
+            "name": "@test4871"
           }
         ]
       }
     ],
-    "name": "NAMS-80: Publish Audit Report",
+    "name": "NAMS-487: Internal Audit and Non-Internal Audit Employees Selection Enhancement",
     "description": "",
-    "id": "nams-80:-publish-audit-report",
+    "id": "nams-487:-internal-audit-and-non-internal-audit-employees-selection-enhancement",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/feature/Sprint6/NAMS-80%20Publish%20Audit%20Report.feature",
+    "uri": "file:src/test/resources/feature/Sprint11/NAMS-487%20IA%20and%20NIA%20Employees%20Selectio.feature",
     "tags": [
       {
-        "name": "@nams80",
+        "name": "@nams487",
         "type": "Tag",
         "location": {
           "line": 1,
@@ -1117,11 +455,11 @@
         }
       },
       {
-        "name": "@sp6",
+        "name": "@sp11",
         "type": "Tag",
         "location": {
           "line": 1,
-          "column": 9
+          "column": 10
         }
       },
       {
@@ -1129,7 +467,7 @@
         "type": "Tag",
         "location": {
           "line": 1,
-          "column": 14
+          "column": 16
         }
       }
     ]

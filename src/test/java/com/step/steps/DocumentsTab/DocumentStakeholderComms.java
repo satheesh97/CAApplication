@@ -148,6 +148,10 @@ public void FillAuitReport(){
          String objective = "//div/label[contains(text(),'"+textarea+"')]//following::textarea";
       auditStep.enterTextarea(objective);
     }
+    public void fillTextInput(String type){
+        String objective = "//div/label[contains(text(),'"+type+"')]//following::input";
+        auditStep.enterText(objective);
+    }
     public void filltextareabox(String textarea){
         String objective = "//div/label[text()='"+textarea+"']//following::textarea";
         auditStep.enterTextarea(objective);
@@ -156,21 +160,36 @@ public void FillAuitReport(){
         String Option="//label[contains(text(),'"+option+"')]";
         auditStep.clickRadioButton(Option);
     }
+    public void clickRadioOption(String Question, String option){
+        String Option="//span[contains(text(),'"+Question+"')]//following::label[contains(text(),'"+option+"')]";
+        auditStep.clickRadioButton(Option);
+        waitStep.waitPageload();
+    }
+    public void clickRadioOptionlabel(){
+        String Option="//label[contains(text(),'"+commonLogic.readYear()+"')]";
+        auditStep.clickRadioButton(Option);
+    }
     public void multiDropSelect(String Question,String value){
         String path="//*[text()=' MY AUDITS']//following::span[text()='"+Question+"']//following::span[@class='MultipleDropdownWidget---value_display']";
         click(path);
-        List<WebElement> droplist = driver.findElements(By.xpath(auditlocator.dropTableIndex));
-        for (int i =0;i<droplist.size();i++){
-            String info =droplist.get(i).getText();
-            if(value.equalsIgnoreCase(info)) {
-                droplist.get(i).click();
-                i=droplist.size();
-            }
-        }
-
-
+        selectFromList(value);
     }
 
+    public void singleDropSelect(String Question,String value){
+        String path="//span[contains(text(),'"+Question+"')]//following::div/div";
+        click(path);
+        selectFromList(value);
+    }
+public void selectFromList(String value){
+    List<WebElement> droplist = driver.findElements(By.xpath(auditlocator.dropTableIndex));
+    for (int i =0;i<droplist.size();i++){
+        String info =droplist.get(i).getText();
+        if(value.equalsIgnoreCase(info)) {
+            droplist.get(i).click();
+            i=droplist.size();
+        }
+    }
+}
     public void stausValidation(String status, String info){
         String planStaus="//strong[text()='"+status+"']";
         String planInfo="//strong[text()='"+info+"']";
@@ -242,10 +261,18 @@ public void fillTabel(){
         for(int i=0;i<text.size();i++){
             text.get(i).sendKeys(commonLogic.readOET());
         }
+        fileupload();
+        waitStep.pageLoadWait();
 //  waitStep.fileUpload(docstoc.fileInput,docstoc.filePath);
     }
     public void fileupload(){
         waitStep.fileUpload(docstoc.fileInput,docstoc.filePath);
+        waitStep.waitPageload();
+    }
+
+    public void fileuploadUnder(String name){
+        String path ="//span[text()=' "+name+"']//following::input[@type='file']";
+        waitStep.fileUpload(path,docstoc.filePath);
     }
 
     public void getCapture(String path, String name){
@@ -274,6 +301,16 @@ public void fillTabel(){
             logger.info("Radio Checbox not Avilbel ****");
         }
     }
+
+    public void selectRow(String table){
+        String path ="//span[text()='"+table+"']//following::tbody/tr";
+        myTaskStep.click(path);
+    }
+
+public void clickAvilabelvalue(String data){
+        String date ="//span[text()='"+data+"']//following::tbody/tr/td/div/p/a";
+    myTaskStep.click(date);
+}
 
 
 }

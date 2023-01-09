@@ -52,7 +52,7 @@ Feature: NAMS-61: Issue Actions Tab
 
     Examples:
       |Username|Password|
-      |satheesh.kaliappan|Satheesh1|
+      |satheesh.kaliappan|Satheesh2|
 
 
 
@@ -89,7 +89,7 @@ Feature: NAMS-61: Issue Actions Tab
 
     Examples:
       |Username|Password|
-      |satheesh.kaliappan|Satheesh1|
+      |satheesh.kaliappan|Satheesh2|
 
   @202211021
   Scenario Outline: NNAMS-61: Issue Actions Tab

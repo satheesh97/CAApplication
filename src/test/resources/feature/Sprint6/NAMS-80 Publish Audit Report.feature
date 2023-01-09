@@ -70,6 +70,7 @@
       And I Move to "Document & Stakeholder Comms"
       And I click the "Audit Report" and "Publish Audit Report" menu
       And I fill the publish Audit Form
+      Then Click the button "OK" and Wait
       #Then Click the button "Confirm" and Wait
       #Then Click the button "Submit" and Wait
       #And I upload the File

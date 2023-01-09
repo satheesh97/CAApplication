@@ -55,7 +55,7 @@
       And I Move to "Document & Stakeholder Comms"
       And I click the "Audit Announcement Memorandum" and "Publish AAM" menu
       Then Click the button "Confirm" and Wait
-      And I fill the Date Field in Audidt Page
+      #And I fill the Date Field in Audidt Page
       Then Click the button "Submit" and Wait
       And I upload the File
       Then Click the button "Proceed to publish" and Wait

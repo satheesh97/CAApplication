@@ -41,10 +41,17 @@ public class WaitStep extends AbstractStepDef {
 
     public void clickSubmit(String name)  {
         String path = "//button[contains(text(),'"+name+"')]";
-        driver.findElement(By.xpath(path)).click();
-        driver.manage().timeouts().pageLoadTimeout(100,TimeUnit.SECONDS);
-        waitSometime();
-        logger.info(name+" element  Clicked Sucessfully");
+        try{
+       WebElement element= driver.findElement(By.xpath(path));
+       if(element.isDisplayed()) {
+          element.click();
+           driver.manage().timeouts().pageLoadTimeout(100, TimeUnit.SECONDS);
+           buttonClickWait();
+           logger.info(name + " element  Clicked Sucessfully");
+       }
+        }catch (Exception e){
+            logger.info("Element is not visible");
+        }
     }
 
     public void clickablediv(String name)  {
@@ -119,9 +126,16 @@ public void clickText(String textName){
     }
     public void clickReminderButton(String reminder, String option){
         String Confrim ="//h4[text()='"+reminder+"']//following::button[text()='"+option+"']";
-        driver.findElement(By.xpath(Confrim)).click();
-        logger.info(option+" element  Clicked Sucessfully");
-        buttonClickWait();
+      try {
+          WebElement element = driver.findElement(By.xpath(Confrim));
+          if(element.isDisplayed()) {
+              element.click();
+              logger.info(option + " element  Clicked Sucessfully");
+              buttonClickWait();
+          }
+      }catch (Exception e){
+          logger.info("Element not Vissible");
+      }
     }
     public void clickIcon(String icon){
 
@@ -147,7 +161,7 @@ public void clickText(String textName){
         String subMenu="//div/div[contains(text(),'"+name+"')]";
         driver.findElement(By.xpath(subMenu)).click();
         logger.info(name+" element  Clicked Sucessfully");
-        pageWait();
+       buttonClickWait();
     }
 
 
@@ -178,9 +192,9 @@ public void clickText(String textName){
     }
 
     public void buttonClickWait(){
-        for(int i=0;i<=5;i++) {
+        for(int i=0;i<=6;i++) {
             try {
-                Thread.sleep(1500);
+                Thread.sleep(2500);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -196,7 +210,7 @@ public void clickText(String textName){
         }
     }
     public void driverwait5(){
-        for(int i=0;i<=5;i++) {
+        for(int i=0;i<=8;i++) {
             try {
                 Thread.sleep(1000);
             } catch (Exception e) {

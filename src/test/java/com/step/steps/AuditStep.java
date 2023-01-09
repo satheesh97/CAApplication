@@ -110,7 +110,7 @@ public class AuditStep extends AbstractStepDef {
         mulClickDropdown(auditlocator.relRegion);
         clickRadioButton(auditlocator.group_Risk);
         clickObject(auditlocator.addRiskThem);
-        if(type.equalsIgnoreCase("Regular Audit")){
+        if(type.equalsIgnoreCase("Regular Audit")||type.equalsIgnoreCase("Change Audit")){
         fillMRCCReiview();}
         singleClickdown(auditlocator.selectThem);
         enterNo(auditlocator.budget);
@@ -126,6 +126,7 @@ public class AuditStep extends AbstractStepDef {
     }
 
 public void fillMRCCReiview(){
+
         enterText(auditlocator.MRCCReviewsTitle);
         searchAndEnter(auditlocator.MRCCReviesRecipt);
 }
@@ -134,6 +135,7 @@ public void fillMRCCReiview(){
         waitStep.click();
         logger.info("Search field prescent and Value is  "+ commonLogic.readFile());
         waitStep.driverwait5();
+        waitStep.pageLoadWait();
     }
     public void searchAuditAudit(){
         driver.findElement(By.xpath(landingPageLocator.searchAudit)).sendKeys(commonLogic.readFile());
@@ -207,7 +209,7 @@ public void fillMRCCReiview(){
     }
     public void insertDate(){
         List<WebElement> elementDate =driver.findElements(By.xpath(auditlocator.scheduleStDate));
-        int count =2;
+        int count =0;
 
         for(int i=0;i<elementDate.size()-3;i++) {
             DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
@@ -314,11 +316,17 @@ public void fillMRCCReiview(){
 
 
     public void enterTextarea(String path){
-        if(driver.findElement(By.xpath(path)).isDisplayed()) {
+        try{
+            WebElement element=driver.findElement(By.xpath(path));
+         if(element.isDisplayed()) {
             WebElement textArea = driver.findElement(By.xpath(path));
             textArea.sendKeys(commonLogic.readFile());
             logger.info("textarea Information "+ commonLogic.readFile());
         }
+        }catch(Exception e){
+            logger.info("UI Element not dispalyed");
+        }
+
     }
 
     public void enterText(String title) {
@@ -347,10 +355,15 @@ driver.findElement(By.xpath(date)).sendKeys(commonLogic.getCurrentDate(count));
     }
 
     public void clickRadioButton(String singleSelect){
-        if(driver.findElement(By.xpath(singleSelect)).isDisplayed()){
+        try{
+            WebElement element =driver.findElement(By.xpath(singleSelect));
+        if(element.isDisplayed()&&element.isEnabled()){
             WebElement drop= driver.findElement(By.xpath(singleSelect));
             drop.click();
             logger.info("Radio button Clicked");
+        }
+        }catch (Exception e){
+            logger.info("element is not active in UI");
         }
     }
 

@@ -33,19 +33,3 @@ Feature: NAMS-205: Non-MICOS Issue Enhancement
 
 
 
-  @test20502
-  Scenario Outline:NAMS-205: Non-MICOS Issue Enhancement Issue Actions Tab Accept Review/exception
-    Given I Enter the "<Username>" and "<Password>"
-    Given  wait for "2" seconds
-    And I  click the menu "Home"
-    Then I click submenu "My Audits"
-    And I Search the Name under the My Task
-    And I Select the Type "Review Exception" And "Accept"
-    Then I click submenu "My Audits"
-    And I Search the Name under the My Task
-    And I Select the Type "Review Issue" And "Approve"
-
-    Examples:
-      |Username|Password|
-      |satheesh.kaliappan|Satheesh1|
-

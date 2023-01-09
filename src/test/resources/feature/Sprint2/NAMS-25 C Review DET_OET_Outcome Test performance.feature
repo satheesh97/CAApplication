@@ -1,6 +1,6 @@
 @nams25 @reg @sp2
   Feature: NAMS-25: Review DET/OET/Outcome Test performance
-    @test2610221
+    @test2610221221
     Scenario Outline: NAMS-25: Review DET/OET/Outcome Test performance
       Given I Enter the "<Username>" and "<Password>"
       Given  wait for "2" seconds
@@ -52,6 +52,6 @@
 
       Examples:
         |Username|Password|
-        |satheesh.kaliappan|Satheesh1|
+        |satheesh.kaliappan|Satheesh2|
 
 

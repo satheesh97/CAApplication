@@ -50,11 +50,33 @@ public class DocumentandSytackholders {
     public String searchYear="//input[@placeholder='Search Annual Plans']";
     public String planyeardate="//span[contains(text(),'ANNUAL')]//following::td/div/p/span";
 
-public String fileInput="//input[@type='file']";
-public String  filePath=System.getProperty("user.dir") + "\\src\\test\\resources\\document\\testdoc.pdf";
-public String auditReportIndex="//label[contains(text(),'Audit Report Index')]//following::input";
-public String managmentResponse="//span[contains(text(),'User')]//following::input";
-public String alert ="//div[@role='alert']";
+    public String fileInput="//input[@type='file']";
+    public String  filePath=System.getProperty("user.dir") + "\\src\\test\\resources\\document\\testdoc.pdf";
+    public String auditReportIndex="//label[contains(text(),'Audit Report Index')]//following::input";
+    public String managmentResponse="//span[contains(text(),'User')]//following::input";
+
+    public String warning ="//p/strong[contains(text(),'Warning')]";
+    public String tableCheckBox="//th/div[contains(@class,'Check')]";
+    public  String rowCheckBox="//td/div[contains(@class,'Check')]";
+    public String accentIcon="//span[contains(text(),'Issues')]//following::div/p/a/span[contains(@class,'color_accent')]";
+    public String controlLink="//span[contains(text(),'Control to link')]//following::div/div/div";
+    public String summaryControl="//td[4]/div/p/span/strong/a";
+    public String summaryAction="//th[@abbr='Action Title']//following::td[2]/div/p/span/strong/a";
+    public String micosIssueID="//span[contains(text(),'MICOS Issue ID')]";
+    public String issueTittle="//span[contains(text(),'Issue Title')]";
+    public String issueRating="//span[contains(text(),'Issue Rating')]";
+    public String headAudit="//div[contains(text(),'Responsible Head of Audit')]";
+    public String chiefSudit="//div[contains(text(),'Accountable Chief Auditor')]";
+    public String issueVerification="//div[contains(text(),'Issue Verification Outcome')]";
+    public String verificationReward="//div[contains(text(),'Verification Reviewed')]";
+    public String actionTittle="//span[contains(text(),'Action Title')]";
+    public String audit="//div/span[contains(text(),'Audit')]";
+    public String control="//div[contains(text(),'Control')]";
+    public String DET="//div[contains(text(),'DET')]";
+    public String OET="//div[contains(text(),'OET')]";
+    public String outComeTest="//div[text()='Outcome Test']";
+
+
 
 
 

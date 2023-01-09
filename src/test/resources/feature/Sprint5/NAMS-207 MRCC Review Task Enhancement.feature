@@ -6,7 +6,7 @@ Feature: NAMS-207: MRCC Review Task Enhancement
     Given  wait for "2" seconds
     And I  click the menu "Audits"
     And Click the button "Create Audit"
-    And I fill the Audit form Without Key Date
+    And I fill the Audit form Type "Regular Audit"
     Then Click the button "Submit" and Wait
     And I  click the menu "Home"
     Then I click submenu "My Audits"
@@ -56,11 +56,9 @@ Feature: NAMS-207: MRCC Review Task Enhancement
     Then Click the button "Submit" and Wait
     And I Click "MRCC Paragraph" and capture the "Feedback"
 
-
-
     Examples:
       |Username|Password|
-      |satheesh.kaliappan|Satheesh1|
+      |satheesh.kaliappan|Satheesh2|
 
   Scenario Outline: NAMS-207: MRCC Review Task Enhancement Reject
     Given I Enter the "<Username>" and "<Password>"

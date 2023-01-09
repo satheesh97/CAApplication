@@ -20,6 +20,7 @@ Feature: NAMS-193: Upload Documents MRCC Indicators Enhancement
     Then Click the button "Manage Audit Staff" and Wait
     And I file the audit lead
     Then Click the button "Save" and Wait
+    And I click menu Button "Summary"
     And I click menu Button "MRCC Reviews"
     Then I click Table "MRCC"
     Then Click the button "Manage MRCC Indicators" and Wait

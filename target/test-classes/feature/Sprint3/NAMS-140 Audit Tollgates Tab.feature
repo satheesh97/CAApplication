@@ -5,7 +5,7 @@
       Given  wait for "2" seconds
       And I  click the menu "Audits"
       And Click the button "Create Audit"
-      And I fill the Audit form Without Key Date
+      And I fill the Audit form Type "Regular Audit"
       Then Click the button "Submit" and Wait
       And I  click the menu "Home"
       Then I click submenu "My Audits"

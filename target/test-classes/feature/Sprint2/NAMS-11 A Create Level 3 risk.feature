@@ -21,7 +21,7 @@ Feature: NAMS-11: Create Level 3 risk
     And I can see "Audit Program"
     Examples:
       |Username|Password|
-      |satheesh.kaliappan|Satheesh1|
+      |satheesh.kaliappan|Satheesh2|
 
   @demo, @Test181022
   Scenario Outline: NAMS-11: Create Level 3 risk
@@ -37,4 +37,4 @@ Feature: NAMS-11: Create Level 3 risk
 
     Examples:
       |Username|Password|
-      |satheesh.kaliappan|Satheesh1|
+      |satheesh.kaliappan|Satheesh2|

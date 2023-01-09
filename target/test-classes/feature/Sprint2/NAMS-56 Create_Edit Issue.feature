@@ -53,7 +53,7 @@
 
       Examples:
         |Username|Password|
-        |satheesh.kaliappan|Satheesh1|
+        |satheesh.kaliappan|Satheesh2|
 
 
 
@@ -82,7 +82,7 @@
       Given  wait for "2" seconds
       And I  click the menu "Home"
       Then I click submenu "My Audits"
-      And I Search the Name under the My Task
+      And I Search the Name under the "My Task"
       And I Select the Type "Review Exception" And "Accept"
       Then I click submenu "My Audits"
       And I Search the Name under the My Task
@@ -90,4 +90,4 @@
 
       Examples:
         |Username|Password|
-        |satheesh.kaliappan|Satheesh1|
+        |satheesh.kaliappan|Satheesh2|

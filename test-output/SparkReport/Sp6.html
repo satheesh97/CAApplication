@@ -1,0 +1,5711 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Extent</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Automation Report</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Dec 10, 2022 12:51:01 PM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@nams21</a><a class="dropdown-item" href="#">@nams18</a><a class="dropdown-item" href="#">@nams189</a><a class="dropdown-item" href="#">@nams214</a><a class="dropdown-item" href="#">@test1801</a><a class="dropdown-item" href="#">@nams190</a><a class="dropdown-item" href="#">@nams15</a><a class="dropdown-item" href="#">@nams80</a><a class="dropdown-item" href="#">@test8002</a><a class="dropdown-item" href="#">@nams213</a><a class="dropdown-item" href="#">@testnams214</a><a class="dropdown-item" href="#">@test14</a><a class="dropdown-item" href="#">@test8001</a><a class="dropdown-item" href="#">@test18901</a><a class="dropdown-item" href="#">@test19001</a><a class="dropdown-item" href="#">@test8004</a><a class="dropdown-item" href="#">@test8003</a><a class="dropdown-item" href="#">@test20501</a><a class="dropdown-item" href="#">@test18903</a><a class="dropdown-item" href="#">@nams209</a><a class="dropdown-item" href="#">@test21301</a><a class="dropdown-item" href="#">@nams206</a><a class="dropdown-item" href="#">@test20901</a><a class="dropdown-item" href="#">@nams151</a><a class="dropdown-item" href="#">@test20902</a><a class="dropdown-item" href="#">@nams193</a><a class="dropdown-item" href="#">@test1931</a><a class="dropdown-item" href="#">@test20903</a><a class="dropdown-item" href="#">@test1601</a><a class="dropdown-item" href="#">@test18902</a><a class="dropdown-item" href="#">@test2101</a><a class="dropdown-item" href="#">@test1701</a><a class="dropdown-item" href="#">@sp6</a><a class="dropdown-item" href="#">@test19002</a><a class="dropdown-item" href="#">@test20502</a><a class="dropdown-item" href="#">@test8005</a><a class="dropdown-item" href="#">@nams205</a><a class="dropdown-item" href="#">@nams16</a><a class="dropdown-item" href="#">@nams17</a><a class="dropdown-item" href="#">@test20601</a><a class="dropdown-item" href="#">@reg</a><a class="dropdown-item" href="#">@nams14</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">NAMS-14: Annual Plan Dashboard</p>
+            <p class="text-sm">
+              <span>12:51:03 PM</span> / <span>00:58:16:280</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">NAMS-14: Annual Plan Dashboard</h5>
+<span class='badge badge-success'>12.10.2022 12:51:03 PM</span>
+<span class='badge badge-danger'>12.10.2022 1:49:20 PM</span>
+<span class='badge badge-default'>00:58:16:280</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>NAMS-14: Annual Plan Dashboard</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="3"><span class="badge log pass-bg mr-2">Pass</span>NAMS-14: Annual Plan Dashboard</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given I Enter the "AA_test1" and "password@1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And wait for "2" seconds</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  click the menu "Annual Plan"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Create Annual Plan" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And i fill the cerate annual Plan</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Save" and Wait</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="350"><span class="badge log pass-bg mr-2">Pass</span>NAMS-14: Annual Plan Dashboard</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given I Enter the "AA_test1" and "password@1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And wait for "2" seconds</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  click the menu "Annual Plan"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Deactivate Audits" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And click sheet "Bulk Deactivate"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I validate CheckBoxGroup Visiblity</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Go Back" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And click sheet "Manual Deactivate"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I validate CheckBoxGroup Visiblity</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Go Back" and Wait</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="10"><span class="badge log pass-bg mr-2">Pass</span>NAMS-15: Annual Plan Lifecycle</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="11"><span class="badge log pass-bg mr-2">Pass</span>NAMS-15: Annual Plan Lifecycle</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given I Enter the "AA_test1" and "password@1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And wait for "2" seconds</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  click the menu "Annual Plan"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I search Annual Plan year</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Transition To Approved" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then I fill TextArea "Rationale"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then I click the Radio "No"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Submit" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Continue" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Transition To Live" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Submit" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Continue" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I verify "STATUS" As "Live"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I click menu Button "Activity History"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I capture the "Annual Plan Histroy"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="27"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">NAMS-16: Transition from Fieldwork to Clearance and Report Enhancement</p>
+            <p class="text-sm">
+              <span>12:57:17 PM</span> / <span>00:02:08:120</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">NAMS-16: Transition from Fieldwork to Clearance and Report Enhancement</h5>
+<span class='badge badge-success'>12.10.2022 12:57:17 PM</span>
+<span class='badge badge-danger'>12.10.2022 12:59:25 PM</span>
+<span class='badge badge-default'>00:02:08:120</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=27</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="28"><span class="badge log pass-bg mr-2">Pass</span>NAMS-16: Transition from Fieldwork to Clearance and Report Enhancement Amgr</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="29"><span class="badge log pass-bg mr-2">Pass</span>NAMS-16: Transition from Fieldwork to Clearance and Report Enhancement Amgr</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given I Enter the "satheesh.kaliappan" and "Satheesh1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given wait for "2" seconds</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  click the menu "Home"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then I click submenu "My Audits"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Search the "AU-" with</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I select "Audit Phase" with value "Fieldwork"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given wait for "4" seconds</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And focuse out the field</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I select "Type" with value "Regular Audit"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given wait for "4" seconds</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Move to "Summary"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Remove from Annual Plan" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Drop the Value "Removed from Plan due to COVID-19" at "Change Request Reason"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then I fill TextArea "Justification"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Submit" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click the button "Move to Clearance and Reporting"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Transition Audit" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Click the "Downward Feedback Process" to "Transition Audit"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="48"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">NAMS-17: Annual Plan Change Requests Tab</p>
+            <p class="text-sm">
+              <span>12:59:25 PM</span> / <span>00:02:36:004</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">NAMS-17: Annual Plan Change Requests Tab</h5>
+<span class='badge badge-success'>12.10.2022 12:59:25 PM</span>
+<span class='badge badge-danger'>12.10.2022 1:02:01 PM</span>
+<span class='badge badge-default'>00:02:36:004</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=48</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="49"><span class="badge log pass-bg mr-2">Pass</span>NAMS-17: Annual Plan Change Requests Tab</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="50"><span class="badge log pass-bg mr-2">Pass</span>NAMS-17: Annual Plan Change Requests Tab</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given I Enter the "AA_test1" and "password@1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And wait for "2" seconds</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  click the menu "Audits"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click the button "Create Audit"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I fill the Audit form</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Submit" and Wait</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="57"><span class="badge log pass-bg mr-2">Pass</span>NAMS-17: Annual Plan Change Requests Tab</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given I Enter the "satheesh.kaliappan" and "Satheesh1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given wait for "2" seconds</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  click the menu "Home"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then I click submenu "My Audits"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Search the Name</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Move to "Summary"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Add to Annual Plan" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I click the Radio "2022"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Drop the Value "Audit added due to regulatory request" at "Change Request Reason"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then I fill TextArea "Justification"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Submit" and Wait</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="69"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">NAMS-18: Annual Plan Summary Tab</p>
+            <p class="text-sm">
+              <span>1:02:01 PM</span> / <span>00:00:43:771</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">NAMS-18: Annual Plan Summary Tab</h5>
+<span class='badge badge-success'>12.10.2022 1:02:01 PM</span>
+<span class='badge badge-danger'>12.10.2022 1:02:45 PM</span>
+<span class='badge badge-default'>00:00:43:771</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=69</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="70"><span class="badge log pass-bg mr-2">Pass</span>NAMS-18: Annual Plan Summary Tab</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="71"><span class="badge log pass-bg mr-2">Pass</span>NAMS-18: Annual Plan Summary Tab</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given I Enter the "AA_test1" and "password@1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And wait for "2" seconds</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  click the menu "Annual Plan"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I click  the Live Year "2022"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I capture the "Annual Plan summary"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I click menu Button "Audits in Plan"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I capture the "Audits in Plan-AnnualPaln"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="79"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">NAMS-189: Publish AAM</p>
+            <p class="text-sm">
+              <span>1:02:45 PM</span> / <span>00:08:18:534</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">NAMS-189: Publish AAM</h5>
+<span class='badge badge-success'>12.10.2022 1:02:45 PM</span>
+<span class='badge badge-danger'>12.10.2022 1:11:03 PM</span>
+<span class='badge badge-default'>00:08:18:534</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=79</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="80"><span class="badge log pass-bg mr-2">Pass</span>NAMS-189: Publish AAM</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="81"><span class="badge log pass-bg mr-2">Pass</span>NAMS-189: Publish AAM</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given I Enter the "AA_test1" and "password@1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And wait for "2" seconds</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  click the menu "Audits"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click the button "Create Audit"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I fill the Audit form Without Key Date</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Submit" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  click the menu "Home"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then I click submenu "My Audits"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Search the Name</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Move to "Risks and Controls"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And file the Risk level "2.5"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Save" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I click menu Button "Document & Stakeholder Comms"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I click the "Audit Planning Memorandum" and "Manage APM" menu</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I fill the APM Managemnt Form</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I click the "Audit Announcement Memorandum" and "Manage AAM Distribution List" menu</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Confirm" and Wait</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="99"><span class="badge log pass-bg mr-2">Pass</span>NAMS-189: Publish AAM Manager User</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="100"><span class="badge log pass-bg mr-2">Pass</span>NAMS-189: Publish AAM Manager User</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given I Enter the "satheesh.kaliappan" and "Satheesh1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given wait for "2" seconds</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  click the menu "Home"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then I click submenu "My Audits"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Search the Name</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Move to "Document & Stakeholder Comms"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I click the "Audit Planning Memorandum" and "Publish APM" menu</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I upload the File</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Confirm" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Click the "Reminder" to "Confirm"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="111"><span class="badge log pass-bg mr-2">Pass</span>NAMS-189: Publish AAM Manager User</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given I Enter the "satheesh.kaliappan" and "Satheesh1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given wait for "2" seconds</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  click the menu "Home"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then I click submenu "My Audits"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Search the Name</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Move to "Document & Stakeholder Comms"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I click the "Audit Announcement Memorandum" and "Publish AAM" menu</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Confirm" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Submit" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I upload the File</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Proceed to publish" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Email distribution list" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "OK" and Wait</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="125"><span class="badge log pass-bg mr-2">Pass</span>NAMS-189: Publish AAM Evidence</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="126"><span class="badge log pass-bg mr-2">Pass</span>NAMS-189: Publish AAM Evidence</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given I Enter the "AA_test1" and "password@1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given wait for "2" seconds</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  click the menu "Home"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then I click submenu "My Audits"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Search the Name</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Move to "Document & Stakeholder Comms"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I capture the "AAM published info"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="134"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">NAMS-190: Publish APM</p>
+            <p class="text-sm">
+              <span>1:11:03 PM</span> / <span>00:05:24:064</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">NAMS-190: Publish APM</h5>
+<span class='badge badge-success'>12.10.2022 1:11:03 PM</span>
+<span class='badge badge-danger'>12.10.2022 1:16:27 PM</span>
+<span class='badge badge-default'>00:05:24:064</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=134</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="135"><span class="badge log pass-bg mr-2">Pass</span>NAMS-190: Publish APM</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="136"><span class="badge log pass-bg mr-2">Pass</span>NAMS-190: Publish APM</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given I Enter the "AA_test1" and "password@1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And wait for "2" seconds</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  click the menu "Audits"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click the button "Create Audit"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I fill the Audit form Without Key Date</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Submit" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  click the menu "Home"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then I click submenu "My Audits"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Search the Name</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Move to "Risks and Controls"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And file the Risk level "2.5"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Save" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I click menu Button "Document & Stakeholder Comms"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I click the "Audit Planning Memorandum" and "Manage APM" menu</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I fill the APM Managemnt Form</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="164"><span class="badge log pass-bg mr-2">Pass</span>NAMS-190: Publish APM</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given I Enter the "AA_test1" and "password@1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given wait for "2" seconds</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  click the menu "Home"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then I click submenu "My Audits"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Search the Name</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Move to "Document & Stakeholder Comms"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I capture the "APM published info"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="152"><span class="badge log pass-bg mr-2">Pass</span>NAMS-190: Publish APM manger User</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="153"><span class="badge log pass-bg mr-2">Pass</span>NAMS-190: Publish APM manger User</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given I Enter the "satheesh.kaliappan" and "Satheesh1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given wait for "2" seconds</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  click the menu "Home"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then I click submenu "My Audits"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Search the Name</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Move to "Document & Stakeholder Comms"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I click the "Audit Planning Memorandum" and "Publish APM" menu</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I upload the File</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Confirm" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Click the "Reminder" to "Confirm"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="172"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">NAMS-193: Upload Documents MRCC Indicators Enhancement</p>
+            <p class="text-sm">
+              <span>1:16:27 PM</span> / <span>00:04:16:647</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">NAMS-193: Upload Documents MRCC Indicators Enhancement</h5>
+<span class='badge badge-success'>12.10.2022 1:16:27 PM</span>
+<span class='badge badge-danger'>12.10.2022 1:20:44 PM</span>
+<span class='badge badge-default'>00:04:16:647</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=172</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="173"><span class="badge log fail-bg mr-2">Fail</span>NAMS-193: Upload Documents MRCC Indicators Enhancement</div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="174"><span class="badge log fail-bg mr-2">Fail</span>NAMS-193: Upload Documents MRCC Indicators Enhancement</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given I Enter the "AA_test1" and "password@1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given wait for "2" seconds</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  click the menu "Audits"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click the button "Create Audit"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I fill the Audit form Without Key Date</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Submit" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  click the menu "Home"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then I click submenu "My Audits"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Search the Name</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Move to "Summary"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click the button "Move to Pre-Planning"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Transition Audit" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>And Click the button "Move to Planning"</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(text(),'Move to Planning')]"}
+  (Session info: chrome=108.0.5359.94)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'BEST', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.94, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\Best\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:62195}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 402589eb9eaf23cf0891ace0db47b805
+*** Element info: {Using=xpath, value=//button[contains(text(),'Move to Planning')]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.step.steps.WaitStep.clickButton(WaitStep.java:85)
+	at com.Steps.Definitions.LoginStepDef.clickTheButton(LoginStepDef.java:73)
+	at ✽.Click the button "Move to Planning"(file:///C:/Users/Best/Desktop/CSApp/CAapplication/src/test/resources/feature/Sprint6/NAMS-193%20Upload%20Documents%20MRCC%20Indicators%20Enhancement.feature:17)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Click the button "Transition Audit" and Wait</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I click menu Button "Budget and Staffing"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Click the button "Manage Audit Staff" and Wait</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I file the audit lead</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Click the button "Save" and Wait</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I click menu Button "Summary"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I click menu Button "MRCC Reviews"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then I click Table "MRCC"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Click the button "Manage MRCC Indicators" and Wait</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I Select Indicator in MRCC</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Click the button "Save" and Wait</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I upload the "Manage Documents" in Indicators</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="200"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">NAMS-205: Non-MICOS Issue Enhancement</p>
+            <p class="text-sm">
+              <span>1:20:44 PM</span> / <span>00:09:32:011</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">NAMS-205: Non-MICOS Issue Enhancement</h5>
+<span class='badge badge-success'>12.10.2022 1:20:44 PM</span>
+<span class='badge badge-danger'>12.10.2022 1:30:16 PM</span>
+<span class='badge badge-default'>00:09:32:011</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=200</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="201"><span class="badge log pass-bg mr-2">Pass</span>NAMS-205: Non-MICOS Issue Enhancement audit form</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="202"><span class="badge log pass-bg mr-2">Pass</span>NAMS-205: Non-MICOS Issue Enhancement audit form</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given I Enter the "AA_test1" and "password@1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given wait for "2" seconds</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  click the menu "Audits"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click the button "Create Audit"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I fill the Audit form</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Submit" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  click the menu "Home"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then I click submenu "My Audits"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Search the Name</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Move to "Risks and Controls"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And file the Risk level "2.5"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Save" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I file the Level two of risk</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I file the Level three of risk</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  fill  the OT Form</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given wait for "7" seconds</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I click menu Button "Exceptions"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Create Exception" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then I fill the create Exception Form</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I move to "Issues" tab</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Create Issue" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I fill the Create Issue Form verify</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="225"><span class="badge log pass-bg mr-2">Pass</span>NAMS-205: Non-MICOS Issue Enhancement Issue Actions Tab Accept Review/exception</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="226"><span class="badge log pass-bg mr-2">Pass</span>NAMS-205: Non-MICOS Issue Enhancement Issue Actions Tab Accept Review/exception</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given I Enter the "satheesh.kaliappan" and "Satheesh1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given wait for "2" seconds</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  click the menu "Home"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then I click submenu "My Audits"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Search the Name under the My Task</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Select the Type "Review Exception" And "Accept"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then I click submenu "My Audits"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Search the Name under the My Task</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Select the Type "Review Issue" And "Approve"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="236"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">NAMS-206: Audit Document Storage Enhancement</p>
+            <p class="text-sm">
+              <span>1:30:16 PM</span> / <span>00:02:52:535</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">NAMS-206: Audit Document Storage Enhancement</h5>
+<span class='badge badge-success'>12.10.2022 1:30:16 PM</span>
+<span class='badge badge-danger'>12.10.2022 1:33:08 PM</span>
+<span class='badge badge-default'>00:02:52:535</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=236</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="237"><span class="badge log pass-bg mr-2">Pass</span>NAMS-206: Audit Document Storage Enhancement</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="238"><span class="badge log pass-bg mr-2">Pass</span>NAMS-206: Audit Document Storage Enhancement</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given I Enter the "AA_test1" and "password@1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And wait for "2" seconds</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  click the menu "Audits"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click the button "Create Audit"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I fill the Audit form Without Key Date</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Submit" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  click the menu "Home"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then I click submenu "My Audits"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Search the Name</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Move to "Related Actions"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And click sheet "Manage Documents"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I upload the File</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Confirm" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Click the "Reminder" to "Confirm"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="253"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">NAMS-209: Audit Transitions Enhancement</p>
+            <p class="text-sm">
+              <span>1:33:09 PM</span> / <span>00:08:16:476</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">NAMS-209: Audit Transitions Enhancement</h5>
+<span class='badge badge-success'>12.10.2022 1:33:09 PM</span>
+<span class='badge badge-danger'>12.10.2022 1:41:25 PM</span>
+<span class='badge badge-default'>00:08:16:476</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=253</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="254"><span class="badge log pass-bg mr-2">Pass</span>NAMS-209: Audit Transitions Enhancement</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="255"><span class="badge log pass-bg mr-2">Pass</span>NAMS-209: Audit Transitions Enhancement</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given I Enter the "AA_test1" and "password@1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And wait for "2" seconds</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  click the menu "Audits"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click the button "Create Audit"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I fill the Audit form Without Key Date</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Submit" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  click the menu "Home"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then I click submenu "My Audits"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Search the Name</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Move to "Risks and Controls"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And file the Risk level "2.5"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Save" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I click menu Button "Document & Stakeholder Comms"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I click the "Audit Planning Memorandum" and "Manage APM" menu</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I fill the APM Managemnt Form</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I click the "Audit Announcement Memorandum" and "Manage AAM Distribution List" menu</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Confirm" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I click menu Button "Summary"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click the button "Move to Pre-Planning"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Transition Audit" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click the button "Move to Planning"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Transition Audit" and Wait</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="278"><span class="badge log pass-bg mr-2">Pass</span>NAMS-209: Audit Transitions Enhancement APM</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="279"><span class="badge log pass-bg mr-2">Pass</span>NAMS-209: Audit Transitions Enhancement APM</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given I Enter the "satheesh.kaliappan" and "Satheesh1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given wait for "2" seconds</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  click the menu "Home"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then I click submenu "My Audits"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Search the Name</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Move to "Document & Stakeholder Comms"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I click the "Audit Planning Memorandum" and "Publish APM" menu</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I upload the File</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Confirm" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Click the "Reminder" to "Confirm"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="290"><span class="badge log pass-bg mr-2">Pass</span>NAMS-209: Audit Transitions Enhancement  AAM</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="291"><span class="badge log pass-bg mr-2">Pass</span>NAMS-209: Audit Transitions Enhancement  AAM</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given I Enter the "satheesh.kaliappan" and "Satheesh1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given wait for "2" seconds</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  click the menu "Home"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then I click submenu "My Audits"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Search the Name</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Move to "Document & Stakeholder Comms"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I click the "Audit Announcement Memorandum" and "Publish AAM" menu</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Confirm" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I fill the Date Field in Audidt Page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Submit" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I upload the File</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Proceed to publish" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Email distribution list" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "OK" and Wait</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="306"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">NAMS-21: Manage Change Request</p>
+            <p class="text-sm">
+              <span>1:41:25 PM</span> / <span>00:00:41:633</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">NAMS-21: Manage Change Request</h5>
+<span class='badge badge-success'>12.10.2022 1:41:25 PM</span>
+<span class='badge badge-danger'>12.10.2022 1:42:07 PM</span>
+<span class='badge badge-default'>00:00:41:633</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=306</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="307"><span class="badge log fail-bg mr-2">Fail</span>NAMS-21: Manage Change Request</div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="308"><span class="badge log fail-bg mr-2">Fail</span>NAMS-21: Manage Change Request</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given I Enter the "AA_test1" and "password@1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given wait for "2" seconds</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  click the menu "Home"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then I click submenu "My Audits"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Search the "AU-" with</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I select "Audit Phase" with value "Fieldwork"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given wait for "4" seconds</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>And I select "Type" with value "Regular Audit"</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <span class="MultipleDropdownWidget---value_display" data-placeholder="Any"></span> is not clickable at point (971, 428). Other element would receive the click: <li id="2e0b4b4714906ae96b1865747856491e_list_5" role="option" aria-checked="false" class="MenuWidgetItem---default_direction" tabindex="-1">...</li>
+  (Session info: chrome=108.0.5359.94)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'BEST', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.94, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\Best\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:62195}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 402589eb9eaf23cf0891ace0db47b805
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at com.step.steps.DocumentsTab.DocumentStakeholderComms.click(DocumentStakeholderComms.java:33)
+	at com.step.steps.DocumentsTab.DocumentStakeholderComms.multiDropSelect(DocumentStakeholderComms.java:161)
+	at com.Steps.Definitions.DocumentAndStock.iSelectWithValue(DocumentAndStock.java:161)
+	at ✽.I select "Type" with value "Regular Audit"(file:///C:/Users/Best/Desktop/CSApp/CAapplication/src/test/resources/feature/Sprint6/NAMS-21%20Manage%20Change%20Request.feature:12)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Given wait for "4" seconds</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I Move to "Summary"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Click the button "Remove from Annual Plan" and Wait</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Drop the Value "Removed from Plan due to COVID-19" at "Change Request Reason"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then I fill TextArea "Justification"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Click the button "Submit" and Wait</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Click the button "Manage Removal Change Request" and Wait</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Click the button "Deactivate" and Wait</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="325"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">NAMS-213: Transition from Pre-Planning to Planning Enhancement</p>
+            <p class="text-sm">
+              <span>1:42:07 PM</span> / <span>00:03:27:711</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">NAMS-213: Transition from Pre-Planning to Planning Enhancement</h5>
+<span class='badge badge-success'>12.10.2022 1:42:07 PM</span>
+<span class='badge badge-danger'>12.10.2022 1:45:34 PM</span>
+<span class='badge badge-default'>00:03:27:711</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=325</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="326"><span class="badge log fail-bg mr-2">Fail</span>NAMS-213: Transition from Pre-Planning to Planning Enhancement</div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="327"><span class="badge log fail-bg mr-2">Fail</span>NAMS-213: Transition from Pre-Planning to Planning Enhancement</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given I Enter the "AA_test1" and "password@1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given wait for "2" seconds</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  click the menu "Audits"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click the button "Create Audit"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I fill the Audit form Without Key Date</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Submit" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  click the menu "Home"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then I click submenu "My Audits"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Search the Name</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Move to "Summary"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click the button "Move to Pre-Planning"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Transition Audit" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click the button "Move to Planning"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Transition Audit" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click the button "Move to Fieldwork"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Transition Audit" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I click menu Button "Related Actions"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I capture the "Moved information under the RealtedAction"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>Then I click function "Move back to Planning"</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <strong class="StrongText---richtext_strong">...</strong> is not clickable at point (183, 9). Other element would receive the click: <nav class="SiteHeaderLayout---header SiteHeaderLayout---site SiteHeaderLayout---mercury_style" id="navBar">...</nav>
+  (Session info: chrome=108.0.5359.94)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'BEST', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.94, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\Best\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:62195}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 402589eb9eaf23cf0891ace0db47b805
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at com.step.steps.DocumentsTab.DocumentStakeholderComms.click(DocumentStakeholderComms.java:33)
+	at com.step.steps.DocumentsTab.AnnualPlan.moveLevelUpDowun(AnnualPlan.java:95)
+	at com.Steps.Definitions.DocumentAndStock.iClickFunction(DocumentAndStock.java:141)
+	at ✽.I click function "Move back to Planning"(file:///C:/Users/Best/Desktop/CSApp/CAapplication/src/test/resources/feature/Sprint6/NAMS-213%20Transition%20from%20Pre-Planning%20to%20Planning%20Enhancement.feature:23)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Click the button "Transition Audit" and Wait</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And I click menu Button "Summary"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="349"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">NAMS-214: Deactivate Audits</p>
+            <p class="text-sm">
+              <span>1:45:34 PM</span> / <span>00:00:00:000</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">NAMS-214: Deactivate Audits</h5>
+<span class='badge badge-success'>12.10.2022 1:45:34 PM</span>
+<span class='badge badge-danger'>12.10.2022 1:45:34 PM</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=349</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="361"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">NAMS-80: Publish Audit Report</p>
+            <p class="text-sm">
+              <span>1:49:20 PM</span> / <span>00:13:24:016</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">NAMS-80: Publish Audit Report</h5>
+<span class='badge badge-success'>12.10.2022 1:49:20 PM</span>
+<span class='badge badge-danger'>12.10.2022 2:02:44 PM</span>
+<span class='badge badge-default'>00:13:24:016</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=361</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="362"><span class="badge log pass-bg mr-2">Pass</span>NAMS-80: Publish Audit Report</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="363"><span class="badge log pass-bg mr-2">Pass</span>NAMS-80: Publish Audit Report</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given I Enter the "AA_test1" and "password@1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And wait for "2" seconds</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  click the menu "Audits"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click the button "Create Audit"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I fill the Audit form Without Key Date</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Submit" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  click the menu "Home"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then I click submenu "My Audits"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Search the Name</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Move to "Risks and Controls"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And file the Risk level "2.5"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Save" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I click menu Button "Document & Stakeholder Comms"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I click the "Audit Planning Memorandum" and "Manage APM" menu</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I fill the APM Managemnt Form</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I click the "Audit Announcement Memorandum" and "Manage AAM Distribution List" menu</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Confirm" and Wait</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="416"><span class="badge log pass-bg mr-2">Pass</span>NAMS-80: Publish Audit Report</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given I Enter the "AA_test1" and "password@1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given wait for "2" seconds</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  click the menu "Home"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then I click submenu "My Audits"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Search the Name</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Move to "Document & Stakeholder Comms"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I capture the "Audit Report published info"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="381"><span class="badge log pass-bg mr-2">Pass</span>NAMS-80: Publish Audit Report Manager User</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="382"><span class="badge log pass-bg mr-2">Pass</span>NAMS-80: Publish Audit Report Manager User</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given I Enter the "satheesh.kaliappan" and "Satheesh1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given wait for "2" seconds</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  click the menu "Home"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then I click submenu "My Audits"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Search the Name</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Move to "Document & Stakeholder Comms"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I click the "Audit Planning Memorandum" and "Publish APM" menu</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I upload the File</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Confirm" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Click the "Reminder" to "Confirm"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="393"><span class="badge log pass-bg mr-2">Pass</span>NAMS-80: Publish Audit Report Manager User</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given I Enter the "satheesh.kaliappan" and "Satheesh1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given wait for "2" seconds</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  click the menu "Home"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then I click submenu "My Audits"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Search the Name</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Move to "Document & Stakeholder Comms"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I click the "Audit Announcement Memorandum" and "Publish AAM" menu</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Confirm" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Submit" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I upload the File</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Proceed to publish" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "Email distribution list" and Wait</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Click the button "OK" and Wait</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="407"><span class="badge log pass-bg mr-2">Pass</span>NAMS-80: Publish Audit Report Manager User</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given I Enter the "satheesh.kaliappan" and "Satheesh1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given wait for "2" seconds</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I  click the menu "Home"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then I click submenu "My Audits"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Search the Name</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I Move to "Document & Stakeholder Comms"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I click the "Audit Report" and "Publish Audit Report" menu</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And I fill the publish Audit Form</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">org.openqa.selenium.ElementClickInterceptedException</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.ElementClickInterceptedException</h4>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:42:05 PM</td>
+<td>
+<a href="#" class="linked" test-id='306' id='316'>And I select "Type" with value "Regular Audit"</a>
+<div class="">
+<span class="badge badge-default">NAMS-21: Manage Change Request.NAMS-21: Manage Change Request.And I select "Type" with value "Regular Audit"</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:45:28 PM</td>
+<td>
+<a href="#" class="linked" test-id='325' id='346'>Then I click function "Move back to Planning"</a>
+<div class="">
+<span class="badge badge-default">NAMS-213: Transition from Pre-Planning to Planning Enhancement.NAMS-213: Transition from Pre-Planning to Planning Enhancement.Then I click function "Move back to Planning"</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">org.openqa.selenium.NoSuchElementException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.NoSuchElementException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:18:44 PM</td>
+<td>
+<a href="#" class="linked" test-id='172' id='187'>And Click the button "Move to Planning"</a>
+<div class="">
+<span class="badge badge-default">NAMS-193: Upload Documents MRCC Indicators Enhancement.NAMS-193: Upload Documents MRCC Indicators Enhancement.And Click the button "Move to Planning"</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">42</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@nams21</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@nams21</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:41:25 PM</td>
+<td>
+<a href="#" class="linked" test-id='306' id='308'>NAMS-21: Manage Change Request</a>
+<div class="">
+<span class="badge badge-default">NAMS-21: Manage Change Request.NAMS-21: Manage Change Request</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@nams18</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@nams18</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:02:01 PM</td>
+<td>
+<a href="#" class="linked" test-id='69' id='71'>NAMS-18: Annual Plan Summary Tab</a>
+<div class="">
+<span class="badge badge-default">NAMS-18: Annual Plan Summary Tab.NAMS-18: Annual Plan Summary Tab</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>4</span>
+</span>
+<p class="name">@nams189</p>
+<p class="duration text-sm">4 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@nams189</h4>
+<span status="pass" class='badge log pass-bg'>4 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:02:45 PM</td>
+<td>
+<a href="#" class="linked" test-id='79' id='81'>NAMS-189: Publish AAM</a>
+<div class="">
+<span class="badge badge-default">NAMS-189: Publish AAM.NAMS-189: Publish AAM</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:06:32 PM</td>
+<td>
+<a href="#" class="linked" test-id='79' id='100'>NAMS-189: Publish AAM Manager User</a>
+<div class="">
+<span class="badge badge-default">NAMS-189: Publish AAM.NAMS-189: Publish AAM Manager User</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:07:52 PM</td>
+<td>
+<a href="#" class="linked" test-id='79' id='111'>NAMS-189: Publish AAM Manager User</a>
+<div class="">
+<span class="badge badge-default">NAMS-189: Publish AAM.NAMS-189: Publish AAM Manager User</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:10:12 PM</td>
+<td>
+<a href="#" class="linked" test-id='79' id='126'>NAMS-189: Publish AAM Evidence</a>
+<div class="">
+<span class="badge badge-default">NAMS-189: Publish AAM.NAMS-189: Publish AAM Evidence</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@nams214</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@nams214</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:45:34 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='350'>NAMS-14: Annual Plan Dashboard</a>
+<div class="">
+<span class="badge badge-default">NAMS-14: Annual Plan Dashboard.NAMS-14: Annual Plan Dashboard</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@test1801</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@test1801</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:02:01 PM</td>
+<td>
+<a href="#" class="linked" test-id='69' id='71'>NAMS-18: Annual Plan Summary Tab</a>
+<div class="">
+<span class="badge badge-default">NAMS-18: Annual Plan Summary Tab.NAMS-18: Annual Plan Summary Tab</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>3</span>
+</span>
+<p class="name">@nams190</p>
+<p class="duration text-sm">3 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@nams190</h4>
+<span status="pass" class='badge log pass-bg'>3 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:11:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='134' id='136'>NAMS-190: Publish APM</a>
+<div class="">
+<span class="badge badge-default">NAMS-190: Publish APM.NAMS-190: Publish APM</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:14:20 PM</td>
+<td>
+<a href="#" class="linked" test-id='134' id='153'>NAMS-190: Publish APM manger User</a>
+<div class="">
+<span class="badge badge-default">NAMS-190: Publish APM.NAMS-190: Publish APM manger User</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:15:40 PM</td>
+<td>
+<a href="#" class="linked" test-id='134' id='164'>NAMS-190: Publish APM</a>
+<div class="">
+<span class="badge badge-default">NAMS-190: Publish APM.NAMS-190: Publish APM</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+</span>
+<p class="name">@nams15</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@nams15</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:51:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='3'>NAMS-14: Annual Plan Dashboard</a>
+<div class="">
+<span class="badge badge-default">NAMS-14: Annual Plan Dashboard.NAMS-14: Annual Plan Dashboard</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:54:46 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='11'>NAMS-15: Annual Plan Lifecycle</a>
+<div class="">
+<span class="badge badge-default">NAMS-14: Annual Plan Dashboard.NAMS-15: Annual Plan Lifecycle</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>5</span>
+</span>
+<p class="name">@nams80</p>
+<p class="duration text-sm">5 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@nams80</h4>
+<span status="pass" class='badge log pass-bg'>5 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:49:20 PM</td>
+<td>
+<a href="#" class="linked" test-id='361' id='363'>NAMS-80: Publish Audit Report</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:52:58 PM</td>
+<td>
+<a href="#" class="linked" test-id='361' id='382'>NAMS-80: Publish Audit Report Manager User</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report Manager User</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:54:18 PM</td>
+<td>
+<a href="#" class="linked" test-id='361' id='393'>NAMS-80: Publish Audit Report Manager User</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report Manager User</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:56:37 PM</td>
+<td>
+<a href="#" class="linked" test-id='361' id='407'>NAMS-80: Publish Audit Report Manager User</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report Manager User</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:01:54 PM</td>
+<td>
+<a href="#" class="linked" test-id='361' id='416'>NAMS-80: Publish Audit Report</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>4</span>
+</span>
+<p class="name">@test8002</p>
+<p class="duration text-sm">4 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@test8002</h4>
+<span status="pass" class='badge log pass-bg'>4 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:52:58 PM</td>
+<td>
+<a href="#" class="linked" test-id='361' id='382'>NAMS-80: Publish Audit Report Manager User</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report Manager User</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:54:18 PM</td>
+<td>
+<a href="#" class="linked" test-id='361' id='393'>NAMS-80: Publish Audit Report Manager User</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report Manager User</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:56:37 PM</td>
+<td>
+<a href="#" class="linked" test-id='361' id='407'>NAMS-80: Publish Audit Report Manager User</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report Manager User</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:01:54 PM</td>
+<td>
+<a href="#" class="linked" test-id='361' id='416'>NAMS-80: Publish Audit Report</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@nams213</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@nams213</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:42:07 PM</td>
+<td>
+<a href="#" class="linked" test-id='325' id='327'>NAMS-213: Transition from Pre-Planning to Planning Enhancement</a>
+<div class="">
+<span class="badge badge-default">NAMS-213: Transition from Pre-Planning to Planning Enhancement.NAMS-213: Transition from Pre-Planning to Planning Enhancement</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@testnams214</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@testnams214</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:45:34 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='350'>NAMS-14: Annual Plan Dashboard</a>
+<div class="">
+<span class="badge badge-default">NAMS-14: Annual Plan Dashboard.NAMS-14: Annual Plan Dashboard</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@test14</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@test14</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:51:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='3'>NAMS-14: Annual Plan Dashboard</a>
+<div class="">
+<span class="badge badge-default">NAMS-14: Annual Plan Dashboard.NAMS-14: Annual Plan Dashboard</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@test8001</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@test8001</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:49:20 PM</td>
+<td>
+<a href="#" class="linked" test-id='361' id='363'>NAMS-80: Publish Audit Report</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@test18901</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@test18901</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:02:45 PM</td>
+<td>
+<a href="#" class="linked" test-id='79' id='81'>NAMS-189: Publish AAM</a>
+<div class="">
+<span class="badge badge-default">NAMS-189: Publish AAM.NAMS-189: Publish AAM</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@test19001</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@test19001</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:11:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='134' id='136'>NAMS-190: Publish APM</a>
+<div class="">
+<span class="badge badge-default">NAMS-190: Publish APM.NAMS-190: Publish APM</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@test8004</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@test8004</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:56:37 PM</td>
+<td>
+<a href="#" class="linked" test-id='361' id='407'>NAMS-80: Publish Audit Report Manager User</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report Manager User</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@test8003</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@test8003</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:54:18 PM</td>
+<td>
+<a href="#" class="linked" test-id='361' id='393'>NAMS-80: Publish Audit Report Manager User</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report Manager User</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@test20501</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@test20501</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:20:44 PM</td>
+<td>
+<a href="#" class="linked" test-id='200' id='202'>NAMS-205: Non-MICOS Issue Enhancement audit form</a>
+<div class="">
+<span class="badge badge-default">NAMS-205: Non-MICOS Issue Enhancement.NAMS-205: Non-MICOS Issue Enhancement audit form</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@test18903</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@test18903</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:07:52 PM</td>
+<td>
+<a href="#" class="linked" test-id='79' id='111'>NAMS-189: Publish AAM Manager User</a>
+<div class="">
+<span class="badge badge-default">NAMS-189: Publish AAM.NAMS-189: Publish AAM Manager User</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>3</span>
+</span>
+<p class="name">@nams209</p>
+<p class="duration text-sm">3 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@nams209</h4>
+<span status="pass" class='badge log pass-bg'>3 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:33:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='253' id='255'>NAMS-209: Audit Transitions Enhancement</a>
+<div class="">
+<span class="badge badge-default">NAMS-209: Audit Transitions Enhancement.NAMS-209: Audit Transitions Enhancement</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:37:45 PM</td>
+<td>
+<a href="#" class="linked" test-id='253' id='279'>NAMS-209: Audit Transitions Enhancement APM</a>
+<div class="">
+<span class="badge badge-default">NAMS-209: Audit Transitions Enhancement.NAMS-209: Audit Transitions Enhancement APM</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:39:04 PM</td>
+<td>
+<a href="#" class="linked" test-id='253' id='291'>NAMS-209: Audit Transitions Enhancement AAM</a>
+<div class="">
+<span class="badge badge-default">NAMS-209: Audit Transitions Enhancement.NAMS-209: Audit Transitions Enhancement AAM</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@test21301</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@test21301</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:42:07 PM</td>
+<td>
+<a href="#" class="linked" test-id='325' id='327'>NAMS-213: Transition from Pre-Planning to Planning Enhancement</a>
+<div class="">
+<span class="badge badge-default">NAMS-213: Transition from Pre-Planning to Planning Enhancement.NAMS-213: Transition from Pre-Planning to Planning Enhancement</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:45:34 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='350'>NAMS-14: Annual Plan Dashboard</a>
+<div class="">
+<span class="badge badge-default">NAMS-14: Annual Plan Dashboard.NAMS-14: Annual Plan Dashboard</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@nams206</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@nams206</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:30:16 PM</td>
+<td>
+<a href="#" class="linked" test-id='236' id='238'>NAMS-206: Audit Document Storage Enhancement</a>
+<div class="">
+<span class="badge badge-default">NAMS-206: Audit Document Storage Enhancement.NAMS-206: Audit Document Storage Enhancement</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@test20901</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@test20901</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:33:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='253' id='255'>NAMS-209: Audit Transitions Enhancement</a>
+<div class="">
+<span class="badge badge-default">NAMS-209: Audit Transitions Enhancement.NAMS-209: Audit Transitions Enhancement</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@nams151</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@nams151</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:54:46 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='11'>NAMS-15: Annual Plan Lifecycle</a>
+<div class="">
+<span class="badge badge-default">NAMS-14: Annual Plan Dashboard.NAMS-15: Annual Plan Lifecycle</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@test20902</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@test20902</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:37:45 PM</td>
+<td>
+<a href="#" class="linked" test-id='253' id='279'>NAMS-209: Audit Transitions Enhancement APM</a>
+<div class="">
+<span class="badge badge-default">NAMS-209: Audit Transitions Enhancement.NAMS-209: Audit Transitions Enhancement APM</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@nams193</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@nams193</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:16:27 PM</td>
+<td>
+<a href="#" class="linked" test-id='172' id='174'>NAMS-193: Upload Documents MRCC Indicators Enhancement</a>
+<div class="">
+<span class="badge badge-default">NAMS-193: Upload Documents MRCC Indicators Enhancement.NAMS-193: Upload Documents MRCC Indicators Enhancement</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@test1931</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@test1931</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:16:27 PM</td>
+<td>
+<a href="#" class="linked" test-id='172' id='174'>NAMS-193: Upload Documents MRCC Indicators Enhancement</a>
+<div class="">
+<span class="badge badge-default">NAMS-193: Upload Documents MRCC Indicators Enhancement.NAMS-193: Upload Documents MRCC Indicators Enhancement</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@test20903</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@test20903</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:39:04 PM</td>
+<td>
+<a href="#" class="linked" test-id='253' id='291'>NAMS-209: Audit Transitions Enhancement AAM</a>
+<div class="">
+<span class="badge badge-default">NAMS-209: Audit Transitions Enhancement.NAMS-209: Audit Transitions Enhancement AAM</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@test1601</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@test1601</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:57:17 PM</td>
+<td>
+<a href="#" class="linked" test-id='27' id='29'>NAMS-16: Transition from Fieldwork to Clearance and Report Enhancement Amgr</a>
+<div class="">
+<span class="badge badge-default">NAMS-16: Transition from Fieldwork to Clearance and Report Enhancement.NAMS-16: Transition from Fieldwork to Clearance and Report Enhancement Amgr</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+</span>
+<p class="name">@test18902</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@test18902</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:06:32 PM</td>
+<td>
+<a href="#" class="linked" test-id='79' id='100'>NAMS-189: Publish AAM Manager User</a>
+<div class="">
+<span class="badge badge-default">NAMS-189: Publish AAM.NAMS-189: Publish AAM Manager User</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:07:52 PM</td>
+<td>
+<a href="#" class="linked" test-id='79' id='111'>NAMS-189: Publish AAM Manager User</a>
+<div class="">
+<span class="badge badge-default">NAMS-189: Publish AAM.NAMS-189: Publish AAM Manager User</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@test2101</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@test2101</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:41:25 PM</td>
+<td>
+<a href="#" class="linked" test-id='306' id='308'>NAMS-21: Manage Change Request</a>
+<div class="">
+<span class="badge badge-default">NAMS-21: Manage Change Request.NAMS-21: Manage Change Request</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+</span>
+<p class="name">@test1701</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@test1701</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:59:25 PM</td>
+<td>
+<a href="#" class="linked" test-id='48' id='50'>NAMS-17: Annual Plan Change Requests Tab</a>
+<div class="">
+<span class="badge badge-default">NAMS-17: Annual Plan Change Requests Tab.NAMS-17: Annual Plan Change Requests Tab</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:00:36 PM</td>
+<td>
+<a href="#" class="linked" test-id='48' id='57'>NAMS-17: Annual Plan Change Requests Tab</a>
+<div class="">
+<span class="badge badge-default">NAMS-17: Annual Plan Change Requests Tab.NAMS-17: Annual Plan Change Requests Tab</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>25</span>
+<span class='badge log badge-danger'>3</span>
+</span>
+<p class="name">@sp6</p>
+<p class="duration text-sm">28 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@sp6</h4>
+<span status="pass" class='badge log pass-bg'>25 passed</span>
+<span status="fail" class='badge log badge-danger'>3 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:51:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='3'>NAMS-14: Annual Plan Dashboard</a>
+<div class="">
+<span class="badge badge-default">NAMS-14: Annual Plan Dashboard.NAMS-14: Annual Plan Dashboard</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:54:46 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='11'>NAMS-15: Annual Plan Lifecycle</a>
+<div class="">
+<span class="badge badge-default">NAMS-14: Annual Plan Dashboard.NAMS-15: Annual Plan Lifecycle</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:57:17 PM</td>
+<td>
+<a href="#" class="linked" test-id='27' id='29'>NAMS-16: Transition from Fieldwork to Clearance and Report Enhancement Amgr</a>
+<div class="">
+<span class="badge badge-default">NAMS-16: Transition from Fieldwork to Clearance and Report Enhancement.NAMS-16: Transition from Fieldwork to Clearance and Report Enhancement Amgr</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:59:25 PM</td>
+<td>
+<a href="#" class="linked" test-id='48' id='50'>NAMS-17: Annual Plan Change Requests Tab</a>
+<div class="">
+<span class="badge badge-default">NAMS-17: Annual Plan Change Requests Tab.NAMS-17: Annual Plan Change Requests Tab</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:00:36 PM</td>
+<td>
+<a href="#" class="linked" test-id='48' id='57'>NAMS-17: Annual Plan Change Requests Tab</a>
+<div class="">
+<span class="badge badge-default">NAMS-17: Annual Plan Change Requests Tab.NAMS-17: Annual Plan Change Requests Tab</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:02:01 PM</td>
+<td>
+<a href="#" class="linked" test-id='69' id='71'>NAMS-18: Annual Plan Summary Tab</a>
+<div class="">
+<span class="badge badge-default">NAMS-18: Annual Plan Summary Tab.NAMS-18: Annual Plan Summary Tab</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:02:45 PM</td>
+<td>
+<a href="#" class="linked" test-id='79' id='81'>NAMS-189: Publish AAM</a>
+<div class="">
+<span class="badge badge-default">NAMS-189: Publish AAM.NAMS-189: Publish AAM</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:06:32 PM</td>
+<td>
+<a href="#" class="linked" test-id='79' id='100'>NAMS-189: Publish AAM Manager User</a>
+<div class="">
+<span class="badge badge-default">NAMS-189: Publish AAM.NAMS-189: Publish AAM Manager User</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:07:52 PM</td>
+<td>
+<a href="#" class="linked" test-id='79' id='111'>NAMS-189: Publish AAM Manager User</a>
+<div class="">
+<span class="badge badge-default">NAMS-189: Publish AAM.NAMS-189: Publish AAM Manager User</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:10:12 PM</td>
+<td>
+<a href="#" class="linked" test-id='79' id='126'>NAMS-189: Publish AAM Evidence</a>
+<div class="">
+<span class="badge badge-default">NAMS-189: Publish AAM.NAMS-189: Publish AAM Evidence</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:11:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='134' id='136'>NAMS-190: Publish APM</a>
+<div class="">
+<span class="badge badge-default">NAMS-190: Publish APM.NAMS-190: Publish APM</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:14:20 PM</td>
+<td>
+<a href="#" class="linked" test-id='134' id='153'>NAMS-190: Publish APM manger User</a>
+<div class="">
+<span class="badge badge-default">NAMS-190: Publish APM.NAMS-190: Publish APM manger User</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:15:40 PM</td>
+<td>
+<a href="#" class="linked" test-id='134' id='164'>NAMS-190: Publish APM</a>
+<div class="">
+<span class="badge badge-default">NAMS-190: Publish APM.NAMS-190: Publish APM</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:16:27 PM</td>
+<td>
+<a href="#" class="linked" test-id='172' id='174'>NAMS-193: Upload Documents MRCC Indicators Enhancement</a>
+<div class="">
+<span class="badge badge-default">NAMS-193: Upload Documents MRCC Indicators Enhancement.NAMS-193: Upload Documents MRCC Indicators Enhancement</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:20:44 PM</td>
+<td>
+<a href="#" class="linked" test-id='200' id='202'>NAMS-205: Non-MICOS Issue Enhancement audit form</a>
+<div class="">
+<span class="badge badge-default">NAMS-205: Non-MICOS Issue Enhancement.NAMS-205: Non-MICOS Issue Enhancement audit form</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:27:14 PM</td>
+<td>
+<a href="#" class="linked" test-id='200' id='226'>NAMS-205: Non-MICOS Issue Enhancement Issue Actions Tab Accept Review/exception</a>
+<div class="">
+<span class="badge badge-default">NAMS-205: Non-MICOS Issue Enhancement.NAMS-205: Non-MICOS Issue Enhancement Issue Actions Tab Accept Review/exception</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:30:16 PM</td>
+<td>
+<a href="#" class="linked" test-id='236' id='238'>NAMS-206: Audit Document Storage Enhancement</a>
+<div class="">
+<span class="badge badge-default">NAMS-206: Audit Document Storage Enhancement.NAMS-206: Audit Document Storage Enhancement</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:33:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='253' id='255'>NAMS-209: Audit Transitions Enhancement</a>
+<div class="">
+<span class="badge badge-default">NAMS-209: Audit Transitions Enhancement.NAMS-209: Audit Transitions Enhancement</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:37:45 PM</td>
+<td>
+<a href="#" class="linked" test-id='253' id='279'>NAMS-209: Audit Transitions Enhancement APM</a>
+<div class="">
+<span class="badge badge-default">NAMS-209: Audit Transitions Enhancement.NAMS-209: Audit Transitions Enhancement APM</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:39:04 PM</td>
+<td>
+<a href="#" class="linked" test-id='253' id='291'>NAMS-209: Audit Transitions Enhancement AAM</a>
+<div class="">
+<span class="badge badge-default">NAMS-209: Audit Transitions Enhancement.NAMS-209: Audit Transitions Enhancement AAM</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:41:25 PM</td>
+<td>
+<a href="#" class="linked" test-id='306' id='308'>NAMS-21: Manage Change Request</a>
+<div class="">
+<span class="badge badge-default">NAMS-21: Manage Change Request.NAMS-21: Manage Change Request</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:42:07 PM</td>
+<td>
+<a href="#" class="linked" test-id='325' id='327'>NAMS-213: Transition from Pre-Planning to Planning Enhancement</a>
+<div class="">
+<span class="badge badge-default">NAMS-213: Transition from Pre-Planning to Planning Enhancement.NAMS-213: Transition from Pre-Planning to Planning Enhancement</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:45:34 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='350'>NAMS-14: Annual Plan Dashboard</a>
+<div class="">
+<span class="badge badge-default">NAMS-14: Annual Plan Dashboard.NAMS-14: Annual Plan Dashboard</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:49:20 PM</td>
+<td>
+<a href="#" class="linked" test-id='361' id='363'>NAMS-80: Publish Audit Report</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:52:58 PM</td>
+<td>
+<a href="#" class="linked" test-id='361' id='382'>NAMS-80: Publish Audit Report Manager User</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report Manager User</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:54:18 PM</td>
+<td>
+<a href="#" class="linked" test-id='361' id='393'>NAMS-80: Publish Audit Report Manager User</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report Manager User</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:56:37 PM</td>
+<td>
+<a href="#" class="linked" test-id='361' id='407'>NAMS-80: Publish Audit Report Manager User</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report Manager User</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:01:54 PM</td>
+<td>
+<a href="#" class="linked" test-id='361' id='416'>NAMS-80: Publish Audit Report</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+</span>
+<p class="name">@test19002</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@test19002</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:14:20 PM</td>
+<td>
+<a href="#" class="linked" test-id='134' id='153'>NAMS-190: Publish APM manger User</a>
+<div class="">
+<span class="badge badge-default">NAMS-190: Publish APM.NAMS-190: Publish APM manger User</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:15:40 PM</td>
+<td>
+<a href="#" class="linked" test-id='134' id='164'>NAMS-190: Publish APM</a>
+<div class="">
+<span class="badge badge-default">NAMS-190: Publish APM.NAMS-190: Publish APM</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@test20502</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@test20502</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:27:14 PM</td>
+<td>
+<a href="#" class="linked" test-id='200' id='226'>NAMS-205: Non-MICOS Issue Enhancement Issue Actions Tab Accept Review/exception</a>
+<div class="">
+<span class="badge badge-default">NAMS-205: Non-MICOS Issue Enhancement.NAMS-205: Non-MICOS Issue Enhancement Issue Actions Tab Accept Review/exception</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@test8005</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@test8005</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:01:54 PM</td>
+<td>
+<a href="#" class="linked" test-id='361' id='416'>NAMS-80: Publish Audit Report</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+</span>
+<p class="name">@nams205</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@nams205</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:20:44 PM</td>
+<td>
+<a href="#" class="linked" test-id='200' id='202'>NAMS-205: Non-MICOS Issue Enhancement audit form</a>
+<div class="">
+<span class="badge badge-default">NAMS-205: Non-MICOS Issue Enhancement.NAMS-205: Non-MICOS Issue Enhancement audit form</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:27:14 PM</td>
+<td>
+<a href="#" class="linked" test-id='200' id='226'>NAMS-205: Non-MICOS Issue Enhancement Issue Actions Tab Accept Review/exception</a>
+<div class="">
+<span class="badge badge-default">NAMS-205: Non-MICOS Issue Enhancement.NAMS-205: Non-MICOS Issue Enhancement Issue Actions Tab Accept Review/exception</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@nams16</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@nams16</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:57:17 PM</td>
+<td>
+<a href="#" class="linked" test-id='27' id='29'>NAMS-16: Transition from Fieldwork to Clearance and Report Enhancement Amgr</a>
+<div class="">
+<span class="badge badge-default">NAMS-16: Transition from Fieldwork to Clearance and Report Enhancement.NAMS-16: Transition from Fieldwork to Clearance and Report Enhancement Amgr</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+</span>
+<p class="name">@nams17</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@nams17</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:59:25 PM</td>
+<td>
+<a href="#" class="linked" test-id='48' id='50'>NAMS-17: Annual Plan Change Requests Tab</a>
+<div class="">
+<span class="badge badge-default">NAMS-17: Annual Plan Change Requests Tab.NAMS-17: Annual Plan Change Requests Tab</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:00:36 PM</td>
+<td>
+<a href="#" class="linked" test-id='48' id='57'>NAMS-17: Annual Plan Change Requests Tab</a>
+<div class="">
+<span class="badge badge-default">NAMS-17: Annual Plan Change Requests Tab.NAMS-17: Annual Plan Change Requests Tab</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@test20601</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@test20601</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:30:16 PM</td>
+<td>
+<a href="#" class="linked" test-id='236' id='238'>NAMS-206: Audit Document Storage Enhancement</a>
+<div class="">
+<span class="badge badge-default">NAMS-206: Audit Document Storage Enhancement.NAMS-206: Audit Document Storage Enhancement</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>25</span>
+<span class='badge log badge-danger'>3</span>
+</span>
+<p class="name">@reg</p>
+<p class="duration text-sm">28 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@reg</h4>
+<span status="pass" class='badge log pass-bg'>25 passed</span>
+<span status="fail" class='badge log badge-danger'>3 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:51:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='3'>NAMS-14: Annual Plan Dashboard</a>
+<div class="">
+<span class="badge badge-default">NAMS-14: Annual Plan Dashboard.NAMS-14: Annual Plan Dashboard</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:54:46 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='11'>NAMS-15: Annual Plan Lifecycle</a>
+<div class="">
+<span class="badge badge-default">NAMS-14: Annual Plan Dashboard.NAMS-15: Annual Plan Lifecycle</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:57:17 PM</td>
+<td>
+<a href="#" class="linked" test-id='27' id='29'>NAMS-16: Transition from Fieldwork to Clearance and Report Enhancement Amgr</a>
+<div class="">
+<span class="badge badge-default">NAMS-16: Transition from Fieldwork to Clearance and Report Enhancement.NAMS-16: Transition from Fieldwork to Clearance and Report Enhancement Amgr</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:59:25 PM</td>
+<td>
+<a href="#" class="linked" test-id='48' id='50'>NAMS-17: Annual Plan Change Requests Tab</a>
+<div class="">
+<span class="badge badge-default">NAMS-17: Annual Plan Change Requests Tab.NAMS-17: Annual Plan Change Requests Tab</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:00:36 PM</td>
+<td>
+<a href="#" class="linked" test-id='48' id='57'>NAMS-17: Annual Plan Change Requests Tab</a>
+<div class="">
+<span class="badge badge-default">NAMS-17: Annual Plan Change Requests Tab.NAMS-17: Annual Plan Change Requests Tab</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:02:01 PM</td>
+<td>
+<a href="#" class="linked" test-id='69' id='71'>NAMS-18: Annual Plan Summary Tab</a>
+<div class="">
+<span class="badge badge-default">NAMS-18: Annual Plan Summary Tab.NAMS-18: Annual Plan Summary Tab</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:02:45 PM</td>
+<td>
+<a href="#" class="linked" test-id='79' id='81'>NAMS-189: Publish AAM</a>
+<div class="">
+<span class="badge badge-default">NAMS-189: Publish AAM.NAMS-189: Publish AAM</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:06:32 PM</td>
+<td>
+<a href="#" class="linked" test-id='79' id='100'>NAMS-189: Publish AAM Manager User</a>
+<div class="">
+<span class="badge badge-default">NAMS-189: Publish AAM.NAMS-189: Publish AAM Manager User</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:07:52 PM</td>
+<td>
+<a href="#" class="linked" test-id='79' id='111'>NAMS-189: Publish AAM Manager User</a>
+<div class="">
+<span class="badge badge-default">NAMS-189: Publish AAM.NAMS-189: Publish AAM Manager User</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:10:12 PM</td>
+<td>
+<a href="#" class="linked" test-id='79' id='126'>NAMS-189: Publish AAM Evidence</a>
+<div class="">
+<span class="badge badge-default">NAMS-189: Publish AAM.NAMS-189: Publish AAM Evidence</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:11:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='134' id='136'>NAMS-190: Publish APM</a>
+<div class="">
+<span class="badge badge-default">NAMS-190: Publish APM.NAMS-190: Publish APM</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:14:20 PM</td>
+<td>
+<a href="#" class="linked" test-id='134' id='153'>NAMS-190: Publish APM manger User</a>
+<div class="">
+<span class="badge badge-default">NAMS-190: Publish APM.NAMS-190: Publish APM manger User</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:15:40 PM</td>
+<td>
+<a href="#" class="linked" test-id='134' id='164'>NAMS-190: Publish APM</a>
+<div class="">
+<span class="badge badge-default">NAMS-190: Publish APM.NAMS-190: Publish APM</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:16:27 PM</td>
+<td>
+<a href="#" class="linked" test-id='172' id='174'>NAMS-193: Upload Documents MRCC Indicators Enhancement</a>
+<div class="">
+<span class="badge badge-default">NAMS-193: Upload Documents MRCC Indicators Enhancement.NAMS-193: Upload Documents MRCC Indicators Enhancement</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:20:44 PM</td>
+<td>
+<a href="#" class="linked" test-id='200' id='202'>NAMS-205: Non-MICOS Issue Enhancement audit form</a>
+<div class="">
+<span class="badge badge-default">NAMS-205: Non-MICOS Issue Enhancement.NAMS-205: Non-MICOS Issue Enhancement audit form</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:27:14 PM</td>
+<td>
+<a href="#" class="linked" test-id='200' id='226'>NAMS-205: Non-MICOS Issue Enhancement Issue Actions Tab Accept Review/exception</a>
+<div class="">
+<span class="badge badge-default">NAMS-205: Non-MICOS Issue Enhancement.NAMS-205: Non-MICOS Issue Enhancement Issue Actions Tab Accept Review/exception</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:30:16 PM</td>
+<td>
+<a href="#" class="linked" test-id='236' id='238'>NAMS-206: Audit Document Storage Enhancement</a>
+<div class="">
+<span class="badge badge-default">NAMS-206: Audit Document Storage Enhancement.NAMS-206: Audit Document Storage Enhancement</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:33:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='253' id='255'>NAMS-209: Audit Transitions Enhancement</a>
+<div class="">
+<span class="badge badge-default">NAMS-209: Audit Transitions Enhancement.NAMS-209: Audit Transitions Enhancement</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:37:45 PM</td>
+<td>
+<a href="#" class="linked" test-id='253' id='279'>NAMS-209: Audit Transitions Enhancement APM</a>
+<div class="">
+<span class="badge badge-default">NAMS-209: Audit Transitions Enhancement.NAMS-209: Audit Transitions Enhancement APM</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:39:04 PM</td>
+<td>
+<a href="#" class="linked" test-id='253' id='291'>NAMS-209: Audit Transitions Enhancement AAM</a>
+<div class="">
+<span class="badge badge-default">NAMS-209: Audit Transitions Enhancement.NAMS-209: Audit Transitions Enhancement AAM</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:41:25 PM</td>
+<td>
+<a href="#" class="linked" test-id='306' id='308'>NAMS-21: Manage Change Request</a>
+<div class="">
+<span class="badge badge-default">NAMS-21: Manage Change Request.NAMS-21: Manage Change Request</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:42:07 PM</td>
+<td>
+<a href="#" class="linked" test-id='325' id='327'>NAMS-213: Transition from Pre-Planning to Planning Enhancement</a>
+<div class="">
+<span class="badge badge-default">NAMS-213: Transition from Pre-Planning to Planning Enhancement.NAMS-213: Transition from Pre-Planning to Planning Enhancement</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:45:34 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='350'>NAMS-14: Annual Plan Dashboard</a>
+<div class="">
+<span class="badge badge-default">NAMS-14: Annual Plan Dashboard.NAMS-14: Annual Plan Dashboard</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:49:20 PM</td>
+<td>
+<a href="#" class="linked" test-id='361' id='363'>NAMS-80: Publish Audit Report</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:52:58 PM</td>
+<td>
+<a href="#" class="linked" test-id='361' id='382'>NAMS-80: Publish Audit Report Manager User</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report Manager User</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:54:18 PM</td>
+<td>
+<a href="#" class="linked" test-id='361' id='393'>NAMS-80: Publish Audit Report Manager User</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report Manager User</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:56:37 PM</td>
+<td>
+<a href="#" class="linked" test-id='361' id='407'>NAMS-80: Publish Audit Report Manager User</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report Manager User</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:01:54 PM</td>
+<td>
+<a href="#" class="linked" test-id='361' id='416'>NAMS-80: Publish Audit Report</a>
+<div class="">
+<span class="badge badge-default">NAMS-80: Publish Audit Report.NAMS-80: Publish Audit Report</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+</span>
+<p class="name">@nams14</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@nams14</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:51:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='3'>NAMS-14: Annual Plan Dashboard</a>
+<div class="">
+<span class="badge badge-default">NAMS-14: Annual Plan Dashboard.NAMS-14: Annual Plan Dashboard</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:54:46 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='11'>NAMS-15: Annual Plan Lifecycle</a>
+<div class="">
+<span class="badge badge-default">NAMS-14: Annual Plan Dashboard.NAMS-15: Annual Plan Lifecycle</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Dec 10, 2022 12:51:01 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Dec 10, 2022 02:02:44 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>11</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>3</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='78%'>
+<b>11</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='21%'><b>3</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='89%'><b>25</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='10%'><b>3</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='93%'><b>335</b> steps passed</small></div>
+<div>
+<small data-tooltip='0%'><b>3</b> steps failed,
+<b>22</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"NAMS-14: Annual Plan Dashboard":3496.28,"NAMS-16: Transition from Fieldwork to Clearance and Report Enhancement":128.12,"NAMS-17: Annual Plan Change Requests Tab":156.004,"NAMS-18: Annual Plan Summary Tab":43.771,"NAMS-189: Publish AAM":498.534,"NAMS-190: Publish APM":324.064,"NAMS-193: Upload Documents MRCC Indicators Enhancement":256.647,"NAMS-205: Non-MICOS Issue Enhancement":572.011,"NAMS-206: Audit Document Storage Enhancement":172.535,"NAMS-209: Audit Transitions Enhancement":496.476,"NAMS-21: Manage Change Request":41.633,"NAMS-213: Transition from Pre-Planning to Planning Enhancement":207.711,"NAMS-214: Deactivate Audits":0,"NAMS-80: Publish Audit Report":804.016
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@nams21</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@nams18</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@nams189</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@nams214</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@test1801</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@nams190</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@nams15</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@nams80</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@test8002</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@nams213</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@testnams214</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@test14</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@test8001</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@test18901</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@test19001</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@test8004</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@test8003</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@test20501</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@test18903</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@nams209</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@test21301</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>@nams206</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@test20901</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@nams151</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@test20902</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@nams193</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@test1931</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@test20903</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@test1601</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@test18902</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@test2101</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@test1701</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@sp6</td>
+<td>25</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>89.286%</td>
+</tr>
+<tr>
+<td>@test19002</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@test20502</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@test8005</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@nams205</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@nams16</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@nams17</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@test20601</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@reg</td>
+<td>25</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>89.286%</td>
+</tr>
+<tr>
+<td>@nams14</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 11,
+failParent: 3,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 25,
+failChild: 3,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 335,
+failGrandChild: 3,
+warningGrandChild: 0,
+skipGrandChild: 22,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

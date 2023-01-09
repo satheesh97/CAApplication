@@ -30,8 +30,9 @@ public class MRCCLocator {
 
 public String MRCCParagraph="//label[contains(text(),'MRCC Para')]//following::textarea";
     public String userRating="//span[contains(text(),'User Rating')]//following::div[contains(text(),'--- Select an User Rating ---')]";
-public String userRatingGood="//span[contains(text(),'User Rating')]//following::div/span[contains(text(),'Good')]";
-    //span[contains(text(),'User Rating')]//following::div[contains(text(),'--- Select an User Rating ---')]"
+   public String userRatingGood="//span[contains(text(),'User Rating')]//following::div/span[contains(text(),'Good')]";
+   public String nextButton="//*[@id='related-action-body']//following::div/div[5]/div/div/button";
+   //span[contains(text(),'User Rating')]//following::div[contains(text(),'--- Select an User Rating ---')]"
     public String userRatingRational="//label[contains(text(),'User Rating Rationale')]//following::textarea";
     public String addGroupStratagy="//div/p/a[contains(text(),'Add Group Strategy Pillar')]";
     public  String groupPiller="//span[contains(text(),'Group Strategy Pillar')]//following::div[contains(@class,'---placeholder')]";

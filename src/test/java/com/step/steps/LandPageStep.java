@@ -111,7 +111,7 @@ public class LandPageStep extends AbstractStepDef {
         auditStep.enterTextarea(auditlocator.DETAssessment);
         waitStep.clickButton("Save");
         click(auditlocator.DETReminderSave);
-        waitStep.driverwait5();
+        waitStep.buttonClickWait();
     }
 
     public void saveDETforException(){
@@ -259,7 +259,6 @@ public void verifyDisposalException(){
     }
 
     public void  leve2RowClick(){
-        String pathL2 ="(//div/div/table/tbody/tr[1])[2]";
         driver.findElement(By.xpath(creatControlLocator.risk1Table)).click();
         waitStep.waitPage("2");
     }

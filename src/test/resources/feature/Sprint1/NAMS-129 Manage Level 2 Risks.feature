@@ -17,4 +17,4 @@ Feature: NAMS-129: Manage Level 2 Risks
     And I file the Level two of risk
     Examples:
       |Username|Password|
-      |satheesh.kaliappan|Satheesh1|
+      |satheesh.kaliappan|Satheesh2|

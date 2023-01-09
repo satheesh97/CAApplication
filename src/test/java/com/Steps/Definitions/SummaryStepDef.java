@@ -47,7 +47,8 @@ public class SummaryStepDef {
          landPageStep.leve2RowClick();
         waitStep.clickButton("Manage Level 2 Risk");
         landPageStep.multiselect();
-        waitStep.clickSubmit("Submit");
+        waitStep.clickButton("Submit");
+        waitStep.pageLoadWait();
         landPageStep.leve2RowClick();
         landPageStep.leve2RiskClick();
         waitStep.clickButton("Create Control");

@@ -54,7 +54,7 @@
         |Username|Password|
         |satheesh.kaliappan|Satheesh1|
 
-    @test1011222 @2121
+    @test10112221 @2121
     Scenario Outline: NAMS-143: Create/Edit Issue Deactivate DET/OET/OT
       Given I Enter the "<Username>" and "<Password>"
       And I  click the menu "Home"
@@ -80,7 +80,7 @@
         |Username|Password|
         |AA_test1 |password@1|
 
-    @test11112022
+    @test10112221
     Scenario Outline: NAMS-143: Create/Edit Issue Reactivate DET/OET/OT
       Given I Enter the "<Username>" and "<Password>"
       And I  click the menu "Home"

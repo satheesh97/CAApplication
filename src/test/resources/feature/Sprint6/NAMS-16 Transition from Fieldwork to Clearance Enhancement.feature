@@ -9,6 +9,7 @@
       And I Search the "AU-" with
       And I select "Audit Phase" with value "Fieldwork"
       Given  wait for "4" seconds
+      And focuse out the field
       And I select "Type" with value "Regular Audit"
       Given  wait for "4" seconds
       And I Move to "Summary"

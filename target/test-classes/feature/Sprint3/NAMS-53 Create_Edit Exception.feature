@@ -1,7 +1,7 @@
 @nams53 @sp3
   Feature: NAMS-53: Create/Edit Exception
     @test0911221
-    Scenario Outline:NAMS-53: Create/Edit Issue create Audit
+    Scenario Outline:NAMS-53: Create/Edit Exception create Audit
       Given I Enter the "<Username>" and "<Password>"
       Given  wait for "2" seconds
       And I  click the menu "Audits"
@@ -36,7 +36,7 @@
         |AA_test1 |password@1|
 
     @test0911222 @2121
-    Scenario Outline:NAMS-53: Create/Edit Issue accept DET/OET/OT
+    Scenario Outline:NAMS-53: Create/Edit Exception accept DET/OET/OT
       Given I Enter the "<Username>" and "<Password>"
       Given  wait for "2" seconds
       And I  click the menu "Home"
@@ -58,7 +58,7 @@
 
 
     @test0911223
-    Scenario Outline: NAMS-53: Create/Edit Issue
+    Scenario Outline: NAMS-53: Create/Edit Exception
       Given I Enter the "<Username>" and "<Password>"
       Given  wait for "2" seconds
       And I  click the menu "Home"

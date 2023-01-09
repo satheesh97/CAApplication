@@ -51,21 +51,27 @@ public class MRCCManageStep extends AbstractStepDef {
 
 
         callRateing();
+        visiblenextButton(mrccLocator.nextButton);
         String text =driver.findElement(By.xpath("//span/span/Strong[contains(text(),'')]")).getText();
         logger.info("@@@@@@@@@@@@@@@@@@@@@2"+text);
         singleClickdownRating(mrccLocator.userRating,text);
         auditStep.enterTextarea(mrccLocator.MRCCParagraph);
 
     }
-    public boolean visible(String path){
-        if(driver.findElement(By.xpath(path)).isDisplayed()){
-            logger.info("Element Visibel");
-            return true;
-        }else{
-            logger.info("Element not Visibel");
-            return false;
-
+    public void visiblenextButton(String path){
+        try{
+            WebElement element=driver.findElement(By.xpath(path));
+        if(element.isDisplayed()&&element.isEnabled()){
+            logger.info("Element Visibel and Enable" +"And Clickable");
+            click(path);
+            waitStep.buttonClickWait();
+            callRateing();
+            visiblenextButton(path);
         }
+        }catch (Exception e){
+            logger.info("Element is not Enable");
+        }
+
 
     }
 

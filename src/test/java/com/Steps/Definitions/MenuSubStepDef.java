@@ -30,7 +30,14 @@ public class MenuSubStepDef {
     public void iFillTheCreateExceptionForm() {
         myTaskStep.filltheException();
     }
-
+    @Then("I fill the create Exception Form for level two")
+    public void iFillTheCreateExceptionFormForLevelTwo() {
+        myTaskStep.filltheExceptionLevelTwo();
+    }
+    @Then("I fill the create Exception Form save")
+    public void iFillTheCreateExceptionFormSave() {
+        myTaskStep.filltheExceptionSave();
+    }
     @And("I move to {string} tab")
     public void iMoveToTab(String tab) {
         waitStep.clickButtonMenu(tab);
@@ -39,6 +46,11 @@ public class MenuSubStepDef {
     @And("I fill the Create Issue Form")
     public void iFillTheCreateIssueForm() {
         myTaskStep.fllissueForm();
+    }
+
+    @And("I fill the Create Issue Form Save")
+    public void iFillTheCreateIssueFormSave() {
+        myTaskStep.fllissueFormSave();
     }
 
     @And("I fill the Create Issue Form verify")

@@ -6,6 +6,7 @@ import com.step.steps.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -112,29 +113,34 @@ public class AnnualPlan extends AbstractStepDef {
     public void fillpublshReport(){
         documentStakeholder.clickRadioOption("Final");
         documentStakeholder.clickRadioOption("Finalised");
-        auditStep.enterNo(docstoc.auditReportIndex);
+        //auditStep.enterNo(docstoc.auditReportIndex);
+       SendKeys(docstoc.auditReportIndex,"450");
         documentStakeholder.filltextarea("Executive Summary");
         documentStakeholder.clickRadioOption("B");
+        documentStakeholder.clickRadioOption("Medium-Low");
         documentStakeholder.filltextareabox("Summary");
         auditStep.searchAndEnter(docstoc.managmentResponse);
         documentStakeholder.filltextarea("Response");
         waitStep.clickSubmit("Submit");
-        int count= Integer.parseInt(driver.findElement(By.xpath(docstoc.auditReportIndex)).getAttribute("value"));
-        alertVisible(count);
+        alertVisible();
         waitStep.clickSubmit("Confirm");
         documentStakeholder.fileupload();
+        waitStep.waitPageload();
+        documentStakeholder.fileupload();
+        waitStep.waitPageload();
         waitStep.clickSubmit("Proceed to publish");
         waitStep.clickSubmit("Email distribution list");
     }
-    public void alertVisible(int count){
+    public void alertVisible(){
         try{
+            int count= Integer.parseInt(driver.findElement(By.xpath(docstoc.auditReportIndex)).getAttribute("value"));
             WebElement element = driver.findElement(By.xpath(docstoc.aletr));
             if(element.isDisplayed()){
                 count++;
-
                 SendKeys(docstoc.auditReportIndex, String.valueOf(count));
+               //waitStep.waitSometime();
                 waitStep.clickSubmit("Submit");
-                alertVisible( count);
+                alertVisible( );
             }
         }catch (Exception e){
             logger.info("Element not Visible");
@@ -147,5 +153,25 @@ public class AnnualPlan extends AbstractStepDef {
        element.clear();
        element.sendKeys(count);
     }
+
+    public void clickForFocus(){
+        String path ="//input[@placeholder='Search Audits']";
+        documentStakeholder.click(path);
+    }
+
+    public void validateAuditName(){
+   String name =driver.findElement(By.xpath("//h1")).getText();
+   if(name.contains("AU-")){
+       Assert.assertTrue(name.contains("AU-"));
+       logger.info("****Audit Reference Number Done and Expected ******" );
+   }else{
+       logger.info("****Audit Reference Number is not Expected ******" );
+   }
+       }
+
+public void  checkTable(){
+        documentStakeholder.click(docstoc.tableCheckBox);
+        waitStep.pageLoadWait();
+}
 
 }

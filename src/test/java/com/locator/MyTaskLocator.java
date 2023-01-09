@@ -10,7 +10,7 @@ public class MyTaskLocator {
     public String risk = "//div/span[text()='Risk or Control?']//following::div//following::div//following::label[contains(text(),'Risk')]";
     public String control ="//div/span[text()='Risk or Control?']//following::div//following::div//following::label[contains(text(),'Control')]";
     public String Level3Risk="//div/span[text()='Level 2 or 3 Risk?']//following::div//following::div//following::label[contains(text(),'Level 3 Risk')]";
-    public String Level2Risk="//div/span[text()='Level 2 or 3 Risk?']//following::div//following::div//following::label[contains(text(),'Level 2 Risk')]";
+    public String Level2Risk="//label[contains(text(),'Level 2 Risk')]";
     public String Level2Control="//div/span[text()='Level 2 or 3 Control?']//following::div//following::div//following::label[contains(text(),'Level 2')]";
     public String Level3Control="//div/span[text()='Level 2 or 3 Control?']//following::div//following::div//following::label[contains(text(),'Level 3')]";
     public String selectRow="//span[text()='Risk or Control?']//following::tbody/tr";
@@ -19,7 +19,8 @@ public class MyTaskLocator {
     public String ActionImplemntedNo="//div/span[text()='Already Implemented?']//following::div//following::div//following::label[contains(text(),'No')]";
     public String selectAvialbelOT ="//span[text()='Available Outcome Tests']//following::tbody/tr/td/div/p/a";
     public String selectViewOption="//span[text()='Issues']//following::tbody/tr/td/div/p/a";
-
+    public String micosIDText="//following::div/label[contains(text(),'Rationale')]//following::textarea";
+public String RationalText="//span[text()=' Issue Result']//following::label[text()='Rationale']//following::textarea";
     public String selectAvialbelExp ="//span[text()='Available Exceptions']//following::tbody/tr/td/div/p/a";
 
     public String dropTableIndex = ".//div[contains(@id,'_tetherWrapper')]//li";
@@ -32,15 +33,15 @@ public class MyTaskLocator {
     public String riskCategory=".//div/span[text()='Risk Category']//following::div/div/div";
     public String issueCause="//div/span[contains(text(),'Issue Cause')]//following::div[@class='MultipleDropdownWidget---dropdown_value']";
 
-   public String systemOrigin="//span[contains(text(),'External System Origin')]//following::div/div/div";
-   public String systemID="//label[contains(text(),'External System ID')]//following::input";
+    public String systemOrigin="//span[contains(text(),'External System Origin')]//following::div/div/div";
+    public String systemID="//label[contains(text(),'External System ID')]//following::input";
     public String groupRiskThem="//div/span[contains(text(),'Group Risk Themes')]//following::div[@class='MultipleDropdownWidget---dropdown_value']";
     public String materialEntities="//div/span[contains(text(),'Material Legal Entities')]//following::div[@class='MultipleDropdownWidget---dropdown_value']";
     public String relavantRegion="//div/span[contains(text(),'Relevant Regions')]//following::div[@class='MultipleDropdownWidget---dropdown_value']";
     public String IATaxonomy ="//span[contains(text(),'Behavioural')]//following::div[contains(text(),'Internal Audit Taxonomy')]";
-
+    public String mainCause_IATaxonomy="//div/span[contains(text(),'Internal Audit Taxonomy')]//following::div[contains(text(),'--- Select a Main  Cause - Internal Audit Taxonomy ---')]";
     public String actionStatus="//div[contains(text(),'--- Select a Value ---')]";
-
+public String showGuidlines="//span[contains(text(),'Show Guidance')]";
     public String cTRAI="//span[contains(text(),'Control Tests')]//following::thead/tr/th/div[contains(text(),'RAI/CAI')]";
     public  String cTLevel2="//span[contains(text(),'Control Tests')]//following::thead/tr/th/div[contains(text(),'Level 2 Risk')]";
 
@@ -51,27 +52,27 @@ public class MyTaskLocator {
     public String ctExptionAndIssues="//span[contains(text(),'Control Tests')]//following::thead/tr/th/div[contains(text(),'Exceptions and Issues')]";
     public String Action="//span[contains(text(),'Control Tests')]//following::thead/tr/th/div[contains(text(),'Actions')]";
     public String menuCTIcon="//span[contains(text(),'Control Tests')]//following::tbody/tr/td/div/div/button";
-   public String menuOTIcon="//span[contains(text(),'Outcome Test')]//following::tbody/tr/td/div/div/button";
+    public String menuOTIcon="//span[contains(text(),'Outcome Test')]//following::tbody/tr/td/div/div/button";
 
-   public String menuIcon="//span[contains(text(),'')]//following::tbody/tr/td/div/div/button";
-   public String manageDocmenu="//button[contains(@class,'has_pulldown')]";
-   public String menuUC="//div[contains(@id,'_tetherWrapper')]//li/span[text()='Update Control']";
+    public String menuIcon="//span[contains(text(),'')]//following::tbody/tr/td/div/div/button";
+    public String manageDocmenu="//button[contains(@class,'has_pulldown')]";
+    public String menuUC="//div[contains(@id,'_tetherWrapper')]//li/span[text()='Update Control']";
     public String menuDET="//div[contains(@id,'_tetherWrapper')]//li/span[text()='Manage DET']";
     public String menuOET="//div[contains(@id,'_tetherWrapper')]//li/span[text()='Manage OET']";
     public String menuOT="//div[contains(@id,'_tetherWrapper')]//li/div/span[text()='Manage OT']";
     public String menuDeactive="//div[contains(@id,'_tetherWrapper')]//li/div/span[text()='Deactivate OT']";
     public String oToutcome="//span[contains(text(),'Outcome Tests')]//following::thead/tr/th[@abbr='Outcome Test Name']";
 
-public String deactivateOET_DET="//p/span/strong/a/span";
-public String deactivateOTReason="//label[contains(text(),'Rationale for Deactivation')]//following::textarea";
+    public String deactivateOET_DET="//p/span/strong/a/span";
+    public String deactivateOTReason="//label[contains(text(),'Rationale for')]//following::textarea";
 
-public String planning="//a[contains(text(),'Planning')]";
-public String fieldWork="//a[contains(text(),'Fieldwork')]";
-public String report="//a[contains(text(),'Reporting')]";
+    public String planning="//a[contains(text(),'Planning')]";
+    public String fieldWork="//a[contains(text(),'Fieldwork')]";
+    public String report="//a[contains(text(),'Reporting')]";
 
-public String exceptionOTTest ="//div/span[text()='Create Exception from Outcome Test?']//following::label[text()='Yes']";
-public String exceptionOTsave ="//div/span[text()='Create Exception On Save?']//following::label[text()='Now']";
+    public String exceptionOTTest ="//div/span[text()='Create Exception from Outcome Test?']//following::label[text()='Yes']";
+    public String exceptionOTsave ="//div/span[text()='Create Exception On Save?']//following::label[text()='Now']";
 
-public String executiveSummery="//label[contains(text(),'Executive Summary Feedback')]//following::textarea";
-public String approve ="//span[contains(text(),'Decision')]//following::label[contains(text(),'Approve')]";
+    public String executiveSummery="//label[contains(text(),'Executive Summary Feedback')]//following::textarea";
+    public String approve ="//span[contains(text(),'Decision')]//following::label[contains(text(),'Approve')]";
 }
